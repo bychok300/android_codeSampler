@@ -1655,76 +1655,126 @@ file content..blah blah\n
 Done\n
 		</string>
 
-	<!-->________________________________________________________________________________________________________________________________</!-->
-	<string name="ConvertFileToHex">
-A simple Java program to demonstrate the use of String formatter(\“%02X \“) to convert a File into Hex value. The attached comments should be self-explanatory.\n
+		<string name="ConvertFileToHex">
+		A simple Java program to demonstrate the use of String formatter(“%02X “) to convert a File into Hex value. The attached comments should be self-explanatory.
+		\n
+		Example\n
+		package com.mkyong;\n
+		\n
+		import java.io.File;\n
+		import java.io.FileInputStream;\n
+		import java.io.IOException;\n
+		import java.io.InputStream;\n
+		import java.io.PrintStream;\n
+		\n
+		public class File2Hex\n
+		{\n
+		    public static void convertToHex(PrintStream out, File file) throws IOException {\n
+			InputStream is = new FileInputStream(file);\n
+		\n
+			int bytesCounter =0;\n
+			int value = 0;\n
+			StringBuilder sbHex = new StringBuilder();\n
+			StringBuilder sbText = new StringBuilder();\n
+			StringBuilder sbResult = new StringBuilder();\n
+		\n
+			while ((value = is.read()) != -1) {\n
+			    //convert to hex value with "X" formatter\n
+		            sbHex.append(String.format(\"02X \", value));\n
+		\n
+			    //If the chracater is not convertable, just print a dot symbol "."\n
+			    if (!Character.isISOControl(value)) {\n
+			      	sbText.append((char)value);\n
+			    }else {\n
+			        sbText.append(\".\");\n
+			    }\n
+		\n
+			    //if 16 bytes are read, reset the counter,\n
+		            //clear the StringBuilder for formatting purpose only.\n
+				    if(bytesCounter==15){\n
+			      	sbResult.append(sbHex).append(\"      \").append(sbText).append(\"\\n\");\n
+				       	sbHex.setLength(0);\n
+			        sbText.setLength(0);\n
+			       	bytesCounter=0;\n
+			    }else{\n
+			        bytesCounter++;\n
+			    }\n
+		       }\n
+		\n
+			//if still got content\n
+				if(bytesCounter!=0){\n
+			     //add spaces more formatting purpose only\n
+			    for(;16> bytesCounter; bytesCounter++){\n
+				//1 character 3 spaces\n
+			sbHex.append(\"   \");\n
+			    }\n
+		    sbResult.append(sbHex).append(\"      \").append(sbText).append(\"\\n\");\n
+    	    }\n
+		\n
+		        out.print(sbResult);\n
+		        is.close();\n
+		  }\n
+		\n
+		   public static void main(String[] args) throws IOException\n
+		   {\n
+		    	//display output to console\n
+		    	convertToHex(System.out, new File(\"c:/file.txt\"));\n
+		\n
+		    	//write the output into a file\n
+    			convertToHex(new PrintStream(\"c:/file.hex\"), new File(\"c:/file.txt\"));\n
+   		 }\n
+		}\n
+
+		</string>
+
+	<string name="GetTotalOfFreeDiskSpace">
+	In Java old days, it lacks of method to determine the free disk space on a partition. But this is changed since JDK 1.6 released, a few new methods – getTotalSpace(), getUsableSpace() and getFreeSpace(), are bundled with java.io.File to retrieve the partition or disk space detail.\n
 \n
-Example\n
+Example\n\n
 package com.mkyong;\n
 \n
 import java.io.File;\n
-import java.io.FileInputStream;\n
-import java.io.IOException;\n
-import java.io.InputStream;\n
-import java.io.PrintStream;\n
 \n
-public class File2Hex\n
+public class DiskSpaceDetail\n
 {\n
-    public static void convertToHex(PrintStream out, File file) throws IOException {\n
-	InputStream is = new FileInputStream(file);\n
+    public static void main(String[] args)\n
+    {\n
+    	File file = new File(\"c:\");\n
+    	long totalSpace = file.getTotalSpace(); //total disk space in bytes.\n
+    	long usableSpace = file.getUsableSpace(); ///unallocated / free disk space in bytes.\n
+    	long freeSpace = file.getFreeSpace(); //unallocated / free disk space in bytes.\n
 \n
-	int bytesCounter =0;\n
-	int value = 0;\n
-	StringBuilder sbHex = new StringBuilder();\n
-	StringBuilder sbText = new StringBuilder();\n
-	StringBuilder sbResult = new StringBuilder();\n
+    	System.out.println(\" === Partition Detail ===\");\n
 \n
-	while ((value = is.read()) != -1) {\n
-	    //convert to hex value with \"X\" formatter\n
-            sbHex.append(String.format(\"%02X \", value));\n
+    	System.out.println(\" === bytes ===\");\n
+    	System.out.println(\"Total size : \" + totalSpace + \" bytes\");\n
+    	System.out.println(\"Space free : \" + usableSpace + \" bytes\");\n
+    	System.out.println(\"Space free : \" + freeSpace + \" bytes\");\n
 \n
-	    //If the chracater is not convertable, just print a dot symbol \".\"\n
-	    if (!Character.isISOControl(value)) {\n
-	      	sbText.append((char)value);\n
-	    }else {\n
-	        sbText.append(\".\");\n
-	    }\n
-\n
-	    //if 16 bytes are read, reset the counter,\n
-            //clear the StringBuilder for formatting purpose only.\n
-	    if(bytesCounter==15){\n
-	      	sbResult.append(sbHex).append(\"      \").append(sbText).append(\"\\n\");\n
-	       	sbHex.setLength(0);\n
-	        sbText.setLength(0);\n
-	       	bytesCounter=0;\n
-	    }else{\n
-	        bytesCounter++;\n
-	    }\n
-       }\n
-\n
-	//if still got content\n
-	if(bytesCounter!=0){\n
-	     //add spaces more formatting purpose only\n
-	    for(; 16>bytesCounter; bytesCounter++){\n
-		//1 character 3 spaces\n
-		sbHex.append(\" \");\n
-	    }\n
-	    sbResult.append(sbHex).append(\" \").append(sbText).append(\"\\n\");\n
-        }\n
-\n
-        out.print(sbResult);\n
-        is.close();\n
-  }\n
-\n
-   public static void main(String[] args) throws IOException\n
-   {\n
-    	//display output to console\n
-    	convertToHex(System.out, new File(\"c:/file.txt\"));\n
-\n
-    	//write the output into a file\n
-    	convertToHex(new PrintStream(\"c:/file.hex\"), new File(\"c:/file.txt\"));\n
+    	System.out.println(\" === mega bytes ===\");\n
+    	System.out.println(\"Total size : \" + totalSpace /1024 /1024 + \" mb\");\n
+    	System.out.println(\"Space free : \" + usableSpace /1024 /1024 + \" mb\");\n
+    	System.out.println(\"Space free : \" + freeSpace /1024 /1024 + \" mb\");\n
     }\n
 }\n
-\
-		</string>
+\n
+ \n
+Output\n\n
+Display the disk space detail in c: partition.\n
+\n
+=== Partition Detail ===\n
+\n
+ === bytes ===\n
+Total size : 52428795904 bytes\n
+Space free : 33677811712 bytes\n
+Space free : 33677811712 bytes\n
+ === mega bytes ===\n
+Total size : 49999 mb\n
+Space free : 32117 mb\n
+Space free : 32117 mb\n
+Note\n\n
+Both getFreeSpace() and getUsableSpace() methods are return the same total free disk space of a given partition. But the real different is not clear, even in the java doc. Tell me if you know what’s the different in between.\n
+			</string>
+
+
 </resources>
