@@ -1,0 +1,1730 @@
+<resources>
+    <string name="app_name">CodeSampler</string>
+    <string name="CreateFile">\n
+    import java.io.File;\n
+    import java.io.IOException;\n
+    \n
+    public class CreateFileExample\n
+    {\n
+        public static void main( String[] args )\n
+    {\n
+        try {\n
+    \n
+            File file = new File("c:\\newfile.txt");\n
+    \n
+            if (file.createNewFile()){\n
+                System.out.println("File is created!");\n
+            }else{\n
+            System.out.println("File already exists.");\n
+    }\n
+    \n
+        } catch (IOException e) {\n
+            e.printStackTrace();\n
+    }\n
+    }\n
+    }\n</string>
+
+    <string name ="ConstructFilePath">
+        In this tutorial, we will show you three Java examples to construct a file path :
+
+File.separator or System.getProperty(“file.separator”) (Recommended)\n
+File file = new File(workingDir, filename); (Recommended)\n
+Create the file separator manually. (Not recommend, just for fun)\n\n
+1. File.separator\n
+Classic Java example to construct a file path, using File.separator or System.getProperty("file.separator"). Both will check the OS and returns the file separator correctly, for example,\n
+\n
+Windows = \\n
+*nix or Mac = /\n
+FilePathExample1.java\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+\n
+public class FilePathExample1 {\n
+	public static void main(String[] args) {\n
+	  try {\n
+\n
+		String filename = "newFile.txt";\n
+		String workingDirectory = System.getProperty("user.dir");\n
+\n
+		//****************//\n
+\n
+		String absoluteFilePath = "";\n
+\n
+		//absoluteFilePath = workingDirectory + System.getProperty("file.separator") + filename;\n
+		absoluteFilePath = workingDirectory + File.separator + filename;\n
+\n
+		System.out.println("Final filepath : " + absoluteFilePath);\n
+\n
+		//****************//\n
+\n
+		File file = new File(absoluteFilePath);\n
+\n
+		if (file.createNewFile()) {\n
+			System.out.println("File is created!");\n
+		} else {\n
+			System.out.println("File is already existed!");\n
+		}\n
+
+	  } catch (IOException e) {\n
+		e.printStackTrace();\n
+	  }\n
+	}\n
+}\n
+Output\n
+
+Final filepath : /Users/mkyong/Documents/workspace/maven/fileUtils/newFile.txt\n
+File is created!\n
+
+
+2. new File()\n
+Some developers are using new File() API to construct the file path.\n
+\n
+FilePathExample2.java\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+\n
+public class FilePathExample2 {\n
+	public static void main(String[] args) {\n
+	  try {\n
+\n
+		String filename = "newFile.txt";\n
+		String workingDirectory = System.getProperty("user.dir");\n
+\n
+		//****************//\n
+\n
+		File file = new File(workingDirectory, filename);\n
+\n
+		//****************//\n
+
+		System.out.println("Final filepath : " + file.getAbsolutePath());\n
+		if (file.createNewFile()) {\n
+			System.out.println("File is created!");\n
+		} else {\n
+			System.out.println("File is already existed!");\n
+		}\n
+\n
+	  } catch (IOException e) {\n
+		e.printStackTrace();\n
+	  }\n
+	}\n
+}\n
+Output\n
+\n
+Final filepath : /Users/mkyong/Documents/workspace/maven/fileUtils/newFile.txt\n
+File is created!\n
+\n
+\n
+3. Manual file separator\n
+Check the system OS and create file path manually, just for fun, not recommend.\n
+\n
+FilePathExample3.java\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+\n
+public class FilePathExample3 {\n
+	public static void main(String[] args) {\n
+	  try {\n
+\n
+		String filename = "testing.txt";\n
+		String workingDir = System.getProperty("user.dir");\n
+\n
+		String absoluteFilePath = "";\n
+\n
+		//****************//\n
+\n
+		String your_os = System.getProperty("os.name").toLowerCase();\n
+\n
+		if (your_os.indexOf("win") >= 0) {\n
+\n
+			//if windows\n
+			absoluteFilePath = workingDir + "\\" + filename;\n
+\n
+		} else if (your_os.indexOf("nix") >= 0 ||\n
+                           your_os.indexOf("nux") >= 0 ||\n
+                           your_os.indexOf("mac") >= 0) {\n
+\n
+			//if unix or mac\n
+			absoluteFilePath = workingDir + "/" + filename;\n
+\n
+		}else{\n
+\n
+			//unknow os?\n
+			absoluteFilePath = workingDir + "/" + filename;\n
+\n
+		}\n
+\n
+		System.out.println("Final filepath : " + absoluteFilePath);\n
+\n
+		//****************//\n
+\n
+		File file = new File(absoluteFilePath);\n
+\n
+		if (file.createNewFile()) {\n
+			System.out.println("Done");\n
+		} else {\n
+			System.out.println("File already exists!");\n
+		}\n
+\n
+	  } catch (IOException e) {\n
+		e.printStackTrace();\n
+	  }\n
+	}\n
+}\n
+Output\n
+\n
+Final filepath : /Users/mkyong/Documents/workspace/maven/fileUtils/newFile.txt\n
+File is created!\n
+\n
+    </string>
+    
+    <string name="SetTheFilePrmission">
+        In Java, file permissions are very OS specific: *nix , NTFS (windows) and FAT/FAT32, all have different kind of file permissions. Java comes with some generic file permission to deal with it.\n
+\n
+Check if the file permission allow :\n
+\n
+file.canExecute(); – return true, file is executable; false is not.\n
+file.canWrite(); – return true, file is writable; false is not.\n
+file.canRead(); – return true, file is readable; false is not.\n
+Set the file permission :\n
+\n
+file.setExecutable(boolean); – true, allow execute operations; false to disallow it.\n
+file.setReadable(boolean); – true, allow read operations; false to disallow it.\n
+file.setWritable(boolean); – true, allow write operations; false to disallow it.\n
+In *nix system, you may need to configure more specifies about file permission, e.g set a 777 permission for a file or directory, however, Java IO classes do not have ready method for it, but you can use the following dirty workaround :\n
+\n
+Runtime.getRuntime().exec("chmod 777 file");\n
+File permission example\n\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+\n
+public class FilePermissionExample\n
+{\n
+    public static void main( String[] args )\n
+    {\n
+    	try {\n
+\n
+	      File file = new File("/mkyong/shellscript.sh");\n
+\n
+	      if(file.exists()){\n
+	    	  System.out.println("Is Execute allow : " + file.canExecute());\n
+		  System.out.println("Is Write allow : " + file.canWrite());\n
+		  System.out.println("Is Read allow : " + file.canRead());\n
+	      }\n
+\n
+	      file.setExecutable(false);\n
+	      file.setReadable(false);\n
+	      file.setWritable(false);\n
+\n
+	      System.out.println("Is Execute allow : " + file.canExecute());\n
+	      System.out.println("Is Write allow : " + file.canWrite());\n
+	      System.out.println("Is Read allow : " + file.canRead());\n
+\n
+	      if (file.createNewFile()){\n
+	        System.out.println("File is created!");\n
+	      }else{\n
+	        System.out.println("File already exists.");\n
+	      }\n
+\n
+    	} catch (IOException e) {\n
+	      e.printStackTrace();\n
+	    }\n
+    }\n
+}\n
+    </string>
+<!-->________________________________________________________________________________________________________________________________</!-->
+    <string name="ReadFileEithBIS">
+        Here is another example to show how to read a file in Java with BufferedInputStream and DataInputStream classes.\n
+\n
+The readLine() from the type DataInputStream is deprecated. Sun officially announced this method can not convert property from bytes to characters. It’s advised to use BufferedReader.\n
+You may interest to read this How to read file from Java – BufferedReader\n
+\n
+package com.mkyong.io;\n
+\n
+import java.io.BufferedInputStream;\n
+import java.io.DataInputStream;\n
+import java.io.File;\n
+import java.io.FileInputStream;\n
+import java.io.IOException;\n
+\n
+public class BufferedInputStreamExample {\n
+\n
+	public static void main(String[] args) {\n
+\n
+		File file = new File("C:\\testing.txt");\n
+		FileInputStream fis = null;\n
+		BufferedInputStream bis = null;\n
+		DataInputStream dis = null;\n
+\n
+		try {\n
+			fis = new FileInputStream(file);\n
+\n
+			bis = new BufferedInputStream(fis);\n
+			dis = new DataInputStream(bis);\n
+\n
+			while (dis.available() != 0) {\n
+				System.out.println(dis.readLine());\n
+			}\n
+\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		} finally {\n
+			try {\n
+				fis.close();\n
+				bis.close();\n
+				dis.close();\n
+			} catch (IOException ex) {\n
+				ex.printStackTrace();\n
+			}\n
+		}\n
+	}\n
+}\n
+    </string>
+    <!-->________________________________________________________________________________________________________________________________</!-->
+    <string name="ReadFileWithBufferedReader">
+        In Java, there are many ways to read a file, here we show you how to use the simplest and most common-used method – BufferedReader.\n
+\n
+package com.mkyong.io;\n
+\n
+import java.io.BufferedReader;\n
+import java.io.FileReader;\n
+import java.io.IOException;\n
+\n
+public class BufferedReaderExample {\n
+\n
+	public static void main(String[] args) {\n
+\n
+		BufferedReader br = null;\n
+\n
+		try {\n
+\n
+			String sCurrentLine;\n
+\n
+			br = new BufferedReader(new FileReader("C:\\testing.txt"));\n
+\n
+			while ((sCurrentLine = br.readLine()) != null) {\n
+				System.out.println(sCurrentLine);\n
+			}\n
+\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		} finally {\n
+			try {\n
+				if (br != null)br.close();\n
+			} catch (IOException ex) {\n
+				ex.printStackTrace();\n
+			}\n
+		}\n
+\n
+	}\n
+}\n
+See updated example in JDK 7, which use try-with-resources new feature to close file automatically.\n
+\n
+package com.mkyong.io;\n
+\n
+import java.io.BufferedReader;\n
+import java.io.FileReader;\n
+import java.io.IOException;\n
+\n
+public class BufferedReaderExample {\n
+\n
+	public static void main(String[] args) {\n
+\n
+		try (BufferedReader br = new BufferedReader(new FileReader("C:\\testing.txt")))\n
+		{\n
+\n
+			String sCurrentLine;\n
+\n
+			while ((sCurrentLine = br.readLine()) != null) {\n
+				System.out.println(sCurrentLine);\n
+			}\n
+\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		}\n
+\n
+	}\n
+}\n
+
+    </string>
+
+    <!-->________________________________________________________________________________________________________________________________</!-->
+    <string name="WriteFileEithFOS">
+    In Java, FileOutputStream is a bytes stream class that\’s used to handle raw binary data. To write the data to file, you have to convert the data into bytes and save it to file. See below full example.\n
+\n
+package com.mkyong.io;\n
+\n
+import java.io.File;\n
+import java.io.FileOutputStream;\n
+import java.io.IOException;\n
+\n
+public class WriteFileExample {\n
+	public static void main(String[] args) {\n
+\n
+		FileOutputStream fop = null;\n
+		File file;\n
+		String content = "This is the text content";\n
+\n
+		try {\n
+\n
+			file = new File("c:/newfile.txt");\n
+			fop = new FileOutputStream(file);\n
+\n
+			// if file doesn\'t exists, then create it\n
+			if (!file.exists()) {\n
+				file.createNewFile();\n
+			}\n
+\n
+			// get the content in bytes\n
+			byte[] contentInBytes = content.getBytes();\n
+\n
+			fop.write(contentInBytes);\n
+			fop.flush();\n
+			fop.close();\n
+\n
+			System.out.println("Done");\n
+\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		} finally {\n
+			try {\n
+				if (fop != null) {\n
+					fop.close();\n
+				}\n
+			} catch (IOException e) {\n
+				e.printStackTrace();\n
+			}\n
+		}\n
+	}\n
+}\n\n
+An updated JDK7 example, using new “try resource close” method to handle file easily.\n
+\n
+package com.mkyong.io;\n
+\n
+import java.io.File;\n
+import java.io.FileOutputStream;\n
+import java.io.IOException;\n
+\n
+public class WriteFileExample {\n
+	public static void main(String[] args) {\n
+\n
+		File file = new File("c:/newfile.txt");\n
+		String content = "This is the text content";\n
+\n
+		try (FileOutputStream fop = new FileOutputStream(file)) {\n
+\n
+			// if file doesn\'t exists, then create it\n
+			if (!file.exists()) {\n
+				file.createNewFile();\n
+			}\n
+\n
+			// get the content in bytes\n
+			byte[] contentInBytes = content.getBytes();\n
+\n
+			fop.write(contentInBytes);\n
+			fop.flush();\n
+			fop.close();\n
+\n
+			System.out.println("Done");\n
+\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		}\n
+	}\n
+}\n
+
+    </string>
+    <!-->________________________________________________________________________________________________________________________________</!-->
+    <string name="WriteFileEithBW">
+In Java, BufferedWriter is a character streams class to handle the character data. Unlike bytes stream (convert data into bytes), you can just write the strings, arrays or characters data directly to file.\n
+\n
+package com.mkyong;\n
+\n
+import java.io.BufferedWriter;\n
+import java.io.File;\n
+import java.io.FileWriter;\n
+import java.io.IOException;\n
+\n
+public class WriteToFileExample {\n
+	public static void main(String[] args) {\n
+		try {\n
+\n
+			String content = "This is the content to write into file";\n
+\n
+			File file = new File("/users/mkyong/filename.txt");\n
+\n
+			// if file doesnt exists, then create it\n
+			if (!file.exists()) {\n
+				file.createNewFile();\n
+			}\n
+\n
+			FileWriter fw = new FileWriter(file.getAbsoluteFile());\n
+			BufferedWriter bw = new BufferedWriter(fw);\n
+			bw.write(content);\n
+			bw.close();\n
+\n
+			System.out.println("Done");\n
+\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		}\n
+	}\n
+}\n
+    </string>
+
+    <!-->________________________________________________________________________________________________________________________________</!-->
+    <string name="AppendContentToFile">
+        FileWritter, a character stream to write characters to file. By default, it will replace all the existing content with new content, however, when you specified a true (boolean) value as the second argument in FileWritter constructor, it will keep the existing content and append the new content in the end of the file.\n
+\n
+1. Replace all existing content with new content.\n
+\n
+new FileWriter(file);\n
+2. Keep the existing content and append the new content in the end of the file.\n
+\n
+new FileWriter(file,true);\n
+Append file example\n
+A text file named “javaio-appendfile.txt” and contains the following content.\n
+\n
+ABC Hello\n
+Append new content with new FileWriter(file,true)\n
+\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+import java.io.FileWriter;\n
+import java.io.BufferedWriter;\n
+import java.io.IOException;\n
+\n
+public class AppendToFileExample\n
+{\n
+    public static void main( String[] args )\n
+    {\n
+    	try{\n
+    		String data = " This content will append to the end of the file";\n
+\n
+    		File file =new File("javaio-appendfile.txt");\n
+\n
+    		//if file doesnt exists, then create it\n
+    		if(!file.exists()){\n
+    			file.createNewFile();\n
+    		}\n
+\n
+    		//true = append file\n
+    		FileWriter fileWritter = new FileWriter(file.getName(),true);\n
+    	        BufferedWriter bufferWritter = new BufferedWriter(fileWritter);\n
+    	        bufferWritter.write(data);\n
+    	        bufferWritter.close();\n
+\n
+	        System.out.println("Done");\n
+\n
+    	}catch(IOException e){\n
+    		e.printStackTrace();\n
+    	}\n
+    }\n
+}\n
+
+\n
+Result:\n\n
+Now, the text file “javaio-appendfile.txt” content is updated\n
+\n
+ABC Hello This content will append to the end of the file\n
+
+
+    </string>
+
+    <!-->________________________________________________________________________________________________________________________________</!-->
+    <string name="DeleteFile">
+        No nonsense, just issue the File.delete() to delete a file, it will return a boolean value to indicate the delete operation status; true if the file is deleted; false if failed.\n
+\n
+Example\n\n
+In this example, it will delete a log file named “c:\\logfile20100131.log”.\n
+\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+\n
+public class DeleteFileExample\n
+{\n
+    public static void main(String[] args)\n
+    {\n
+    	try{\n
+\n
+    		File file = new File("c:\\logfile20100131.log");\n
+\n
+    		if(file.delete()){\n
+    			System.out.println(file.getName() + " is deleted!");\n
+    		}else{\n
+    			System.out.println("Delete operation is failed.");\n
+    		}\n
+\n
+    	}catch(Exception e){\n
+\n
+    		e.printStackTrace();\n
+\n
+    	}\n
+\n
+    }\n
+}\n
+    </string>
+    <!-->________________________________________________________________________________________________________________________________</!-->
+    <string name="DeleteFilesWithCertainExtensionOnly">
+        In Java, you can implements the FilenameFilter, override the accept(File dir, String name) method, to perform the file filtering function.\n
+\n
+In this example, we show you how to use FilenameFilter to list out all files that are end with “.txt” extension in folder “c:\\folder“, and then delete it.\n
+\n
+package com.mkyong.io;\n
+\n
+import java.io.*;\n
+\n
+public class FileChecker {\n
+\n
+   private static final String FILE_DIR = "c:\\folder";\n
+   private static final String FILE_TEXT_EXT = ".txt";\n
+\n
+   public static void main(String args[]) {\n
+	new FileChecker().deleteFile(FILE_DIR,FILE_TEXT_EXT);\n
+   }\n
+\n
+   public void deleteFile(String folder, String ext){\n
+\n
+     GenericExtFilter filter = new GenericExtFilter(ext);\n
+     File dir = new File(folder);\n
+\n
+     //list out all the file name with .txt extension\n
+     String[] list = dir.list(filter);\n
+\n
+     if (list.length == 0) return;\n
+\n
+     File fileDelete;\n
+\n
+     for (String file : list){\n
+   	String temp = new StringBuffer(FILE_DIR)\n
+                      .append(File.separator)\n
+                      .append(file).toString();\n
+    	fileDelete = new File(temp);\n
+    	boolean isdeleted = fileDelete.delete();\n
+    	System.out.println("file : " + temp + " is deleted : " + isdeleted);\n
+     }\n
+   }\n
+\n
+   //inner class, generic extension filter\n
+   public class GenericExtFilter implements FilenameFilter {\n
+\n
+       private String ext;\n
+\n
+       public GenericExtFilter(String ext) {\n
+         this.ext = ext;\n
+       }\n
+\n
+       public boolean accept(File dir, String name) {\n
+         return (name.endsWith(ext));\n
+       }\n
+    }\n
+}\n
+
+    </string>
+
+    <!-->________________________________________________________________________________________________________________________________</!-->
+        <string name="FindFilesWithCertainExtensionOnly">
+A FilenameFilter example, it will only display files that use “.jpg” extension in folder “c:\\folder“.\n
+\n\n
+package com.mkyong.io;\n
+\n
+import java.io.*;\n
+\n
+public class FindCertainExtension {\n
+\n
+	private static final String FILE_DIR = "c:\\folder";\n
+	private static final String FILE_TEXT_EXT = ".jpg";\n
+\n
+	public static void main(String args[]) {\n
+		new FindCertainExtension().listFile(FILE_DIR, FILE_TEXT_EXT);\n
+	}\n
+\n
+	public void listFile(String folder, String ext) {\n
+\n
+		GenericExtFilter filter = new GenericExtFilter(ext);\n
+\n
+		File dir = new File(folder);\n
+\n
+		if(dir.isDirectory()==false){\n
+			System.out.println("Directory does not exists : " + FILE_DIR);\n
+			return;\n
+		}\n
+\n
+		// list out all the file name and filter by the extension\n
+		String[] list = dir.list(filter);\n
+\n
+		if (list.length == 0) {\n
+			System.out.println("no files end with : " + ext);\n
+			return;\n
+		}\n
+\n
+		for (String file : list) {\n
+			String temp = new StringBuffer(FILE_DIR).append(File.separator)\n
+					.append(file).toString();\n
+			System.out.println("file : " + temp);\n
+		}\n
+	}\n
+\n
+	// inner class, generic extension filter\n
+	public class GenericExtFilter implements FilenameFilter {\n
+\n
+		private String ext;\n
+\n
+		public GenericExtFilter(String ext) {\n
+			this.ext = ext;\n
+		}\n
+\n
+		public boolean accept(File dir, String name) {\n
+			return (name.endsWith(ext));\n
+		}\n
+	}\n
+}\n
+        </string>
+
+    <!-->________________________________________________________________________________________________________________________________</!-->
+    <string name="RenameFile">
+        Java comes with renameTo() method to rename a file. However , this method is really platform-dependent: you may successfully rename a file in *nix but failed in Windows. So, the return value (true if the file rename successful, false if failed) should always be checked to make sure the file is rename successful.\n
+\n
+File.renameTo() Example\n\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+\n
+public class RenameFileExample\n
+{\n
+    public static void main(String[] args)\n
+    {\n
+\n
+		File oldfile =new File("oldfile.txt");\n
+		File newfile =new File("newfile.txt");\n
+\n
+		if(oldfile.renameTo(newfile)){\n
+			System.out.println("Rename succesful");\n
+		}else{\n
+			System.out.println("Rename failed");\n
+		}\n
+\n
+    }\n
+}\n
+    </string>
+    <!-->________________________________________________________________________________________________________________________________</!-->
+    <string name="CopyFile">
+        Java didnt comes with any ready make file copy function, you have to manual create the file copy process. To copy file, just convert the file into a bytes stream with FileInputStream and write the bytes into another file with FileOutputStream.\n
+\n
+The overall processes are quite simple, just do not understand why Java doesn’t include this method into the java.io.File class.\n
+\n
+File copy example\n
+Here’s an example to copy a file named “Afile.txt” to another file named “Bfile.txt”. If the “Bfile.txt” is exists, the existing content will be replace, else it will create with the content of the “Afile.txt”.\n
+\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+import java.io.FileInputStream;\n
+import java.io.FileOutputStream;\n
+import java.io.IOException;\n
+import java.io.InputStream;\n
+import java.io.OutputStream;\n
+\n
+public class CopyFileExample\n
+{\n
+    public static void main(String[] args)\n
+    {\n
+\n
+    	InputStream inStream = null;\n
+	OutputStream outStream = null;\n
+\n
+    	try{\n
+\n
+    	    File afile =new File("Afile.txt");\n
+    	    File bfile =new File("Bfile.txt");\n
+\n
+    	    inStream = new FileInputStream(afile);\n
+    	    outStream = new FileOutputStream(bfile);\n
+\n
+    	    byte[] buffer = new byte[1024];\n
+\n
+    	    int length;\n
+    	    //copy the file content in bytes\n
+    	    while ((length = inStream.read(buffer)) > 0){\n
+\n
+    	    	outStream.write(buffer, 0, length);\n
+\n
+    	    }\n
+\n
+    	    inStream.close();\n
+    	    outStream.close();\n
+\n
+    	    System.out.println("File is copied successful!");\n
+\n
+    	}catch(IOException e){\n
+    		e.printStackTrace();\n
+    	}\n
+    }\n
+}\n
+    </string>
+
+    <!-->________________________________________________________________________________________________________________________________</!-->
+    <string name="MoveFileToAnotherDirectory">
+        Java.io.File does not contains any ready make move file method, but you can workaround with the following two alternatives :\n
+\n
+File.renameTo().\n\n
+Copy to new file and delete the original file.\n\n
+In the below two examples, you move a file “C:\\folderA\\Afile.txt” from one directory to another directory with the same file name “C:\\folderB\\Afile.txt“.\n
+\n
+1. File.renameTo()\n\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+\n
+public class MoveFileExample\n
+{\n
+    public static void main(String[] args)\n
+    {\n
+    	try{\n
+\n
+    	   File afile =new File("C:\\folderA\\Afile.txt");\n
+\n
+    	   if(afile.renameTo(new File("C:\\folderB\\" + afile.getName()))){\n
+    		System.out.println("File is moved successful!");\n
+    	   }else{\n
+    		System.out.println("File is failed to move!");\n
+    	   }\n
+\n
+    	}catch(Exception e){\n
+    		e.printStackTrace();\n
+    	}\n
+    }\n
+}\n
+\n
+ \n
+2. Copy and Delete\n\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+import java.io.FileInputStream;\n
+import java.io.FileOutputStream;\n
+import java.io.IOException;\n
+import java.io.InputStream;\n
+import java.io.OutputStream;\n
+\n
+public class MoveFileExample\n
+{\n
+    public static void main(String[] args)\n
+    {\n
+\n
+    	InputStream inStream = null;\n
+	OutputStream outStream = null;\n
+\n
+    	try{\n
+\n
+    	    File afile =new File("C:\\folderA\\Afile.txt");\n
+    	    File bfile =new File("C:\\folderB\\Afile.txt");\n
+\n
+    	    inStream = new FileInputStream(afile);\n
+    	    outStream = new FileOutputStream(bfile);\n
+\n
+    	    byte[] buffer = new byte[1024];\n
+\n
+    	    int length;\n
+    	    //copy the file content in bytes\n
+    	    while ((length = inStream.read(buffer)) > 0){\n
+\n
+    	    	outStream.write(buffer, 0, length);\n
+\n
+    	    }\n
+\n
+    	    inStream.close();\n
+    	    outStream.close();\n
+\n
+    	    //delete the original file\n
+    	    afile.delete();\n
+\n
+    	    System.out.println("File is copied successful!");\n
+\n
+    	}catch(IOException e){\n
+    	    e.printStackTrace();\n
+    	}\n
+    }\n
+}\n
+    </string>
+    <!-->________________________________________________________________________________________________________________________________</!-->
+    <string name="MakeFileReadOnly">
+A Java program to demonstrate the use of java.io.File setReadOnly() method to make a file read only. Since JDK 1.6, a new setWritable() method is provided to make a file to be writable again.\n
+\n
+Example\n\n
+package com.mkyong;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+\n
+public class FileReadAttribute\n
+{\n
+\n
+    public static void main(String[] args) throws IOException\n
+    {\n
+    	File file = new File("c:/file.txt");\n
+\n
+    	//mark this file as read only, since jdk 1.2\n
+    	file.setReadOnly();\n
+\n
+    	if(file.canWrite()){\n
+    	     System.out.println("This file is writable");\n
+    	}else{\n
+    	     System.out.println("This file is read only");\n
+    	}\n
+\n
+    	//revert the operation, mark this file as writable, since jdk 1.6\n
+    	file.setWritable(true);\n
+\n
+    	if(file.canWrite()){\n
+    	     System.out.println("This file is writable");\n
+    	}else{\n
+    	     System.out.println("This file is read only");\n
+    	}\n
+    }\n
+}\n
+\n
+ \n
+Output:\n
+This file is read only\n
+This file is writable\n
+    </string>
+
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="GetTheFileCreationDate">
+		There are no official way to get the file creation date in Java. However, you can use the following workaround to get the file creation date in Windows platform.\n
+\n
+How it work\n\n
+In Windows command prompt, type the command to list the file creation date.\n
+\n
+C:\>cmd /c dir c:\logfile.log /tc\n
+ Volume in drive C has no label.\n
+ Volume Serial Number is 0410-1EC3\n
+\n
+ Directory of c:\\n
+\n
+31/05/2010  08:05                14 logfile.log\n
+               1 File(s)             14 bytes\n
+               0 Dir(s)  35,389,460,480 bytes free\n
+The “31/05/2010 08:05” is what you need. The idea is use the Java “Runtime.getRuntime().exec” to execute the above command, hold the output, and parse it by lines until you get the date and time.\n
+\n
+\n
+ \n
+Example\n\n
+In this example, it will get the creation date of file (c:\\logfile.log).\n
+\n
+package com.mkyong.file;\n
+\n
+import java.io.BufferedReader;\n
+import java.io.IOException;\n
+import java.io.InputStreamReader;\n
+import java.util.StringTokenizer;\n
+\n
+public class GetFileCreationDateExample\n
+{\n
+    public static void main(String[] args)
+    {\n
+\n
+    	try{\n
+\n
+    		Process proc =\n
+    		   Runtime.getRuntime().exec("cmd /c dir c:\\logfile.log /tc");\n
+\n
+    		BufferedReader br =\n
+    		   new BufferedReader(\n
+    		      new InputStreamReader(proc.getInputStream()));\n
+\n
+    		String data ="";\n
+\n
+    		//it\'s quite stupid but work\n
+    		for(int i=0; 6 > i; i++){\n
+    			data = br.readLine();\n
+    		}\n
+\n
+    		System.out.println("Extracted value : " + data);\n
+\n
+    		//split by space\n
+    		StringTokenizer st = new StringTokenizer(data);\n
+    		String date = st.nextToken();//Get date\n
+    		String time = st.nextToken();//Get time\n
+\n
+    		System.out.println("Creation Date  : " + date);\n
+    		System.out.println("Creation Time  : " + time);\n
+\n
+    	}catch(IOException e){\n
+\n
+    		e.printStackTrace();\n
+\n
+    	}\n
+\n
+    }\n
+}\n
+\n
+ \n
+Result\n\n
+Extracted value : 31/05/2010  08:05  14 logfile.log\n
+Creation Date  : 31/05/2010\n
+Creation Time  : 08:05\n
+
+
+	</string>
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="GetTheFileLastModifiedDate">
+		In Java, you can use the File.lastModified() to get the file’s last modified timestamps. This method will returns the time in milliseconds (long value), you may to format it with SimpleDateFormat to make it a human readable format.\n
+\n
+File Last Modified\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+import java.text.SimpleDateFormat;\n
+\n
+public class GetFileLastModifiedExample\n
+{\n
+    public static void main(String[] args)\n
+    {\n
+	File file = new File("c:\\logfile.log");\n
+\n
+	System.out.println("Before Format : " + file.lastModified());\n
+\n
+	SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");\n
+\n
+	System.out.println("After Format : " + sdf.format(file.lastModified()));\n
+    }\n
+}\n
+\n
+ \n
+Result\n\n
+Before Format : 1275265349422\n
+After Format : 05/31/2010 08:22:29\n
+\n
+
+		</string>
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="ChangeTheFileLastModifiedDate">
+		Here’s an example to show the use of File.setLastModified() to change the file’s last modified date. This method accept the new modified date in milliseconds (long type), some data type conversion are required.\n
+\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+import java.text.ParseException;\n
+import java.text.SimpleDateFormat;\n
+import java.util.Date;\n
+\n
+public class ChangeFileLastModifiedExample\n
+{\n
+    public static void main(String[] args)\n
+    {\n
+\n
+    	try{\n
+\n
+    		File file = new File("C:\\logfile.log");\n
+\n
+    		//print the original last modified date\n
+    		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");\n
+    		System.out.println("Original Last Modified Date : "\n
+    				+ sdf.format(file.lastModified()));\n
+\n
+    		//set this date\n
+    		String newLastModified = "01/31/1998";\n
+\n
+    		//need convert the above date to milliseconds in long value\n
+    		Date newDate = sdf.parse(newLastModified);\n
+    		file.setLastModified(newDate.getTime());\n
+\n
+    		//print the latest last modified date\n
+    		System.out.println("Lastest Last Modified Date : "\n
+    				+ sdf.format(file.lastModified()));\n
+\n
+    	}catch(ParseException e){\n
+\n
+    		e.printStackTrace();\n
+\n
+    	}\n
+\n
+    }\n
+}\n
+Result\n\n
+Original Last Modified Date : 05/31/2010\n
+Lastest Last Modified Date : 01/31/1998\n
+
+		</string>
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="GetFileSize">
+		In Java, you can use the File.length() method to get the file size in bytes.\n
+\n
+Example\n\n
+Get an image file (c:\\java_xml_logo.jpg) 14KB, and display the file size.\n
+\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+\n
+public class FileSizeExample\n
+{\n
+    public static void main(String[] args)\n
+    {\n
+		File file =new File("c:\\java_xml_logo.jpg");\n
+\n
+		if(file.exists()){\n
+\n
+			double bytes = file.length();\n
+			double kilobytes = (bytes / 1024);\n
+			double megabytes = (kilobytes / 1024);\n
+			double gigabytes = (megabytes / 1024);\n
+			double terabytes = (gigabytes / 1024);\n
+			double petabytes = (terabytes / 1024);\n
+			double exabytes = (petabytes / 1024);\n
+			double zettabytes = (exabytes / 1024);\n
+			double yottabytes = (zettabytes / 1024);\n
+\n
+			System.out.println("bytes : " + bytes);\n
+			System.out.println("kilobytes : " + kilobytes);\n
+			System.out.println("megabytes : " + megabytes);\n
+			System.out.println("gigabytes : " + gigabytes);\n
+			System.out.println("terabytes : " + terabytes);\n
+			System.out.println("petabytes : " + petabytes);\n
+			System.out.println("exabytes : " + exabytes);\n
+			System.out.println("zettabytes : " + zettabytes);\n
+			System.out.println("yottabytes : " + yottabytes);\n
+		}else{\n
+			 System.out.println("File does not exists!");\n
+		}\n
+\n
+    }\n
+}\n
+\n
+ \n
+Result\n\n
+bytes : 13900.0\n
+kilobytes : 13.57421875\n
+megabytes : 0.013256072998046875\n
+gigabytes : 1.2945383787155151E-5\n
+terabytes : 1.2641976354643703E-8\n
+petabytes : 1.234568003383174E-11\n
+exabytes : 1.205632815803881E-14\n
+zettabytes : 1.1773757966834775E-17\n
+yottabytes : 1.1497810514487085E-20\n\n
+
+		</string>
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="GetFilepathOfFile">
+		The File.getAbsolutePath() will give you the full complete path name (filepath + filename) of a file.\n
+\n
+For example,\n
+\n
+File file = File("C:\\abcfolder\\textfile.txt");\n
+System.out.println("Path : " + file.getAbsolutePath());\n
+It will display the full path : “Path : C:\\abcfolder\\textfile.txt“.\n
+\n
+In most cases, you may just need to get the file path only “C:\\abcfolder\\“. With the help of substring() and lastIndexOf() menthods, you can extract the file path easily :\n
+\n
+File file = File("C:\\abcfolder\\textfile.txt");\n
+String absolutePath = file.getAbsolutePath();\n
+String filePath = absolutePath.\n
+    substring(0,absolutePath.lastIndexOf(File.separator));\n
+Get file path example\n
+In this example, it create a temporary file, and print out the file path of it.\n
+\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+\n
+public class AbsoluteFilePathExample\n
+{\n
+    public static void main(String[] args)\n
+    {\n
+    	try{\n
+\n
+    	    File temp = File.createTempFile("i-am-a-temp-file", ".tmp" );\n
+\n
+    	    String absolutePath = temp.getAbsolutePath();\n
+    	    System.out.println("File path : " + absolutePath);\n
+\n
+    	    String filePath = absolutePath.\n
+    	    	     substring(0,absolutePath.lastIndexOf(File.separator));\n
+\n
+    	    System.out.println("File path : " + filePath);\n
+\n
+    	}catch(IOException e){\n
+\n
+    	    e.printStackTrace();\n
+\n
+    	}\n
+\n
+    }\n
+}\n
+\n
+ \n
+Result\n\n
+File path : C:\Users\mkyong\AppData\Local\Temp\i-am-a-temp-file69424.tmp\n
+File path : C:\Users\mkyong\AppData\Local\Temp\n
+		</string>
+
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="GetTheTotalNumberOfLinesOfFile">
+		LineNumberReader.readLine() method and accumulate it as the total number of lines. A line is considered a line if it ends with a line feed (\"\\n\") or a carriage return (\"\\r\").\n
+\n
+Example\n\n
+A text file named “c:\\ihave10lines.txt”, contains 10 lines\n
+\n
+Line 1\n
+Line 2\n
+Line 3\n
+Line 4\n
+Line 5\n
+Line 6\n
+Line 7\n
+Line 8\n
+Line 9\n
+Line 10\n
+Counts the line\n
+\n
+package com.mkyong.file;\n
+\n
+import java.io.File;\n
+import java.io.FileReader;\n
+import java.io.IOException;\n
+import java.io.LineNumberReader;\n
+\n
+public class LineNumberReaderExample\n
+{\n
+    public static void main(String[] args)\n
+    {\n
+\n
+    	try{\n
+\n
+    		File file =new File("c:\\ihave10lines.txt");\n
+\n
+    		if(file.exists()){\n
+\n
+    		    FileReader fr = new FileReader(file);\n
+    		    LineNumberReader lnr = new LineNumberReader(fr);\n
+\n
+    		    int linenumber = 0;\n
+\n
+    	            while (lnr.readLine() != null){\n
+    	        	linenumber++;\n
+    	            }\n
+\n
+    	            System.out.println("Total number of lines : " + linenumber);\n
+\n
+    	            lnr.close();\n
+\n
+\n
+    		}else{\n
+    			 System.out.println("File does not exists!");\n
+    		}\n
+\n
+    	}catch(IOException e){\n
+    		e.printStackTrace();\n
+    	}\n
+\n
+    }\n
+}\n
+\n
+ \n
+Result\n\n
+Total number of lines : 10\n
+		</string>
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="CheckIfFileExists">
+		To determine whether a file is exist in your file system, use the Java IO File.exists().\n
+\n
+package com.mkyong.io;\n
+\n
+import java.io.*;\n
+\n
+public class FileChecker {\n
+\n
+  public static void main(String args[]) {\n
+\n
+	  File f = new File("c:\\mkyong.txt");\n
+\n
+	  if(f.exists()){\n
+		  System.out.println("File existed");\n
+	  }else{\n
+		  System.out.println("File not found!");\n
+	  }\n
+\n
+  }\n
+\n
+}\n
+		</string>
+
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="CheckIfFileIsHidden">
+		A Java program to demonstrate the use of java.io.File isHidden() to check if a file is hidden.\n
+\n
+package com.mkyong;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+\n
+public class FileHidden\n
+{\n
+\n
+    public static void main(String[] args) throws IOException\n
+    {\n
+    	File file = new File("c:/hidden-file.txt");\n
+\n
+    	if(file.isHidden()){\n
+    		System.out.println("This file is hidden");\n
+    	}else{\n
+    		System.out.println("This file is not hidden");\n
+    	}\n
+    }\n
+}\n\n
+Note\n
+The isHidden() method is system dependent, on UNIX platform, a file is considered hidden if it’s name is begins with a “dot” symbol (\".\"); On Microsoft Windows platform, a file is considered to be hidden, if it’s marked as hidden in the file properties.\n
+
+		</string>
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="ReadUTF8EncodedDataFromFile">
+		Here’s the example to demonstrate how to read “UTF-8” encoded data from a file in Java\n
+\n
+package com.mkyong;\n
+\n
+import java.io.BufferedReader;\n
+import java.io.File;\n
+import java.io.FileInputStream;\n
+import java.io.IOException;\n
+import java.io.InputStreamReader;\n
+import java.io.UnsupportedEncodingException;\n
+\n
+public class test {\n
+	public static void main(String[] args){\n
+\n
+	try {\n
+		File fileDir = new File("c:\\temp\\test.txt");\n
+\n
+		BufferedReader in = new BufferedReader(\n
+		   new InputStreamReader(\n
+                      new FileInputStream(fileDir), "UTF8"));\n
+\n
+		String str;\n
+\n
+		while ((str = in.readLine()) != null) {\n
+		    System.out.println(str);\n
+		}\n
+\n
+                in.close();\n
+	    }\n
+	    catch (UnsupportedEncodingException e)\n
+	    {\n
+			System.out.println(e.getMessage());\n
+	    }\n
+	    catch (IOException e)\n
+	    {\n
+			System.out.println(e.getMessage());\n
+	    }\n
+	    catch (Exception e)\n
+	    {\n
+			System.out.println(e.getMessage());\n
+	    }\n
+	}\n
+}\n\n
+Result\n
+Website UTF-8\n
+?? UTF-8\n
+??????? UTF-8\n\n
+Do not worry about the symbol “???”, this is because my output console is not support the UTF-8 data. The variable “str” is storing exactly same “UTF-8” encoded data as showed in the text file.\n
+		</string>
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="WriteUTF8EncodedDataIntoFile">
+		Here’s the Java example to demonstrate how to write UTF-8 encoded data into a text file – “c:\\temp\\test.txt”\n
+
+P.S Symbol “??” is some “UTF-8” data in Chinese and Japanese\n
+\n
+package com.mkyong;\n
+\n
+import java.io.BufferedWriter;\n
+import java.io.File;\n
+import java.io.FileOutputStream;\n
+import java.io.IOException;\n
+import java.io.OutputStreamWriter;\n
+import java.io.UnsupportedEncodingException;\n
+import java.io.Writer;\n
+\n
+public class test {\n
+	public static void main(String[] args){\n
+\n
+	  try {\n
+		File fileDir = new File("c:\\temp\\test.txt");\n
+			\n
+		Writer out = new BufferedWriter(new OutputStreamWriter(\n
+			new FileOutputStream(fileDir), "UTF8"));\n
+\n
+		out.append("Website UTF-8").append(\"\\r\\n\");\n
+		out.append("?? UTF-8").append(\"\\r\\n\");\n
+		out.append("??????? UTF-8").append(\"\\r\\n\");\n
+		\n
+		out.flush();\n
+		out.close();\n
+	        \n
+	    } \n
+	   catch (UnsupportedEncodingException e) \n
+	   {\n
+		System.out.println(e.getMessage());\n
+	   } \n
+	   catch (IOException e) \n
+	   {\n
+		System.out.println(e.getMessage());\n
+	    }\n
+	   catch (Exception e)\n
+	   {\n
+		System.out.println(e.getMessage());\n
+	   } \n
+	}	\n
+}\n
+		</string>
+
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="AssignFileContentIntoVariable">
+	Most people will read the file content and assign to StringBuffer or String line by line. Here\’s another trick that may interest you – how to assign whole file content into a variable with one Java\’s statement, try it :)\n
+\n
+Example\n\n
+In this example, you will use DataInputStreamto convert all the content into bytes, and create a String variable with the converted bytes.\n
+\n
+package com.mkyong.io;\n
+\n
+import java.io.DataInputStream;\n
+import java.io.FileInputStream;\n
+\n
+public class App{\n
+\n
+	public static void main (String args[]) {\n
+\n
+	try{\n
+\n
+	         DataInputStream dis =\n
+		    new DataInputStream (\n
+		    	 new FileInputStream ("c:\\logging.log"));\n
+\n
+		 byte[] datainBytes = new byte[dis.available()];\n
+		 dis.readFully(datainBytes);\n
+		 dis.close();\n
+\n
+		 String content = new String(datainBytes, 0, datainBytes.length);\n
+\n
+		 System.out.println(content);\n
+\n
+	}catch(Exception ex){\n
+		ex.printStackTrace();\n
+	}\n
+\n
+  }\n
+}\n
+\n
+ \n
+Output\n
+This will print out all the “logging.log” file content.\n
+\n
+10:21:29,425  INFO Version:15 - Hibernate Annotations 3.3.0.GA\n
+10:21:29,441  INFO Environment:509 - Hibernate 3.2.3\n
+10:21:29,441  INFO Environment:542 - hibernate.properties not found\n
+10:21:29,456  INFO Environment:676 - Bytecode provider name : cglib\n
+10:21:29,456  INFO Environment:593 - using JDK 1.4 java.sql.Timestamp handling\n
+............\n
+	</string>
+
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="GenerateFileChecksumValue">
+		Here is a simple example to demonstrate how to generate a file checksum value with “SHA-1” mechanism in Java.\n
+\n
+import java.io.FileInputStream;\n
+import java.security.MessageDigest;\n
+\n
+public class TestCheckSum {\n
+\n
+  public static void main(String args[]) throws Exception {\n
+\n
+    String datafile = "c:\\INSTLOG.TXT";\n
+\n
+    MessageDigest md = MessageDigest.getInstance("SHA1");\n
+    FileInputStream fis = new FileInputStream(datafile);\n
+    byte[] dataBytes = new byte[1024];\n
+\n
+    int nread = 0;\n
+\n
+    while ((nread = fis.read(dataBytes)) != -1) {\n
+      md.update(dataBytes, 0, nread);\n
+    };\n
+\n
+    byte[] mdbytes = md.digest();\n
+\n
+    //convert the byte to hex format\n
+    StringBuffer sb = new StringBuffer("");\n
+    for (int i = 0;mdbytes.length > i; i++) {\n
+    	sb.append(Integer.toString((mdbytes[i] &amp; 0xff) + 0x100, 16).substring(1));\n
+    }\n
+\n
+    System.out.println(\"Digest(in hex format):: \" + sb.toString());\n
+\n
+  }\n
+}\n
+Result\n\n
+Digest(in hex format):: bf35fa420d3e0f669e27b337062bf19f510480d4\n
+The "INSTLOG.TXT" file has a "bf35fa420d3e0f669e27b337062bf19f510480d4" SHA-1 checksum value.\n
+\n
+For checksum value in MD5 format , you need to change the MessageDigest :\n
+\n
+MessageDigest md = MessageDigest.getInstance("MD5");\n
+
+
+		</string>
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="ConvertFileIntoAnArrayOfBytes">
+		The Java.io.FileInputStream can used to convert a File object into an array of bytes. In this example, you read a file from “C:\\testing.txt“, convert it into an array of bytes and print out the content.\n
+\n
+package com.mkyong.common;\n
+\n
+import java.io.File;\n
+import java.io.FileInputStream;\n
+import java.io.FileOutputStream;\n
+\n
+public class FileToArrayOfBytes\n
+{\n
+    public static void main( String[] args )\n
+    {\n
+    	FileInputStream fileInputStream=null;\n
+\n
+        File file = new File(\"C:\\testing.txt\");\n
+\n
+        byte[] bFile = new byte[(int) file.length()];\n
+\n
+        try {\n
+            //convert file into array of bytes\n
+	    fileInputStream = new FileInputStream(file);\n
+	    fileInputStream.read(bFile);\n
+	    fileInputStream.close();\n
+\n
+	    for (int i = 0; bFile.length > i; i++) {\n
+	       	System.out.print((char)bFile[i]);\n
+            }\n
+\n
+	    System.out.println(\"Done\");\n
+        }catch(Exception e){\n
+        	e.printStackTrace();\n
+        }\n
+    }\n
+}\n
+		</string>
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="ConvertArrayOfBytesIntoFile">
+		The Java.io.FileOutputStream can used to convert an array of bytes into a file. In this example, you read a file from “C:\\testing.txt“, and convert it into an array of bytes, and write it into another file “C:\\testing2.txt“.\n
+\n
+package com.mkyong.common;\n
+\n
+import java.io.File;\n
+import java.io.FileInputStream;\n
+import java.io.FileOutputStream;\n
+\n
+public class ArrayOfBytesToFile\n
+{\n
+    public static void main( String[] args )\n
+    {\n
+    	FileInputStream fileInputStream=null;\n
+\n
+        File file = new File(\"C:\\testing.txt\");\n
+\n
+        byte[] bFile = new byte[(int) file.length()];\n
+\n
+        try {\n
+            //convert file into array of bytes\n
+	    fileInputStream = new FileInputStream(file);\n
+	    fileInputStream.read(bFile);\n
+	    fileInputStream.close();\n
+\n
+	    //convert array of bytes into file\n
+	    FileOutputStream fileOuputStream =\n
+                  new FileOutputStream(\"C:\\testing2.txt\");\n
+	    fileOuputStream.write(bFile);\n
+	    fileOuputStream.close();\n
+\n
+	    System.out.println(\"Done\");\n
+        }catch(Exception e){\n
+            e.printStackTrace();\n
+        }\n
+    }\n
+}\n
+		</string>
+
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="ConvertStringToInputStream">
+		A simple Java program to convert a String to InputStream, and use BufferedReader to read and display the converted InputStream.\n
+\n
+package com.mkyong;\n
+\n
+import java.io.BufferedReader;\n
+import java.io.ByteArrayInputStream;\n
+import java.io.IOException;\n
+import java.io.InputStream;\n
+import java.io.InputStreamReader;\n
+\n
+public class StringToInputStreamExample {\n
+    public static void main(String[] args) throws IOException {\n
+	String str = \"This is a String ~ GoGoGo\";\n
+\n
+	// convert String into InputStream\n
+	InputStream is = new ByteArrayInputStream(str.getBytes());\n
+\n
+	// read it with BufferedReader\n
+	BufferedReader br = new BufferedReader(new InputStreamReader(is));\n
+\n
+	String line;\n
+	while ((line = br.readLine()) != null) {\n
+		System.out.println(line);\n
+	}\n
+\n
+	br.close();\n
+   }\n
+}\n
+		</string>
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="ConvertInputStreamToString">
+		In Java, you can use BufferedReader + InputStreamReader to convert InputStream to String.\n
+\n
+InputStreamToStringExample.java\n
+package com.mkyong.core;\n
+\n
+import java.io.BufferedReader;\n
+import java.io.ByteArrayInputStream;\n
+import java.io.IOException;\n
+import java.io.InputStream;\n
+import java.io.InputStreamReader;\n
+\n
+public class InputStreamToStringExample {\n
+\n
+	public static void main(String[] args) throws IOException {\n
+\n
+		// intilize an InputStream\n
+		InputStream is =\n
+                     new ByteArrayInputStream(\"file content..blah blah\".getBytes());\n
+\n
+		String result = getStringFromInputStream(is);\n
+\n
+		System.out.println(result);\n
+		System.out.println(\"Done\");\n
+\n
+	}\n
+\n
+	// convert InputStream to String\n
+	private static String getStringFromInputStream(InputStream is) {\n
+\n
+		BufferedReader br = null;\n
+		StringBuilder sb = new StringBuilder();\n
+\n
+		String line;\n
+		try {\n
+\n
+			br = new BufferedReader(new InputStreamReader(is));\n
+			while ((line = br.readLine()) != null) {\n
+				sb.append(line);\n
+			}\n
+\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		} finally {\n
+			if (br != null) {\n
+				try {\n
+					br.close();\n
+				} catch (IOException e) {\n
+					e.printStackTrace();\n
+				}\n
+			}\n
+		}\n
+\n
+		return sb.toString();\n
+\n
+	}\n
+\n
+}\n\n
+Output\n
+\n
+file content..blah blah\n
+Done\n
+		</string>
+
+	<!-->________________________________________________________________________________________________________________________________</!-->
+	<string name="ConvertFileToHex">
+A simple Java program to demonstrate the use of String formatter(\“%02X \“) to convert a File into Hex value. The attached comments should be self-explanatory.\n
+\n
+Example\n
+package com.mkyong;\n
+\n
+import java.io.File;\n
+import java.io.FileInputStream;\n
+import java.io.IOException;\n
+import java.io.InputStream;\n
+import java.io.PrintStream;\n
+\n
+public class File2Hex\n
+{\n
+    public static void convertToHex(PrintStream out, File file) throws IOException {\n
+	InputStream is = new FileInputStream(file);\n
+\n
+	int bytesCounter =0;\n
+	int value = 0;\n
+	StringBuilder sbHex = new StringBuilder();\n
+	StringBuilder sbText = new StringBuilder();\n
+	StringBuilder sbResult = new StringBuilder();\n
+\n
+	while ((value = is.read()) != -1) {\n
+	    //convert to hex value with \"X\" formatter\n
+            sbHex.append(String.format(\"%02X \", value));\n
+\n
+	    //If the chracater is not convertable, just print a dot symbol \".\"\n
+	    if (!Character.isISOControl(value)) {\n
+	      	sbText.append((char)value);\n
+	    }else {\n
+	        sbText.append(\".\");\n
+	    }\n
+\n
+	    //if 16 bytes are read, reset the counter,\n
+            //clear the StringBuilder for formatting purpose only.\n
+	    if(bytesCounter==15){\n
+	      	sbResult.append(sbHex).append(\"      \").append(sbText).append(\"\\n\");\n
+	       	sbHex.setLength(0);\n
+	        sbText.setLength(0);\n
+	       	bytesCounter=0;\n
+	    }else{\n
+	        bytesCounter++;\n
+	    }\n
+       }\n
+\n
+	//if still got content\n
+	if(bytesCounter!=0){\n
+	     //add spaces more formatting purpose only\n
+	    for(; 16>bytesCounter; bytesCounter++){\n
+		//1 character 3 spaces\n
+		sbHex.append(\" \");\n
+	    }\n
+	    sbResult.append(sbHex).append(\" \").append(sbText).append(\"\\n\");\n
+        }\n
+\n
+        out.print(sbResult);\n
+        is.close();\n
+  }\n
+\n
+   public static void main(String[] args) throws IOException\n
+   {\n
+    	//display output to console\n
+    	convertToHex(System.out, new File(\"c:/file.txt\"));\n
+\n
+    	//write the output into a file\n
+    	convertToHex(new PrintStream(\"c:/file.hex\"), new File(\"c:/file.txt\"));\n
+    }\n
+}\n
+\
+		</string>
+</resources>
