@@ -41,7 +41,7 @@
         <activity android:name=".javaio.file.RenameFile"></activity>
         <activity android:name=".javaio.file.CopyFile"></activity>
         <activity android:name=".javaio.file.MoveFileToAnotherDirectory"></activity>
-        <activity android:name=".javaio.file.MakeFileReadOnly"></activity><!-->stopped here</!-->
+        <activity android:name=".javaio.file.MakeFileReadOnly"></activity>
         <activity android:name=".javaio.file.GetTheFileCreationDate"></activity>
         <activity android:name=".javaio.file.GetTheFileLastModifiedDate"></activity>
         <activity android:name=".javaio.file.ChangeTheFileLastModifiedDate"></activity>
@@ -101,7 +101,7 @@
 
         <activity android:name=".consoleio.ConsoleIO"></activity>
         <!---> список ConsoleIO содержит эти подразделы</!-->
-        <activity android:name=".consoleio.GetTheStandartInput"></activity>
+        <activity android:name=".consoleio.GetTheStandartInput"></activity><!-->stopped here</!-->
 
 
 
@@ -109,7 +109,46 @@
 
 
 
-        <activity android:name=".JavaXML"></activity>
+        <activity android:name=".javaxml.JavaXML"></activity>
+        <!---> список JavaXML содержит эти подразделы</!-->
+        <activity android:name=".javaxml.dom.DOMXMLParser"></activity>
+        <!---> список DOMXMLParser содержит эти подразделы</!-->
+        <activity android:name=".javaxml.dom.ReadXMLFile"></activity>
+        <activity android:name=".javaxml.dom.ModifyExistingXMLFile"></activity>
+        <activity android:name=".javaxml.dom.CreateNewXMLFile"></activity>
+        <activity android:name=".javaxml.dom.CountXMLElements"></activity>
+
+
+
+        <activity android:name=".javaxml.sax.SAXXMLParser"></activity>
+        <!---> список DOMXMLParser содержит эти подразделы</!-->
+        <activity android:name=".javaxml.sax.ReadXMLFileSAX"></activity>
+        <activity android:name=".javaxml.sax.ReadUTF8XMLFile"></activity>
+        <activity android:name=".javaxml.sax.SAXErrorInvalidByte1"></activity>
+        <activity android:name=".javaxml.sax.SAXErrorContentIsNotAllowed"></activity>
+
+
+
+
+        <activity android:name=".javaxml.jdom.JDOMXMLParser"></activity>
+        <!---> список JDOMXMLParser содержит эти подразделы</!-->
+        <activity android:name=".javaxml.jdom.ReadXMLFileJDOM"></activity>
+        <activity android:name=".javaxml.jdom.ModifyExistingXMLFileJDOM"></activity>
+        <activity android:name=".javaxml.jdom.CreateNewXMLFileJDOM"></activity>
+
+
+
+        <activity android:name=".javaxml.jaxb.JAXBExample"></activity>
+        <!---> список JAXBExample содержит эти подразделы</!-->
+        <activity android:name=".javaxml.jaxb.JAXB2Example"></activity>
+
+
+
+        <activity android:name=".javaxml.xmlproperties.XMLProperties"></activity>
+        <!---> список XMLProperties содержит эти подразделы</!-->
+        <activity android:name=".javaxml.xmlproperties.ConvertPropertiesFileIntoXMLFile"></activity>
+        <activity android:name=".javaxml.xmlproperties.ConvertXMLFileIntoPropertiesFile"></activity>
+
 
         <activity android:name=".JavaRegEx"></activity>
 

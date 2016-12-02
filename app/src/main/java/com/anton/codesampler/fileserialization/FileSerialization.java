@@ -7,9 +7,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.anton.codesampler.fileserialization.ReadObjFromFile;
-import com.anton.codesampler.fileserialization.WriteAnObjToFile;
-
 /**
  * Created by rem0tec0de on 27.11.16.
  */
