@@ -48,21 +48,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.1_31e057c2740dd1275e1a44edbbb479e4b9970770/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="cb2d948319367b100acc76d66f7871eeb44f011f">
         <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_36a8b711a38218c8becc29b825dc93a5606ed688/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.1_31e057c2740dd1275e1a44edbbb479e4b9970770/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -79,7 +79,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="19db4bc7413070e8b593adbfc9002e4f7da30881">
+        sha1="f4381c25031c20e06767f43d218d26dc4a9f2346">
         <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6b3f9a0c5ee045ecbfc3d81bf4b987150e36bff6/classes.dex" />
     </item>
     <item
@@ -142,7 +142,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="03fedd0cb63afc679eabb8663069fa768bbad6be">
+        sha1="bad3f575f99029a1a3dc5547d94383c1bf935c8d">
         <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8fdcd680b121a615111bbf193cdc7ea748de5e7a/classes.dex" />
     </item>
     <item

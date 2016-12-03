@@ -20,88 +20,88 @@
 
         <!---> это главные список </!-->
         <!---> это первый элемент списка</!-->
-        <activity android:name=".JavaIO"></activity>
+        <activity android:name=".javaIO.JavaIO"></activity>
 
         <!---> список JavaIO содержит эти подразделы</!-->
 
-        <activity android:name=".javaio.file.File"></activity>
+        <activity android:name=".javaIO.file.File"></activity>
 
         <!---> список File содержит эти подразделы</!-->
-        <activity android:name=".javaio.file.CreateFile"></activity>
-        <activity android:name=".javaio.file.ConstructFilePath"></activity>
-        <activity android:name=".javaio.file.SetTheFilePermission"></activity>
-        <activity android:name=".javaio.file.ReadFileEithBIS"></activity>
-        <activity android:name=".javaio.file.ReadFileWithBufferedReader"></activity>
-        <activity android:name=".javaio.file.WriteFileWithFOS"></activity>
-        <activity android:name=".javaio.file.WriteFileEithBW"></activity>
-        <activity android:name=".javaio.file.AppendContentToFile"></activity>
-        <activity android:name=".javaio.file.DeleteFile"></activity>
-        <activity android:name=".javaio.file.DeleteFilesWithCertainExtensionOnly"></activity>
-        <activity android:name=".javaio.file.FindFilesWithCertainExtensionOnly"></activity>
-        <activity android:name=".javaio.file.RenameFile"></activity>
-        <activity android:name=".javaio.file.CopyFile"></activity>
-        <activity android:name=".javaio.file.MoveFileToAnotherDirectory"></activity>
-        <activity android:name=".javaio.file.MakeFileReadOnly"></activity>
-        <activity android:name=".javaio.file.GetTheFileCreationDate"></activity>
-        <activity android:name=".javaio.file.GetTheFileLastModifiedDate"></activity>
-        <activity android:name=".javaio.file.ChangeTheFileLastModifiedDate"></activity>
-        <activity android:name=".javaio.file.GetFileSize"></activity>
-        <activity android:name=".javaio.file.GetFilepathOfFile"></activity>
-        <activity android:name=".javaio.file.GetTheTotalNumberOfLinesOfFile"></activity>
-        <activity android:name=".javaio.file.CheckIfFileExists"></activity>
-        <activity android:name=".javaio.file.CheckIfFileIsHidden"></activity>
-        <activity android:name=".javaio.file.ReadUTF8EncodedDataFromFile"></activity>
-        <activity android:name=".javaio.file.WriteUTF8EncodedDataIntoFile"></activity>
-        <activity android:name=".javaio.file.AssignFileContentIntoVariable"></activity>
-        <activity android:name=".javaio.file.GenerateFileChecksumValue"></activity>
-        <activity android:name=".javaio.file.ConvertFileIntoAnArrayOfBytes"></activity>
-        <activity android:name=".javaio.file.ConvertArrayOfBytesIntoFile"></activity>
-        <activity android:name=".javaio.file.ConvertStringToInputStream"></activity>
-        <activity android:name=".javaio.file.ConvertInputStreamToString"></activity>
-        <activity android:name=".javaio.file.ConvertFileToHex"></activity>
-        <activity android:name=".javaio.file.GetTotalOfFreeDiskSpace"></activity>
+        <activity android:name=".javaIO.file.CreateFile"></activity>
+        <activity android:name=".javaIO.file.ConstructFilePath"></activity>
+        <activity android:name=".javaIO.file.SetTheFilePermission"></activity>
+        <activity android:name=".javaIO.file.ReadFileEithBIS"></activity>
+        <activity android:name=".javaIO.file.ReadFileWithBufferedReader"></activity>
+        <activity android:name=".javaIO.file.WriteFileWithFOS"></activity>
+        <activity android:name=".javaIO.file.WriteFileEithBW"></activity>
+        <activity android:name=".javaIO.file.AppendContentToFile"></activity>
+        <activity android:name=".javaIO.file.DeleteFile"></activity>
+        <activity android:name=".javaIO.file.DeleteFilesWithCertainExtensionOnly"></activity>
+        <activity android:name=".javaIO.file.FindFilesWithCertainExtensionOnly"></activity>
+        <activity android:name=".javaIO.file.RenameFile"></activity>
+        <activity android:name=".javaIO.file.CopyFile"></activity>
+        <activity android:name=".javaIO.file.MoveFileToAnotherDirectory"></activity>
+        <activity android:name=".javaIO.file.MakeFileReadOnly"></activity>
+        <activity android:name=".javaIO.file.GetTheFileCreationDate"></activity>
+        <activity android:name=".javaIO.file.GetTheFileLastModifiedDate"></activity>
+        <activity android:name=".javaIO.file.ChangeTheFileLastModifiedDate"></activity>
+        <activity android:name=".javaIO.file.GetFileSize"></activity>
+        <activity android:name=".javaIO.file.GetFilepathOfFile"></activity>
+        <activity android:name=".javaIO.file.GetTheTotalNumberOfLinesOfFile"></activity>
+        <activity android:name=".javaIO.file.CheckIfFileExists"></activity>
+        <activity android:name=".javaIO.file.CheckIfFileIsHidden"></activity>
+        <activity android:name=".javaIO.file.ReadUTF8EncodedDataFromFile"></activity>
+        <activity android:name=".javaIO.file.WriteUTF8EncodedDataIntoFile"></activity>
+        <activity android:name=".javaIO.file.AssignFileContentIntoVariable"></activity>
+        <activity android:name=".javaIO.file.GenerateFileChecksumValue"></activity>
+        <activity android:name=".javaIO.file.ConvertFileIntoAnArrayOfBytes"></activity>
+        <activity android:name=".javaIO.file.ConvertArrayOfBytesIntoFile"></activity>
+        <activity android:name=".javaIO.file.ConvertStringToInputStream"></activity>
+        <activity android:name=".javaIO.file.ConvertInputStreamToString"></activity>
+        <activity android:name=".javaIO.file.ConvertFileToHex"></activity>
+        <activity android:name=".javaIO.file.GetTotalOfFreeDiskSpace"></activity>
 
 
-        <activity android:name=".fileserialization.FileSerialization"></activity>
+        <activity android:name=".javaIO.FileSerialization.FileSerialization"></activity>
         <!---> список FileSerialization содержит эти подразделы</!-->
-        <activity android:name=".fileserialization.WriteAnObjToFile"></activity>
-        <activity android:name=".fileserialization.ReadObjFromFile"></activity>
+        <activity android:name=".javaIO.FileSerialization.WriteAnObjToFile"></activity>
+        <activity android:name=".javaIO.FileSerialization.ReadObjFromFile"></activity>
 
 
-        <activity android:name=".filecompression.FileCompression"></activity>
+        <activity android:name=".javaIO.FileCompression.FileCompression"></activity>
         <!---> список FileCompression содержит эти подразделы</!-->
-        <activity android:name=".filecompression.CompressFilesInZIPFormat"></activity>
-        <activity android:name=".filecompression.DecompressFilesFromZIPFile"></activity>
-        <activity android:name=".filecompression.CompressFileInGZIPFormat"></activity>
-        <activity android:name=".filecompression.DecompressFileFromGZIPFile"></activity>
-        <activity android:name=".filecompression.CompressSerializedObjectIntoFile"></activity>
-        <activity android:name=".filecompression.DecompressSerializedObjectFromGzipFile"></activity>
+        <activity android:name=".javaIO.FileCompression.CompressFilesInZIPFormat"></activity>
+        <activity android:name=".javaIO.FileCompression.DecompressFilesFromZIPFile"></activity>
+        <activity android:name=".javaIO.FileCompression.CompressFileInGZIPFormat"></activity>
+        <activity android:name=".javaIO.FileCompression.DecompressFileFromGZIPFile"></activity>
+        <activity android:name=".javaIO.FileCompression.CompressSerializedObjectIntoFile"></activity>
+        <activity android:name=".javaIO.FileCompression.DecompressSerializedObjectFromGzipFile"></activity>
 
 
 
 
-        <activity android:name=".temproraryfiles.TemporaryFile"></activity>
+        <activity android:name=".javaIO.TemporaryFiles.TemporaryFile"></activity>
         <!---> список TemporaryFile содержит эти подразделы</!-->
-        <activity android:name=".temproraryfiles.CreateTemporaryFile"></activity>
-        <activity android:name=".temproraryfiles.WriteDataToTemporaryFile"></activity>
-        <activity android:name=".temproraryfiles.DeleteTemporaryFile"></activity>
-        <activity android:name=".temproraryfiles.GetTheTemporaryFilePath"></activity>
+        <activity android:name=".javaIO.TemporaryFiles.CreateTemporaryFile"></activity>
+        <activity android:name=".javaIO.TemporaryFiles.WriteDataToTemporaryFile"></activity>
+        <activity android:name=".javaIO.TemporaryFiles.DeleteTemporaryFile"></activity>
+        <activity android:name=".javaIO.TemporaryFiles.GetTheTemporaryFilePath"></activity>
 
 
 
-        <activity android:name=".directory.Directory"></activity>
+        <activity android:name=".javaIO.Directory.Directory"></activity>
         <!---> список Directory содержит эти подразделы</!-->
-        <activity android:name=".directory.CreateDirectory"></activity>
-        <activity android:name=".directory.DeleteDirectory"></activity>
-        <activity android:name=".directory.CopyDirectory"></activity>
-        <activity android:name=".directory.TraverseDirectoryStructure"></activity>
-        <activity android:name=".directory.CheckIfDirectoryIsEmpty"></activity>
-        <activity android:name=".directory.GetTheCurrentWorkingDirectory"></activity>
+        <activity android:name=".javaIO.Directory.CreateDirectory"></activity>
+        <activity android:name=".javaIO.Directory.DeleteDirectory"></activity>
+        <activity android:name=".javaIO.Directory.CopyDirectory"></activity>
+        <activity android:name=".javaIO.Directory.TraverseDirectoryStructure"></activity>
+        <activity android:name=".javaIO.Directory.CheckIfDirectoryIsEmpty"></activity>
+        <activity android:name=".javaIO.Directory.GetTheCurrentWorkingDirectory"></activity>
 
 
-        <activity android:name=".consoleio.ConsoleIO"></activity>
+        <activity android:name=".javaIO.ConsoleIO.ConsoleIO"></activity>
         <!---> список ConsoleIO содержит эти подразделы</!-->
-        <activity android:name=".consoleio.GetTheStandartInput"></activity><!-->stopped here</!-->
+        <activity android:name=".javaIO.ConsoleIO.GetTheStandartInput"></activity><!-->stopped here</!-->
 
 
 
@@ -161,9 +161,16 @@
         <activity android:name=".json.jackson.JacksonStreamingExample"></activity>
         <activity android:name=".json.jackson.PrettyPrintJSONOutputInJackso"></activity>
 
+        <activity android:name=".json.gson.GoogleGson"></activity>
+        <!---> список Google GSON содержит эти подразделы</!-->
+        <activity android:name=".json.gson.ObjAndGson"></activity>
+        <activity android:name=".json.gson.GsonSimpleStreaming"></activity>
+        <activity android:name=".json.gson.Gsonoutput"></activity>
 
 
-
+        <activity android:name=".json.jsonsimple.JSONSimple"></activity>
+        <!---> список JSON.Simple содержит эти подразделы</!-->
+        <activity android:name=".json.jsonsimple.JSONSimpleExample"></activity>
 
 
 

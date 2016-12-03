@@ -5325,7 +5325,7 @@ msg 2\n
 msg 3\n
 	</string>
 
-	<string name="PrettyPrintJSONOutputInJackso">
+	<string name="PrettyPrintJSONOutputInJackso"><![CDATA[
 
 		In this tutorial, we will show you how to use Jackson library to pretty print JSON Object and String in the console and JSP page.\n
 \n
@@ -5333,7 +5333,7 @@ msg 3\n
 Example to convert Object and print its output in JSON format.\n
 \n
 User user = new User();\n
-//...set user data\n
+//…set user data\n
 
 ObjectMapper mapper = new ObjectMapper();\n
 System.out.println(mapper.writeValueAsString(user));\n
@@ -5376,7 +5376,7 @@ Output\n
 \n
  \n
 3. Pretty Print JSON in JSP page\n
-To pretty print JSON data in a JSP page or any other HTML page, just wrap the json data with &lt;pre> tag. This example is using Spring MVC and JSP page.\n
+To pretty print JSON data in a JSP page or any other HTML page, just wrap the json data with <pre> tag. This example is using Spring MVC and JSP page.\n
 \n
 Controller Class\n
 @Controller\n
@@ -5385,27 +5385,555 @@ public class AdminController {\n
 \n
   @RequestMapping(method = RequestMethod.GET)\n
   public ModelAndView index() {\n
-\n
+
 	String test = \"{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"mkyong\\"}";\n
 	Object json = mapper.readValue(test, Object.class);\n
-\n
+
 	ModelAndView modelandView = new ModelAndView(\"viewname\");\n
-\n
+
 	modelandView.addObject(\"output\", mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json));\n
-\n
+
 	return modelandViewl;\n
-\n
+
   }\n
-\n
-}\n
+
+}
 In html page.\n
-&lt;pre>${output}&lt;/pre>\n
+<pre>${output}</pre>\n
 
 
+	]]></string>
+
+		<string name="ObjAndGson">
+
+			In this tutorial, we will show you how to use Gson to convert Java object to / from JSON.\n
+\n
+P.S All examples are tested with Gson 2.6.2\n
+\n
+Note\n
+JSON stands for JavaScript Object Notation, it is a lightweight data-interchange format. You can see many Java applications started to throw away XML format and start using JSON as a new data-interchange format. Java is all about object, often times, you need to convert an object into JSON format for data-interchange or vice verse.\n
+Note\n
+Jackson is another high performance JSON processor, try this Jackson 2 – Java object to / from JSON\n
+1. Quick Reference\n
+1.1 toJson() – Convert Java object to JSON\n
+\n
+Gson gson = new Gson();\n
+Staff obj = new Staff();\n
+\n
+// 1. Java object to JSON, and save into a file\n
+gson.toJson(obj, new FileWriter(\"D:\\file.json\"));\n
+\n
+// 2. Java object to JSON, and assign to a String\n
+String jsonInString = gson.toJson(obj);\n
+1.2 fromJson() – Convert JSON to Java object\n
+\n
+Gson gson = new Gson();\n
+\n
+// 1. JSON to Java object, read it from a file.\n
+Staff staff = gson.fromJson(new FileReader(\"D:\\file.json\"), Staff.class);\n
+\n
+// 2. JSON to Java object, read it from a Json String.\n
+String jsonInString = \"{\'name\' : \'mkyong\'}\";\n
+Staff staff = gson.fromJson(jsonInString, Staff.class);\n
+\n
+// JSON to JsonElement, convert to String later.\n
+JsonElement json = gson.fromJson(new FileReader(\"D:\\file.json\"), JsonElement.class);\n
+    String result = gson.toJson(json);\n
+\n
+ \n
+2. Gson Dependency\n
+To use Gson, declares the following dependency.\n
+\n
+pom.xml\n
+&lt;dependency>\n
+    	&lt;groupId>com.google.code.gson&lt;/groupId>\n
+	&lt;artifactId>gson&lt;/artifactId>\n
+	&lt;version>2.6.2&lt;/version>\n
+	&lt;/dependency>\n
+\n
+
+3. POJO\n\n
+A simple POJO, for testing later.\n
+\n
+staff.java\n
+package com.mkyong.json;\n
+\n
+import java.math.BigDecimal;\n
+import java.util.List;\n
+\n
+public class Staff {\n
+\n
+	private String name;\n
+	private int age;\n
+	private String position;\n
+	private BigDecimal salary;\n
+	private List&lt;String> skills;\n
+\n
+	//...\n
+4. Java Object to JSON\n
+Gson example to convert a Staff object into a JSON formatted string.\n
+\n
+GsonExample.java\n
+package com.mkyong.json;\n
+\n
+import com.google.gson.Gson;\n
+\n
+import java.io.FileWriter;\n
+import java.io.IOException;\n
+import java.math.BigDecimal;\n
+import java.util.ArrayList;\n
+import java.util.List;\n
+\n
+public class GsonExample {\n
+\n
+    public static void main(String[] args) {\n
+\n
+        Staff staff = createDummyObject();\n
+\n
+        //1. Convert object to JSON string\n
+        Gson gson = new Gson();\n
+        String json = gson.toJson(staff);\n
+        System.out.println(json);\n
+\n
+        //2. Convert object to JSON string and save into a file directly\n
+        try (FileWriter writer = new FileWriter(\"D:\\staff.json\")) {\n
+\n
+            gson.toJson(staff, writer);\n
+\n
+        } catch (IOException e) {\n
+            e.printStackTrace();\n
+        }\n
+\n
+    }\n
+\n
+    private static Staff createDummyObject() {\n
+\n
+        Staff staff = new Staff();\n
+\n
+        staff.setName(\"mkyong\");\n
+        staff.setAge(35);\n
+        staff.setPosition(\"Founder\");\n
+        staff.setSalary(new BigDecimal(\"10000\"));\n
+\n
+        List&lt;String> skills = new ArrayList&lt;>();\n
+        skills.add(\"java\");\n
+        skills.add(\"python\");\n
+        skills.add(\"shell\");\n
+\n
+        staff.setSkills(skills);\n
+\n
+        return staff;\n
+
+    }\n
+
+}\n
+Output\n
+
+{\"name\":\"mkyong\",\"age\":35,\"position\":\"Founder\",\"salary\":10000,\"skills\":[\"java\",\"python\",\"shell\"]}\n
+\n
+//new file is created in \"D:\\staff.json\"\n
+5. JSON to Java Object\n
+Gson example to read a JSON from a file and convert it back to a Java object.\n
+\n
+Gson2Example.java\n
+package com.mkyong.json;\n
+\n
+import com.google.gson.Gson;\n
+import java.io.FileReader;\n
+import java.io.IOException;\n
+import java.io.Reader;\n
+\n
+public class Gson2Example {\n
+\n
+    public static void main(String[] args) {\n
+\n
+        Gson gson = new Gson();\n
+\n
+        try (Reader reader = new FileReader(\"D:\\staff.json\")) {\n
+\n
+			// Convert JSON to Java Object\n
+            Staff staff = gson.fromJson(reader, Staff.class);\n
+            System.out.println(staff);\n
+\n
+			// Convert JSON to JsonElement, and later to String\n
+            /*JsonElement json = gson.fromJson(reader, JsonElement.class);\n
+            String jsonInString = gson.toJson(json);\n
+            System.out.println(jsonInString);*/\n
+\n
+        } catch (IOException e) {\n
+            e.printStackTrace();\n
+        }\n
+
+    }\n
+
+}\n
+Output\n
+\n
+Staff{name=\'mkyong\', age=35, position=\'Founder\', salary=10000, skills=[java, python, shell]}\n\n
+6. FAQs\n
+Some commonly ask questions.\n
+\n
+6.1 Convert a JSON Array to a List, using TypeToken\n
+\n
+String json = \"[{\\"name\\":\\"mkyong\\"}, {\\"name\\":\\"laplap\\"}]\";\n
+List&lt;Staff> list = gson.fromJson(json, new TypeToken&lt;List&lt;Staff>>(){}.getType());\n
+list.forEach(x -> System.out.println(x));\n
+6.2 Convert a JSON to a Map\n
+
+String json = \"{\\"name\\":\\"mkyong\\", \\"age\\":33}\";\n
+Map&lt;String, Object> map = gson.fromJson(json, new TypeToken&lt;Map&lt;String, Object>>(){}.getType());\n
+map.forEach((x,y)-> System.out.println(\"key : \" + x + \" , value : \" + y));\n
+		</string>
+
+
+		<string name="GsonSimpleStreaming">
+			Since Gson version 1.6, two new classes – JsonReader and JsonWriter, are introduce to provide streaming processing on JSON data. Read this Gson streaming documentation to understand what are the benefits of using it.\n
+\n
+Here we show you two full examples of using following Gson streaming APIs to read and write JSON data.\n
+\n
+JsonWriter – Streaming write to JSON.\n
+JsonReader – Streaming read from JSON.\n
+Gson streaming processing is fast, but difficult to code, because you need to handle each and every detail of processing JSON data.\n
+\n
+1. JsonWriter\n
+In this example, you use \“JsonWriter\” to write JSON data into a file name \“file.json\“. See comments for self-expalantory.\n
+\n
+import java.io.FileWriter;\n
+import java.io.IOException;\n
+import com.google.gson.stream.JsonWriter;\n
+\n
+public class GsonStreamExample {\n
+   public static void main(String[] args) {\n
+\n
+     JsonWriter writer;\n
+     try {\n
+	writer = new JsonWriter(new FileWriter(\"c:\\user.json\"));\n
+\n
+	writer.beginObject(); // {\n
+	writer.name(\"name\").value(\"mkyong\"); // \"name\" : \"mkyong\"\n
+	writer.name(\"age\").value(29); // \"age\" : 29\n
+\n
+	writer.name(\"messages\"); // \"messages\" :\n
+	writer.beginArray(); // [\n
+	writer.value(\"msg 1\"); // \"msg 1\"\n
+	writer.value(\"msg 2\"); // \"msg 2\"\n
+	writer.value(\"msg 3\"); // \"msg 3\"\n
+	writer.endArray(); // ]\n
+\n
+	writer.endObject(); // }\n
+	writer.close();\n
+\n
+	System.out.println(\"Done\");\n
+\n
+     } catch (IOException e) {\n
+	e.printStackTrace();\n
+     }\n
+
+   }\n
+
+}\n
+As result, following new file named \“file.json\” is created :\n
+\n
+{\n
+	\"name\":\"mkyong\",\n
+	\"age\":29,\n
+	\"messages\":[\"msg 1\",\"msg 2\",\"msg 3\"]\n
+}\n
+\n
+
+2. JsonReader\n
+Example to use \“JsonReader\” to parse or read above file \“file.json\”.\n
+\n
+Token\n
+In streaming mode, every JSON \“data\” is consider as an individual token. When you use JsonReader to process it, each tokens will be processed sequential.\n
+For example,\n
+\n
+{\n
+	\"url\":\"www.mkyong.com\"\n
+}\n
+Token 1 = \“{\”\n
+Token 2 = \“url\”\n
+Token 3 = \“www.mkyong.com\”\n
+Token 4 = \“}”\n
+\n
+As result, you need to keep calling \“next****\” method to move to next token manually.\n
+\n
+See full example.\n
+\n
+package com.mkyong.core;\n
+\n
+import java.io.FileNotFoundException;\n
+import java.io.FileReader;\n
+import java.io.IOException;\n
+import com.google.gson.stream.JsonReader;\n
+\n
+public class GsonStreamExample {\n
+   public static void main(String[] args) {\n
+\n
+     try {\n
+	JsonReader reader = new JsonReader(new FileReader(\"c:\\user.json\"));\n
+\n
+	reader.beginObject();\n
+
+	while (reader.hasNext()) {\n
+
+	  String name = reader.nextName();\n
+
+	  if (name.equals(\"name\")) {\n
+
+		System.out.println(reader.nextString());\n
+
+	  } else if (name.equals(\"age\")) {\n
+
+		System.out.println(reader.nextInt());\n
+
+	  } else if (name.equals(\"message\")) {\n
+
+		// read array\n
+		reader.beginArray();\n
+
+		while (reader.hasNext()) {\n
+			System.out.println(reader.nextString());\n
+		}\n
+
+		reader.endArray();\n
+
+	  } else {\n
+		reader.skipValue(); //avoid some unhandle events\n
+	  }\n
+        }\n
+
+	reader.endObject();\n
+	reader.close();\n
+\n
+     } catch (FileNotFoundException e) {\n
+	e.printStackTrace();\n
+     } catch (IOException e) {\n
+	e.printStackTrace();\n
+     }\n
+
+   }\n
+
+}\n
+Output\n
+\n
+mkyong\n
+29\n
+msg 1\n
+msg 2\n
+msg 3\n
+		</string>
+
+	<string name="Gsonoutput">
+
+		In this tutorial, we will show you how to enable pretty print JSON output in Gson framework.\n
+\n
+1. By default, Gson display the JSON output like the following :\n
+\n
+Gson gson = new Gson();\n
+String json = gson.toJson(someObj);\n
+System.out.println(json);\n
+Output\n
+\n
+{\"name\":\"mkyong",\"age\":35,\"position\":\"Founder\",\"salary\":10000,\"skills\":[\"java\",\"python\",\"shell\"]}\n
+2. To enable the pretty-print, create the Gson object with GsonBuilder\n
+\n
+Gson gson = new GsonBuilder().setPrettyPrinting().create();\n
+String json = gson.toJson(obj);\n
+System.out.println(json);\n
+Output\n
+\n
+{\n
+  \"name\": \"mkyong\",\n
+  \"age\": 35,\n
+  \"position\": \"Founder\",\n
+  \"salary\": 10000,\n
+  \"skills\": [\n
+    \"java\",\n
+    \"python\",\n
+    \"shell\"\n
+  ]\n
+}\n
+3. Full example.\n
+\n
+GsonExample.java\n
+package com.mkyong.json;\n
+\n
+import com.google.gson.Gson;\n
+import com.google.gson.GsonBuilder;\n
+\n
+import java.math.BigDecimal;\n
+import java.util.ArrayList;\n
+import java.util.List;\n
+\n
+public class GsonExample {\n
+\n
+    public static void main(String[] args) {\n
+\n
+        Staff staff = createDummyObject();\n
+\n
+        //Gson gson = new Gson();\n
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();\n
+\n
+        String json = gson.toJson(staff);\n
+        System.out.println(json);\n
+
+    }\n
+\n
+    private static Staff createDummyObject() {\n
+\n
+        Staff staff = new Staff();\n
+
+        staff.setName(\"mkyong\");\n
+        staff.setAge(35);\n
+        staff.setPosition(\"Founder\");\n
+        staff.setSalary(new BigDecimal(\"10000\"));\n
+\n
+        List&lt;String> skills = new ArrayList&lt;>();\n
+        skills.add(\"java\");\n
+        skills.add(\"python\");\n
+        skills.add(\"shell\");\n
+
+        staff.setSkills(skills);\n
+
+        return staff;\n
+
+    }\n
+
+}\n
+Output\n\n
+
+{\n
+  \"name\": \"mkyong\",\n
+  \"age\": 35,\n
+  \"position\": \"Founder\",\n
+  \"salary\": 10000,\n
+  \"skills\": [\n
+    \"java\",\n
+    \"python\",\n
+    \"shell\"\n
+  ]\n
+}\n
 	</string>
 
 
 
+	<string name="JSONSimpleExample">
+		In this tutorial, we show you how to use JSON.simple to read and write JSON data from / to a file.\n
+\n
+1. JSON.simple Dependency\n
+JSON.simple is available at Maven central repository, just declares following dependency in your pom.xml file.\n
+\n
+	&lt;dependency>\n
+	&lt;groupId>com.googlecode.json-simple&lt;/groupId>\n
+	&lt;artifactId>json-simple&lt;/artifactId>\n
+	&lt;version>1.1&lt;/version>\n
+	&lt;/dependency>\n
+
+ \n
+2. Write JSON to file\n
+In below example, it write JSON data via JSONObject and JSONArray, and save it into a file named \“test.json\“.\n
+\n
+import java.io.FileWriter;\n
+import java.io.IOException;\n
+import org.json.simple.JSONArray;\n
+import org.json.simple.JSONObject;\n
+\n
+public class JsonSimpleExample {\n
+     public static void main(String[] args) {\n
+\n
+	JSONObject obj = new JSONObject();\n
+	obj.put(\"name\", \"mkyong.com\");\n
+	obj.put(\"age\", new Integer(100));\n
+\n
+	JSONArray list = new JSONArray();\n
+	list.add(\"msg 1\");\n
+	list.add(\"msg 2\");\n
+	list.add(\"msg 3\");\n
+\n
+	obj.put(\"messages\", list);\n
+\n
+	try {\n
+\n
+		FileWriter file = new FileWriter(\"c:\\test.json\");\n
+		file.write(obj.toJSONString());\n
+		file.flush();\n
+		file.close();\n
+
+	} catch (IOException e) {\n
+		e.printStackTrace();\n
+	}\n
+
+	System.out.print(obj);\n
+
+     }\n
+
+}\n
+Output – See content of file named \“test.json\“.\n
+\n
+{\n
+	\"age\":100,\n
+	\"name\":"mkyong.com",\n
+	\"messages\":[\"msg 1\",\"msg 2\",\"msg 3\"]\n
+}\n
+
+ \n
+3. Read JSON from file\n
+Use JSONParser to read above generated JSON file \“test.json\“, and display each of the values.\n
+\n
+import java.io.FileNotFoundException;\n
+import java.io.FileReader;\n
+import java.io.IOException;\n
+import java.util.Iterator;\n
+import org.json.simple.JSONArray;\n
+import org.json.simple.JSONObject;\n
+import org.json.simple.parser.JSONParser;\n
+import org.json.simple.parser.ParseException;\n
+\n
+public class JsonSimpleExample {\n
+     public static void main(String[] args) {\n
+\n
+	JSONParser parser = new JSONParser();\n
+\n
+	try {\n
+
+		Object obj = parser.parse(new FileReader(\"c:\\test.json\"));\n
+\n
+		JSONObject jsonObject = (JSONObject) obj;\n
+\n
+		String name = (String) jsonObject.get(\"name\");\n
+		System.out.println(name);\n
+\n
+		long age = (Long) jsonObject.get(\"age\");\n
+		System.out.println(age);\n
+\n
+		// loop array\n
+		JSONArray msg = (JSONArray) jsonObject.get(\"messages\");\n
+		Iterator&lt;String> iterator = msg.iterator();\n
+		while (iterator.hasNext()) {\n
+			System.out.println(iterator.next());\n
+		}\n
+\n
+	} catch (FileNotFoundException e) {\n
+		e.printStackTrace();\n
+	} catch (IOException e) {\n
+		e.printStackTrace();\n
+	} catch (ParseException e) {\n
+		e.printStackTrace();\n
+	}\n
+
+     }\n
+
+}\n
+Output\n
+\n
+mkyong.com\n
+100\n
+msg 1\n
+msg 2\n
+msg 3\n
+
+	</string>
 
 
 

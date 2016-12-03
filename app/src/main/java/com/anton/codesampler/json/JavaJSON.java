@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.anton.codesampler.GoogleGson;
-import com.anton.codesampler.JSONSimple;
+import com.anton.codesampler.json.gson.GoogleGson;
+import com.anton.codesampler.json.jsonsimple.JSONSimple;
 import com.anton.codesampler.json.jackson.Jackson;
 
 /**
