@@ -4378,6 +4378,1037 @@ donot-spam-me@nospam.com\n
 
 	</string>
 
+	<string name="ObjectAndJSON">
+
+		1. Quick Reference\n\n
+1.1 Convert Java object to JSON, writeValue(...)\n
+\n
+ObjectMapper mapper = new ObjectMapper();\n
+User user = new User();\n
+\n
+//Object to JSON in file\n
+mapper.writeValue(new File(\"c:\\user.json\"), user);\n
+\n
+//Object to JSON in String\n
+String jsonInString = mapper.writeValueAsString(user);\n
+1.2 Convert JSON to Java object, readValue(...)\n
+\n
+ObjectMapper mapper = new ObjectMapper();\n
+String jsonInString = \"{\'name\' : \'mkyong\'}\";\n
+
+//JSON from file to Object
+User user = mapper.readValue(new File(\"c:\\user.json\"), User.class);
+\n
+//JSON from String to Object\n
+User user = mapper.readValue(jsonInString, User.class);\n
+P.S All examples are tested with Jackson 1.9.13\n
+\n
+
+\n
+2. Jackson Dependency\n
+For Jackson 1.x, it contains 6 separate jars for different purpose, in most cases, you just need jackson-mapper-asl.\n
+\n
+pom.xml\n
+&lt;dependency>\n
+	&lt;groupId>org.codehaus.jackson&lt;/groupId>\n
+	&lt;artifactId>jackson-mapper-asl&lt;/artifactId>\n
+	&lt;version>1.9.13&lt;/version>\n
+	&lt;/dependency>\n
+
+\n
+3. POJO (Plain Old Java Object)\n
+An User object for testing.\n
+\n
+User.java\n
+package com.mkyong.json;\n
+\n
+import java.util.List;\n
+\n
+public class User {\n
+\n
+	private String name;\n
+	private int age;\n
+	private List&lt;String> messages;\n
+\n
+	//getters and setters\n
+}\n
+4. Java Object to JSON\n\n
+Convert an user object into a JSON formatted string.\n
+\n
+JacksonExample.java\n
+package com.mkyong.json;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+import java.util.ArrayList;\n
+import java.util.List;\n
+\n
+import org.codehaus.jackson.JsonGenerationException;\n
+import org.codehaus.jackson.map.JsonMappingException;\n
+import org.codehaus.jackson.map.ObjectMapper;\n
+\n
+public class JacksonExample {\n
+	public static void main(String[] args) {\n
+\n
+		ObjectMapper mapper = new ObjectMapper();\n
+\n
+		//For testing\n
+		User user = createDummyUser();\n
+\n
+		try {\n
+			//Convert object to JSON string and save into file directly\n
+			mapper.writeValue(new File(\"D:\\user.json\"), user);\n
+\n
+			//Convert object to JSON string\n
+			String jsonInString = mapper.writeValueAsString(user);\n
+			System.out.println(jsonInString);\n
+\n
+			//Convert object to JSON string and pretty print\n
+			jsonInString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(user);\n
+			System.out.println(jsonInString);\n
+
+\n
+		} catch (JsonGenerationException e) {\n
+			e.printStackTrace();\n
+		} catch (JsonMappingException e) {\n
+			e.printStackTrace();\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		}\n
+
+	}\n
+\n
+	private static User createDummyUser(){\n
+\n
+		User user = new User();\n
+\n
+		user.setName(\"mkyong\");\n
+		user.setAge(33);\n
+\n
+		List&lt;String> msg = new ArrayList&lt;>();\n
+		msg.add(\"hello jackson 1\");\n
+		msg.add(\"hello jackson 2\");\n
+		msg.add(\"hello jackson 3\");\n
+\n
+		user.setMessages(msg);\n
+\n
+		return user;\n
+\n
+	}\n
+}\n
+Output\n
+\n
+//new json file is created in D:\\user.json\"\n
+\n
+{\"name\":\"mkyong\",\"age\":33,\"messages\":[\"hello jackson 1\",\"hello jackson 2\",\"hello jackson 3\"]}\n
+\n
+{\n
+  \"name\" : \"mkyong\",\n
+  \"age\" : 33,\n
+  \"messages\" : [ \"hello jackson 1\", \"hello jackson 2\", \"hello jackson 3\" ]\n
+}\n
+5. JSON to Java Object\n\n
+Read JSON string and convert it back to a Java object.\n
+\n
+JacksonExample.java\n
+package com.mkyong.json;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+import java.util.ArrayList;\n
+import java.util.List;\n
+\n
+import org.codehaus.jackson.JsonGenerationException;\n
+import org.codehaus.jackson.map.JsonMappingException;\n
+import org.codehaus.jackson.map.ObjectMapper;\n
+\n
+public class JacksonExample {\n
+	public static void main(String[] args) {\n
+\n
+		ObjectMapper mapper = new ObjectMapper();\n
+\n
+		try {\n
+\n
+			// Convert JSON string from file to Object\n
+			User user = mapper.readValue(new File(\"G:\\user.json\"), User.class);\n
+			System.out.println(user);\n
+\n
+			// Convert JSON string to Object\n
+			String jsonInString = \"{\"age\":33,\"messages\":[\"msg 1\",\"msg 2\"],\"name\":\"mkyong\"}";\n
+			User user1 = mapper.readValue(jsonInString, User.class);\n
+			System.out.println(user1);\n
+\n
+		} catch (JsonGenerationException e) {\n
+			e.printStackTrace();\n
+		} catch (JsonMappingException e) {\n
+			e.printStackTrace();\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		}\n
+\n
+	}\n
+
+}\n
+Output\n
+\n
+User [name=mkyong, age=33, messages=[hello jackson 1, hello jackson 2, hello jackson 3]]\n
+\n
+User [name=mkyong, age=33, messages=[msg 1, msg 2]]\n
+6. @JsonView\n
+@JsonView has been supported in Jackson since version 1.4, it lets you control what fields to display.\n
+\n
+6.1 A simple class.\n
+\n
+Views.java\n
+package com.mkyong.json;\n
+\n
+public class Views {\n
+\n
+	public static class NameOnly{};\n
+	public static class AgeAndName extends NameOnly{};\n
+\n
+}\n
+6.2 Annotate on the fields you want to display.\n
+\n
+User.java\n
+package com.mkyong.json;\n
+\n
+import java.util.List;\n
+import org.codehaus.jackson.map.annotate.JsonView;\n
+\n
+public class User {\n
+\n
+	@JsonView(Views.NameOnly.class)\n
+	private String name;\n
+\n
+	@JsonView(Views.AgeAndName.class)\n
+	private int age;\n
+\n
+	private List&lt;String> messages;\n
+\n
+	//getter and setters\n
+}\n
+6.3 Enable the @JsonView via writerWithView().\n
+\n
+JacksonExample.java\n
+package com.mkyong.json;\n
+\n
+import java.io.IOException;\n
+import java.util.ArrayList;\n
+import java.util.List;\n
+\n
+import org.codehaus.jackson.JsonGenerationException;\n
+import org.codehaus.jackson.map.JsonMappingException;\n
+import org.codehaus.jackson.map.ObjectMapper;\n
+import org.codehaus.jackson.map.SerializationConfig;\n
+\n
+public class JacksonExample {\n
+	public static void main(String[] args) {\n
+\n
+		ObjectMapper mapper = new ObjectMapper();\n
+		//By default all fields without explicit view definition are included, disable this\n
+		mapper.configure(SerializationConfig.Feature.DEFAULT_VIEW_INCLUSION, false);\n
+\n
+		//For testing\n
+		User user = createDummyUser();\n
+\n
+		try {\n
+			//display name only\n
+			String jsonInString = mapper.writerWithView(Views.NameOnly.class).writeValueAsString(user);\n
+			System.out.println(jsonInString);\n
+\n
+			//display namd ana age\n
+			jsonInString = mapper.writerWithView(Views.AgeAndName.class).writeValueAsString(user);\n
+			System.out.println(jsonInString);\n
+\n
+
+		} catch (JsonGenerationException e) {\n
+			e.printStackTrace();\n
+		} catch (JsonMappingException e) {\n
+			e.printStackTrace();\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		}\n
+\n
+	}\n
+
+	private static User createDummyUser(){\n
+\n
+		User user = new User();\n
+\n
+		user.setName(\"mkyong\");\n
+		user.setAge(33);\n
+
+		List&lt;String> msg = new ArrayList&lt;>();\n\n
+		msg.add(\"hello jackson 1\");\n
+		msg.add(\"hello jackson 2\");\n
+		msg.add(\"hello jackson 3\");\n
+\n
+		user.setMessages(msg);\n
+\n
+		return user;\n
+
+	}\n
+}\n
+Output\n
+\n
+{\"name\":\"mkyong\"}\n
+{\"name\":\"mkyong\",\"age\":33}\n
+
+
+	</string>
+
+	<string name="MapAndJSON">
+In this tutorial, we will show you few Jackson examples to convert JSON string to/from a Map.\n
+\n
+P.S All examples are tested with Jackson 2.6.3\n
+\n
+1. JSON string to Map\n
+JsonMapExample.java\n\n
+package com.mkyong.json;\n
+\n
+import java.io.IOException;\n
+import java.util.HashMap;\n
+import java.util.Map;\n
+\n
+import com.fasterxml.jackson.core.JsonGenerationException;\n
+import com.fasterxml.jackson.core.type.TypeReference;\n
+import com.fasterxml.jackson.databind.JsonMappingException;\n
+import com.fasterxml.jackson.databind.ObjectMapper;\n
+\n
+public class JsonMapExample {\n
+\n
+	public static void main(String[] args) {\n
+\n
+		try {\n
+\n
+			ObjectMapper mapper = new ObjectMapper();\n
+			String json = \"{\\"name\\":\\"mkyong\\", \\"age\\":29}\";\n
+\n
+			Map&lt;String, Object> map = new HashMap&lt;String, Object>();\n
+\n
+			// convert JSON string to Map\n
+			map = mapper.readValue(json, new TypeReference&lt;Map&lt;String, String>>(){});\n
+\n
+			System.out.println(map);\n
+\n
+		} catch (JsonGenerationException e) {\n
+			e.printStackTrace();\n
+		} catch (JsonMappingException e) {\n
+			e.printStackTrace();\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		}\n
+	}\n
+
+}\n
+Output\n
+\n
+{name=mkyong, age=29}\n
+\n
+ \n
+2. Map to JSON string\n
+Example to convert the Map to JSON string.\n
+\n
+MapJsonExample.java\n
+package com.mkyong.json;\n
+\n
+import java.io.IOException;\n
+import java.util.HashMap;\n
+import java.util.Map;\n
+\n
+import com.fasterxml.jackson.core.JsonGenerationException;\n
+import com.fasterxml.jackson.databind.JsonMappingException;\n
+import com.fasterxml.jackson.databind.ObjectMapper;\n
+\n
+public class MapJsonExample{\n
+\n
+	public static void main(String[] args) {\n
+\n
+		try {\n
+\n
+			ObjectMapper mapper = new ObjectMapper();\n
+			String json = \"\";\n
+\n
+			Map&lt;String, Object> map = new HashMap&lt;String, Object>();\n
+			map.put(\"name\", \"mkyong\");\n
+			map.put(\"age\", 29);\n
+\n
+			// convert map to JSON string\n
+			json = mapper.writeValueAsString(map);\n
+\n
+			System.out.println(json);\n
+
+			json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(map);\n
+\n
+			// pretty print\n
+			System.out.println(json);\n
+\n
+		} catch (JsonGenerationException e) {\n
+			e.printStackTrace();\n
+		} catch (JsonMappingException e) {\n
+			e.printStackTrace();\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		}\n
+	}\n
+
+}\n
+Output\n
+\n
+{\"name\":\"mkyong\",\"age\":29}\n
+{\n
+  \"name\" : \"mkyong\",\n
+  \"age\" : 29\n
+}\n
+\n
+ \n
+3. Map to JSON File\n\n
+JsonMapFileExample.java\n
+package com.mkyong.json;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+import java.util.ArrayList;\n
+import java.util.HashMap;\n
+import java.util.List;\n
+import java.util.Map;\n
+\n
+import com.fasterxml.jackson.core.JsonGenerationException;\n
+import com.fasterxml.jackson.databind.JsonMappingException;\n
+import com.fasterxml.jackson.databind.ObjectMapper;\n
+\n
+public class JsonMapFileExample {\n
+\n
+	public static void main(String[] args) {\n
+\n
+		try {\n
+\n
+			ObjectMapper mapper = new ObjectMapper();\n
+\n
+			Map&lt;String, Object> map = new HashMap&lt;String, Object>();\n
+			map.put(\"name\", \"mkyong\");\n
+			map.put(\"age\", 29);\n
+\n
+			List&lt;Object> list = new ArrayList&lt;>();\n
+			list.add(\"msg 1\");\n
+			list.add(\"msg 2\");\n
+			list.add(\"msg 3\");\n
+\n
+			map.put(\"messages\", list);\n
+\n
+			// write JSON to a file\n
+			mapper.writeValue(new File(\"c:\\user.json\"), map);\n
+\n
+		} catch (JsonGenerationException e) {\n
+			e.printStackTrace();\n
+		} catch (JsonMappingException e) {\n
+			e.printStackTrace();\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		}\n
+	}\n
+
+}\n
+c:\\user.json\n\n
+{\"name\":\"mkyong\",\"messages\":[\"msg 1\",\"msg 2\",\"msg 3\"],\"age\":29}\n
+4. JSON file to Map\n
+JsonFileMapExample.java\n
+package com.mkyong.json;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+import java.util.ArrayList;\n
+import java.util.Map;\n
+\n
+import com.fasterxml.jackson.core.JsonGenerationException;\n
+import com.fasterxml.jackson.core.type.TypeReference;\n
+import com.fasterxml.jackson.databind.JsonMappingException;\n
+import com.fasterxml.jackson.databind.ObjectMapper;\n
+\n
+public class Jackson2Example {\n
+\n
+	public static void main(String[] args) {\n
+\n
+		try {\n
+\n
+			ObjectMapper mapper = new ObjectMapper();\n
+\n
+			// read JSON from a file\n
+			Map&lt;String, Object> map = mapper.readValue(\n
+					new File(\"c:\\user.json\"),\n
+					new TypeReference&lt;Map&lt;String, Object>>() {\n
+			});\n
+\n
+			System.out.println(map.get(\"name\"));\n
+			System.out.println(map.get(\"age\"));\n
+\n
+			@SuppressWarnings(\"unchecked\")\n
+			ArrayList&lt;String> list = (ArrayList&lt;String>) map.get(\"messages\");\n
+\n
+			for (String msg : list) {\n
+				System.out.println(msg);\n
+			}\n
+\n
+		} catch (JsonGenerationException e) {\n
+			e.printStackTrace();\n
+		} catch (JsonMappingException e) {\n
+			e.printStackTrace();\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		}\n
+	}\n
+
+}\n
+Output\n
+\n
+mkyong\n
+29\n
+msg 1\n
+msg 2\n
+msg 3\n
+
+	</string>
+
+
+	<string name="JacksonTreeModelExample">
+In Jackson, you can use \“Tree Model\” to represent JSON, and perform the read and write operations via JsonNode, it is similar to an XML DOM tree.\n
+\n
+P.S Tested with Jackson 2.6.3\n
+\n
+1. TreeModel Traversing Example\n
+1.1 JSON file, top level represents an object.\n
+\n
+c:\\user.json\n
+{\n
+  \"id\"   : 1,\n
+  \"name\" : {\n
+    \"first\" : \"Yong\",\n
+    \"last\" : \"Mook Kim\"\n
+  },\n
+  \"contact\" : [\n
+    { \"typ\e" : \"phone/home\", \"ref\" : \"111-111-1234\"},\n
+    { \"type\" : \"phone/work\", \"ref\" : \"222-222-2222\"}\n
+  ]\n
+}\n
+1.2 Using Jackson TreeModel (JsonNode) to parse and traversal above JSON file. Read comments for self-explanatory.\n
+\n
+JacksonTreeModel.java\n
+package com.mkyong.json;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+\n
+import com.fasterxml.jackson.core.JsonGenerationException;\n
+import com.fasterxml.jackson.databind.JsonMappingException;\n
+import com.fasterxml.jackson.databind.JsonNode;\n
+import com.fasterxml.jackson.databind.ObjectMapper;\n
+\n
+public class JacksonTreeModel {\n
+\n
+	public static void main(String[] args) {\n
+\n
+		try {\n
+\n
+			long id;\n
+			String firstName = \"\";\n
+			String middleName = \"\";\n
+			String lastName = \"\";\n
+\n
+			ObjectMapper mapper = new ObjectMapper();\n
+\n
+			JsonNode root = mapper.readTree(new File(\"c:\\user.json\"));\n
+\n
+			// Get id\n
+			id = root.path(\"id\").asLong();\n
+			System.out.println(\"id : \" + id);\n
+\n
+			// Get Name\n
+			JsonNode nameNode = root.path(\"name\");\n
+			if (nameNode.isMissingNode()) {\n
+				// if \"name\" node is missing\n
+			} else {\n
+\n
+				firstName = nameNode.path(\"first\").asText();\n
+				// missing node, just return empty string\n
+				middleName = nameNode.path(\"middle\").asText();\n
+				lastName = nameNode.path(\"last\").asText();\n
+\n
+				System.out.println(\"firstName : \" + firstName);\n
+				System.out.println(\"middleName : \" + middleName);\n
+				System.out.println(\"lastName : \" + lastName);\n
+\n
+			}\n
+\n
+			// Get Contact\n
+			JsonNode contactNode = root.path(\"contact\");\n
+			if (contactNode.isArray()) {\n
+				// If this node an Arrray?\n
+			}\n
+\n
+			for (JsonNode node : contactNode) {\n
+				String type = node.path(\"type\").asText();\n
+				String ref = node.path(\"ref\").asText();\n
+				System.out.println(\"type : \" + type);\n
+				System.out.println(\"ref : \" + ref);\n
+\n
+			}\n
+\n
+		} catch (JsonGenerationException e) {\n
+			e.printStackTrace();\n
+		} catch (JsonMappingException e) {\n
+			e.printStackTrace();\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		}\n
+	}\n
+\n
+}\n
+Output\n
+\n
+id : 1\n
+firstName : Yong\n
+middleName :\n
+lastName : Mook Kim\n
+type : phone/home\n
+ref : 111-111-1234\n
+type : phone/work\n
+ref : 222-222-2222\n
+\n
+ \n
+2. TreeModel Traversing Example – Part 2\n
+2.1 JSON file, top level represents an Array.\n
+\n
+c:\\user2.json\n
+[\n
+ {\n
+  \"id\"   : 1,\n
+  \"name\" : {\n
+    \"first\" : \"Yong\",\n
+    \"last\" : \"Mook Kim\"\n
+  },\n
+  \"contact\" : [\n
+    { \"type\" : \"phone/home\", \"ref\" : \"111-111-1234\"},\n
+    { \"type\" : \"phone/work\", \"ref\" : \"222-222-2222\"}\n
+  ]\n
+},\n
+{\n
+  \"id\"   : 2,\n
+  \"name\" : {\n
+    \"first\" : \"Yong\",\n
+    \"last\" : \"Zi Lap\"\n
+  },\n
+  \"contact\" : [\n
+    { \"type\" : \"phone/home\", \"ref\" : \"333-333-1234\"},\n
+    { \"type\" : \"phone/work\", \"ref\" : \"444-444-4444\"}\n
+  ]\n
+}\n
+]\n
+2.2 The concept is same, just loops the first node.\n
+\n
+ObjectMapper mapper = new ObjectMapper();\n
+JsonNode rootArray = mapper.readTree(new File(\"c:\\user2.json\"));\n
+\n
+for(JsonNode root : rootArray){\n
+\n
+	//refer example 1.2 above, same ways to process nodes\n
+\n
+}\n
+\n
+ \n
+3. TreeModel CRUD Example\n
+3.1 This example, show you how to create, update and remove nodes (ObjectNode and ArrayNode). Read the comments for self-explanatory.\n
+\n
+JacksonTreeModel.java\n
+package com.mkyong.json;\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+\n
+import com.fasterxml.jackson.core.JsonGenerationException;\n
+import com.fasterxml.jackson.databind.JsonMappingException;\n
+import com.fasterxml.jackson.databind.JsonNode;\n
+import com.fasterxml.jackson.databind.ObjectMapper;\n
+import com.fasterxml.jackson.databind.node.ArrayNode;\n
+import com.fasterxml.jackson.databind.node.ObjectNode;\n
+\n
+public class JacksonTreeModel {\n
+\n
+	public static void main(String[] args) {\n
+\n
+		try {\n
+\n
+			ObjectMapper mapper = new ObjectMapper();\n
+\n
+			JsonNode root = mapper.readTree(new File(\"c:\\user.json\"));\n
+\n
+			String resultOriginal = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(root);\n
+			System.out.println(\"Before Update \" + resultOriginal);\n
+\n
+			// 1. Update id to 1000\n
+			((ObjectNode) root).put(\"id\", 1000L);\n
+\n
+			// 2. If middle name is empty , update to M\n
+			JsonNode nameNode = root.path(\"name\");\n
+			if (\"\".equals(nameNode.path(\"middle\").asText())) {\n
+				((ObjectNode) nameNode).put(\"middle\", \"M\");\n
+			}\n
+\n
+			// 3. Create a new field in nameNode\n
+			((ObjectNode) nameNode).put(\"nickname\", \"mkyong\");\n
+\n
+			// 4. Remove last field in nameNode\n
+			((ObjectNode) nameNode).remove(\"last\");\n
+\n
+			// 5. Create a new ObjectNode and add to root\n
+			ObjectNode positionNode = mapper.createObjectNode();\n
+			positionNode.put(\"name\", \"Developer\");\n
+			positionNode.put(\"years\", 10);\n
+			((ObjectNode) root).set(\"position\", positionNode);\n
+\n
+			// 6. Create a new ArrayNode and add to root\n
+			ArrayNode gamesNode = mapper.createArrayNode();\n
+\n
+			ObjectNode game1 = mapper.createObjectNode();\n
+			game1.put(\"name\", \"Fall Out 4\");\n
+			game1.put(\"price\", 49.9);\n
+\n
+			ObjectNode game2 = mapper.createObjectNode();\n
+			game2.put(\"name\", \"Dark Soul 3\");\n
+			game2.put(\"price\", 59.9);\n
+\n
+			gamesNode.add(game1);\n
+			gamesNode.add(game2);\n
+			((ObjectNode) root).set(\"games\", gamesNode);\n
+\n
+			// 7. Append a new Node to ArrayNode\n
+			ObjectNode email = mapper.createObjectNode();\n
+			email.put(\"type\", \"email\");\n
+			email.put(\"ref\", \"abc@mkyong.com\");\n
+\n
+			JsonNode contactNode = root.path(\"contact\");\n
+			((ArrayNode) contactNode).add(email);\n
+\n
+			String resultUpdate = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(root);\n
+			System.out.println(\"After Update \" + resultUpdate);\n
+\n
+		} catch (JsonGenerationException e) {\n
+			e.printStackTrace();\n
+		} catch (JsonMappingException e) {\n
+			e.printStackTrace();\n
+		} catch (IOException e) {\n
+			e.printStackTrace();\n
+		}\n
+	}\n
+\n
+}\n
+Output\n
+\n
+Before Update {\n
+  \"id\" : 1,\n
+  \"name\" : {\n
+    \"first\" : \"Yong\",\n
+    \"last\" : \"Mook Kim\"\n
+  },\n
+  \"contact\" : [ {\n
+    \"type\" : \"phone/home\",\n
+    \"ref\" : \"111-111-1234\"\n
+  }, {\n
+    \"type\" : \"phone/work\",\n
+    \"ref\" : \"222-222-2222\"\n
+  } ]\n
+}\n
+\n
+After Update {\n
+  \"id\" : 1000,\n
+  \"name\" : {\n
+    \"first\" : \"Yong\",\n
+    \"middle\" : \"M\",\n
+    \"nickname\" : \"mkyong"\\n
+  },\n
+  \"contact\" : [ {\n
+    \"type\" : \"phone/home\",\n
+    \"ref\" : \"111-111-1234\"\n
+  }, {\n
+    \"type\" : \"phone/work\",\n
+    \"ref\" : \"222-222-2222\"\n
+  }, {\n
+    \"type\" : \"email\",\n
+    \"ref\" : \"abc@mkyong.com\"\n
+  } ],\n
+  \"position\" : {\n
+    \"name\" : \"Developer\",\n
+    \"years\" : 10\n
+  },\n
+  \"games\" : [ {\n
+    \"name\" : \"Fall Out 4\",\n
+    \"price\" : 49.9\n
+  }, {\n
+    \"name\" : "\Dark Soul 3\",\n
+    \"price\" : 59.9\n
+  } ]\n
+}\n
+
+	</string>
+
+	<string name="JacksonStreamingExample">
+
+		Jackson supports read and write JSON via high-performance Jackson Streaming APIs, or incremental mode. Read this Jackson Streaming APIs document for detail explanation on the benefit of using streaming API.\n
+\n
+Jackson\’s streaming processing is high-performance, fast and convenient, but it\’s also difficult to use, because you need to handle each and every detail of JSON data.\n
+\n
+In this tutorial, we show you how to use following Jackson streaming APIs to read and write JSON data.\n
+\n
+JsonGenerator – Write to JSON.\n
+JsonParser – Parse JSON.\n
+1. JsonGenerator\n
+In this example, you use \“JsonGenerator\” to write JSON \“field name\”, \“values\” and \“array of values\” into a file name \“file.json\“. See code comments for self-explanatory.\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+import org.codehaus.jackson.JsonEncoding;\n
+import org.codehaus.jackson.JsonFactory;\n
+import org.codehaus.jackson.JsonGenerationException;\n
+import org.codehaus.jackson.JsonGenerator;\n
+import org.codehaus.jackson.map.JsonMappingException;\n
+\n
+public class JacksonStreamExample {\n
+   public static void main(String[] args) {\n
+\n
+     try {\n
+\n
+	JsonFactory jfactory = new JsonFactory();\n
+\n
+	/*** write to file ***/\n
+	JsonGenerator jGenerator = jfactory.createJsonGenerator(new File(\n
+			\"c:\\user.json\"), JsonEncoding.UTF8);\n
+	jGenerator.writeStartObject(); // {\n
+\n
+	jGenerator.writeStringField(\"name\", \"mkyong\"); // \"name\" : \"mkyong\"\n
+	jGenerator.writeNumberField(\"age\", 29); // \"age\" : 29\n
+\n
+	jGenerator.writeFieldName(\"messages\"); // \"messages\" :\n
+	jGenerator.writeStartArray(); // [\n
+\n
+	jGenerator.writeString(\"msg 1\"); // \"msg 1\"\n
+	jGenerator.writeString(\"msg 2\"); // \"msg 2\"\n
+	jGenerator.writeString(\"msg 3\"); // \"msg 3\"\n
+\n
+	jGenerator.writeEndArray(); // ]\n
+\n
+	jGenerator.writeEndObject(); // }\n
+\n
+	jGenerator.close();\n
+\n
+     } catch (JsonGenerationException e) {\n
+\n
+	e.printStackTrace();\n
+\n
+     } catch (JsonMappingException e) {\n
+\n
+	e.printStackTrace();\n
+\n
+     } catch (IOException e) {\n
+\n
+	e.printStackTrace();\n
+\n
+     }\n
+
+   }\n
+
+}\n
+As result, following new file named \“file.json\” is created :\n
+\n
+{\n
+	\"name\":\"mkyong\",\n
+	\"age\":29,\n
+	\"messages\":[\"msg 1\",\"msg 2\",\"msg 3\"]\n
+}\n
+\n
+ \n
+2. JsonParser\n
+On the other hand, use JsonParser to parse or read above file \“file.json\“, and display each of the values.\n
+\n
+Token concept\n
+In streaming mode, every JSON \“string\” is consider as a single token, and each tokens will be processed incremental, that why we call it \“incremental mode\”. For example,\n
+{\n
+   \"name\":\"mkyong\"\n
+}\n
+Token 1 = \“{\“\n
+Token 2 = \“name\”\n
+Token 3 = \“mkyong\”\n
+Token 4 = \“}\”\n
+See full example.\n
+\n
+import java.io.File;\n
+import java.io.IOException;\n
+import org.codehaus.jackson.JsonFactory;\n
+import org.codehaus.jackson.JsonGenerationException;\n
+import org.codehaus.jackson.JsonParser;\n
+import org.codehaus.jackson.JsonToken;\n
+import org.codehaus.jackson.map.JsonMappingException;\n
+\n
+public class JacksonStreamExample {\n
+   public static void main(String[] args) {\n
+\n
+     try {\n
+\n
+	JsonFactory jfactory = new JsonFactory();\n
+\n
+	/*** read from file ***/\n
+	JsonParser jParser = jfactory.createJsonParser(new File(\"c:\\user.json\"));\n
+\n
+	// loop until token equal to \"}\"\n
+	while (jParser.nextToken() != JsonToken.END_OBJECT) {\n
+\n
+		String fieldname = jParser.getCurrentName();\n
+		if (\"name\".equals(fieldname)) {\n
+\n
+		  // current token is \"name\",\n
+                  // move to next, which is \"name\"\'s value\n
+		  jParser.nextToken();\n
+		  System.out.println(jParser.getText()); // display mkyong\n
+\n
+		}\n
+
+		if (\"age\".equals(fieldname)) {\n
+\n
+		  // current token is \"age\",\n
+                  // move to next, which is \"name\"\'s value\n
+		  jParser.nextToken();\n
+		  System.out.println(jParser.getIntValue()); // display 29\n
+\n
+		}\n
+\n
+		if (\"messages\".equals(fieldname)) {\n
+\n
+		  jParser.nextToken(); // current token is \"[\", move next\n
+\n
+		  // messages is array, loop until token equal to \"]\"\n
+		  while (jParser.nextToken() != JsonToken.END_ARRAY) {\n
+\n
+                     // display msg1, msg2, msg3\n
+		     System.out.println(jParser.getText());\n
+\n
+		  }\n
+
+		}\n
+
+	  }\n
+	  jParser.close();\n
+\n
+     } catch (JsonGenerationException e) {\n
+\n
+	  e.printStackTrace();\n
+\n
+     } catch (JsonMappingException e) {\n
+\n
+	  e.printStackTrace();\n
+\n
+     } catch (IOException e) {\n
+\n
+	  e.printStackTrace();\n
+
+     }\n
+
+  }\n
+
+}\n
+Warning\n
+The array parsing is a bit tricky, read code comments for explanation.\n\n
+Output\n
+\n
+mkyong\n
+29\n
+msg 1\n
+msg 2\n
+msg 3\n
+	</string>
+
+	<string name="PrettyPrintJSONOutputInJackso">
+
+		In this tutorial, we will show you how to use Jackson library to pretty print JSON Object and String in the console and JSP page.\n
+\n
+1. Pretty Print JSON Object\n\n
+Example to convert Object and print its output in JSON format.\n
+\n
+User user = new User();\n
+//...set user data\n
+
+ObjectMapper mapper = new ObjectMapper();\n
+System.out.println(mapper.writeValueAsString(user));\n
+But the json output is in compact mode.\n
+\n
+{\"age\":29,\"messages\":[\"msg 1\",\"msg 2\",\"msg 3\"],\"name\":\"mkyong\"}\n
+To enable pretty print, use writerWithDefaultPrettyPrinter.\n
+\n
+ObjectMapper mapper = new ObjectMapper();\n
+System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(user));\n\n
+Output\n
+
+{\n
+  \"age\" : 29,\n
+  \"messages\" : [ \"msg 1\", \"msg 2\", \"msg 3\" ],\n
+  \"name\" : \"mkyong\"\n
+}\n
+\n
+ \n
+2. Pretty Print JSON String\n
+This is a bit tricky, try to use writerWithDefaultPrettyPrinter again.\n
+\n
+String test = \"{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"mkyong\\"}";\n
+System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(test));\n
+Output, not what we want, json is still in compact mode.\n
+\n
+\"{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"mkyong\\"}"\n
+To solve it, bind the JSON string to Object before pretty print it.\n
+\n
+String test = "{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"mkyong\\"}";\n
+Object json = mapper.readValue(test, Object.class);\n
+System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json));\n\n
+Output\n
+\n
+{\n
+  \"age\" : 29,\n
+  \"messages\" : [ \"msg 1\", \"msg 2\", \"msg 3\" ],\n
+  \"name\" : \"mkyong\"\n
+}\n
+\n
+ \n
+3. Pretty Print JSON in JSP page\n
+To pretty print JSON data in a JSP page or any other HTML page, just wrap the json data with &lt;pre> tag. This example is using Spring MVC and JSP page.\n
+\n
+Controller Class\n
+@Controller\n
+@RequestMapping(\"/anything\")\n
+public class AdminController {\n
+\n
+  @RequestMapping(method = RequestMethod.GET)\n
+  public ModelAndView index() {\n
+\n
+	String test = \"{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"mkyong\\"}";\n
+	Object json = mapper.readValue(test, Object.class);\n
+\n
+	ModelAndView modelandView = new ModelAndView(\"viewname\");\n
+\n
+	modelandView.addObject(\"output\", mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json));\n
+\n
+	return modelandViewl;\n
+\n
+  }\n
+\n
+}\n
+In html page.\n
+&lt;pre>${output}&lt;/pre>\n
+
+
+	</string>
+
+
+
+
+
+
 
 
 </resources>

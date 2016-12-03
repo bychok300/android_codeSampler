@@ -150,7 +150,23 @@
         <activity android:name=".javaxml.xmlproperties.ConvertXMLFileIntoPropertiesFile"></activity>
 
 
-        <activity android:name=".JavaRegEx"></activity>
+        <activity android:name=".json.JavaJSON"></activity>
+        <!---> список Java Json содержит эти подразделы</!-->
+        <activity android:name=".json.jackson.Jackson"></activity>
+
+        <!---> список Jacson содержит эти подразделы</!-->
+        <activity android:name=".json.jackson.ObjectAndJSON"></activity>
+        <activity android:name=".json.jackson.MapAndJSON"></activity>
+        <activity android:name=".json.jackson.JacksonTreeModelExample"></activity>
+        <activity android:name=".json.jackson.JacksonStreamingExample"></activity>
+        <activity android:name=".json.jackson.PrettyPrintJSONOutputInJackso"></activity>
+
+
+
+
+
+
+
 
         <activity android:name=".JDBC"></activity>
 

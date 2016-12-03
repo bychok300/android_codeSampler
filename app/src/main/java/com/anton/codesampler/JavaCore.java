@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.anton.codesampler.javaxml.JavaXML;
+import com.anton.codesampler.json.JavaJSON;
 
 
 /**
@@ -28,7 +29,7 @@ public class JavaCore extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //тут мы создаем элементы списка
-        final String[] Javacore = new String[]{"Java I/O", "Java XML", "Java RegEx", "JDBC"};
+        final String[] Javacore = new String[]{"Java I/O", "Java XML", "Java JSON", "JDBC"};
         //создаем эклемпляр адаптера и пихаем в него наш список
         mAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, Javacore);
@@ -53,7 +54,7 @@ public class JavaCore extends ListActivity {
                 startActivity(intent1);
                 break;
             case 2:
-                Intent intent2 = new Intent(this, JavaRegEx.class);
+                Intent intent2 = new Intent(this, JavaJSON.class);
                 startActivity(intent2);
                 break;
             case 3:
