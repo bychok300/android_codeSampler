@@ -26,4 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void About (View view) {
+        //делаем экземпляр класса интент с (текущей страницой, классом обработчиком перехода)
+        Intent intent = new Intent(MainActivity.this, AboutPage.class);
+        // стартуем нашу новую активити
+        startActivity(intent);
+
+
+    }
+
 }

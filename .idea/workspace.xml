@@ -9,43 +9,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c15f728-604e-41d8-88f6-d558ed349175" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/gson/GoogleGson.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/gson/GsonSimpleStreaming.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/gson/Gsonoutput.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/gson/ObjAndGson.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/jsonsimple/JSONSimple.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/jsonsimple/JSONSimpleExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/gsonoutput.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/gsonsimplestreaming.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/jsonsimpleexample.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/objandgson.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/GoogleGson.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JSONSimple.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JavaIO.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/JavaIO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/consoleio/ConsoleIO.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/ConsoleIO/ConsoleIO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/consoleio/GetTheStandartInput.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/ConsoleIO/GetTheStandartInput.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/directory/CheckIfDirectoryIsEmpty.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/Directory/CheckIfDirectoryIsEmpty.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/directory/CopyDirectory.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/Directory/CopyDirectory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/directory/CreateDirectory.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/Directory/CreateDirectory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/directory/DeleteDirectory.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/Directory/DeleteDirectory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/directory/Directory.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/Directory/Directory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/directory/GetTheCurrentWorkingDirectory.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/Directory/GetTheCurrentWorkingDirectory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/directory/TraverseDirectoryStructure.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/Directory/TraverseDirectoryStructure.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/filecompression/CompressFileInGZIPFormat.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/FileCompression/CompressFileInGZIPFormat.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/filecompression/CompressFilesInZIPFormat.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/FileCompression/CompressFilesInZIPFormat.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/filecompression/CompressSerializedObjectIntoFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/FileCompression/CompressSerializedObjectIntoFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/filecompression/DecompressFileFromGZIPFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/FileCompression/DecompressFileFromGZIPFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/filecompression/DecompressFilesFromZIPFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/FileCompression/DecompressFilesFromZIPFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/filecompression/DecompressSerializedObjectFromGzipFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/FileCompression/DecompressSerializedObjectFromGzipFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/filecompression/FileCompression.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/FileCompression/FileCompression.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/fileserialization/FileSerialization.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/FileSerialization/FileSerialization.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/fileserialization/ReadObjFromFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/FileSerialization/ReadObjFromFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/fileserialization/WriteAnObjToFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/FileSerialization/WriteAnObjToFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/temproraryfiles/CreateTemporaryFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/TemporaryFiles/CreateTemporaryFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/temproraryfiles/DeleteTemporaryFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/TemporaryFiles/DeleteTemporaryFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/temproraryfiles/GetTheTemporaryFilePath.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/TemporaryFiles/GetTheTemporaryFilePath.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/temproraryfiles/TemporaryFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/TemporaryFiles/TemporaryFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/temproraryfiles/WriteDataToTemporaryFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/TemporaryFiles/WriteDataToTemporaryFile.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/AboutPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/FAQ/FAQ.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/FAQ/InsertDateValueInPreparedStatement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/FAQ/InsertTimestampValueInPreparedStatement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBC.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PSSTMNBatchUpdate.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PSSTMNCreateTable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PSSTMNDeleteRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PSSTMNInsertRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PSSTMNSelectListRecords.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PSSTMNUpdateRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PreparedStatement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStatement/STMNBatchUpdate.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStatement/STMNCreateTable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStatement/STMNDeleteRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStatement/STMNInsertRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStatement/STMNSelectListRecords.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStatement/STMNUpdateRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStatement/Statement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStoredProcedure/StoredProcedure.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStoredProcedure/StoredProcedureCURSOR.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStoredProcedure/StoredProcedureIN.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStoredProcedure/StoredProcedureOUT.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/QuickStart/MySQL.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/QuickStart/OracleDB.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/QuickStart/PostgreSQL.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/QuickStart/QuickStart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/TransactionExample/TransactionExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/TransactionExample/TransaqExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/aboutpage.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/insdatainps.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/insinps.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/mysql.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/oracledb.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/postgresql.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/psstmnbatch.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/psstmncreate.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/psstmndelete.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/psstmninsert.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/psstmnselectlist.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/psstmnupdate.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/spcursor.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/spin.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/spout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/stmnbatchupdate.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/stmncreatetable.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/stmndeleterecord.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/stmninsertrecord.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/stmnselectlist.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/stmnupdaterecord.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/transaqexample.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
@@ -55,43 +70,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JavaCore.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JavaCore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/AppendContentToFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/AppendContentToFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/AssignFileContentIntoVariable.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/AssignFileContentIntoVariable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/ChangeTheFileLastModifiedDate.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/ChangeTheFileLastModifiedDate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/CheckIfFileExists.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/CheckIfFileExists.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/CheckIfFileIsHidden.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/CheckIfFileIsHidden.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/ConstructFilePath.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/ConstructFilePath.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/ConvertArrayOfBytesIntoFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/ConvertArrayOfBytesIntoFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/ConvertFileIntoAnArrayOfBytes.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/ConvertFileIntoAnArrayOfBytes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/ConvertFileToHex.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/ConvertFileToHex.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/ConvertInputStreamToString.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/ConvertInputStreamToString.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/ConvertStringToInputStream.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/ConvertStringToInputStream.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/CopyFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/CopyFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/CreateFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/CreateFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/DeleteFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/DeleteFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/DeleteFilesWithCertainExtensionOnly.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/DeleteFilesWithCertainExtensionOnly.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/File.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/File.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/FindFilesWithCertainExtensionOnly.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/FindFilesWithCertainExtensionOnly.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/GenerateFileChecksumValue.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/GenerateFileChecksumValue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/GetFileSize.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/GetFileSize.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/GetFilepathOfFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/GetFilepathOfFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/GetTheFileCreationDate.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/GetTheFileCreationDate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/GetTheFileLastModifiedDate.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/GetTheFileLastModifiedDate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/GetTheTotalNumberOfLinesOfFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/GetTheTotalNumberOfLinesOfFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/GetTotalOfFreeDiskSpace.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/GetTotalOfFreeDiskSpace.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/MakeFileReadOnly.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/MakeFileReadOnly.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/MoveFileToAnotherDirectory.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/MoveFileToAnotherDirectory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/ReadFileEithBIS.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/ReadFileEithBIS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/ReadFileWithBufferedReader.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/ReadFileWithBufferedReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/ReadUTF8EncodedDataFromFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/ReadUTF8EncodedDataFromFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/RenameFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/RenameFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/SetTheFilePermission.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/SetTheFilePermission.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/WriteFileEithBW.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/WriteFileEithBW.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/WriteFileWithFOS.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/WriteFileWithFOS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaio/file/WriteUTF8EncodedDataIntoFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/file/WriteUTF8EncodedDataIntoFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/JavaJSON.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/JavaJSON.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
@@ -128,35 +111,72 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="172" column="66" selection-start-line="172" selection-start-column="49" selection-end-line="172" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
           <provider editor-type-id="android-manifest">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jsonsimpleexample.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/jsonsimpleexample.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+            <state relative-caret-position="247">
+              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
               <folding />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="android-designer2">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/AboutPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aboutpage.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/aboutpage.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+              <folding>
+                <element signature="e#262#281#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="5921" column="30" selection-start-line="5921" selection-start-column="30" selection-end-line="5921" selection-end-column="30" />
+            <state relative-caret-position="1404">
+              <caret line="8438" column="0" selection-start-line="8438" selection-start-column="0" selection-end-line="8438" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -164,14 +184,14 @@
       </file>
       <file leaf-file-name="checkiffileishidden.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/checkiffileishidden.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
           <provider editor-type-id="android-designer2">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="38" selection-start-line="6" selection-start-column="4" selection-end-line="11" selection-end-column="38" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -1856,56 +1876,56 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/createnewxmlfile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/countxmlelements.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/ReadXMLFileSAX.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/SAXErrorInvalidByte1.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/SAXXMLParser.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/SAXErrorContentIsNotAllowed.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/readxmlfilesax.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/ReadUTF8XMLFile.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/readutf8xmlfile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/saxerrorinvalidbyte.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/saxerrorcontentisnotallowed.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDOMXMLParser.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/ReadXMLFileJDOM.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/ModifyExistingXMLFileJDOM.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/CreateNewXMLFileJDOM.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/readxmljdom.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/modifyexistingxmljdom.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/createnewxmlfilejdom.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JAXBExample.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JAXB2Example.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/jaxbhelloexample.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/XMLProperties.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/ConvertPropertiesFileIntoXMLFile.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/ConvertXMLFileIntoPropertiesFile.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/convertproperties.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/convertxml.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JavaCore.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JavaJSON.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/Jackson.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/ObjectAndJSON.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/MapAndJSON.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JacksonTreeModelExample.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JacksonStreamingExample.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/PrettyPrintJSONOutputInJackso.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/objandjson.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/mapandjson.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/jacksontree.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/jacksonstreaming.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/prettyprintjson.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/GoogleGson.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/ObjAndGson.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/GsonSimpleStreaming.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/Gsonoutput.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/objandgson.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/gsonsimplestreaming.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/gsonoutput.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JSONSimple.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JSONSimpleExample.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/STMNUpdateRecord.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/STMNDeleteRecord.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/STMNSelectListRecords.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/STMNBatchUpdate.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/Statement.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/stmncreatetable.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/stmninsertrecord.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/stmnupdaterecord.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/stmndeleterecord.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/stmnselectlist.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/stmnbatchupdate.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/PSSTMNCreateTable.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/PSSTMNInsertRecord.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/PSSTMNUpdateRecord.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/PSSTMNDeleteRecord.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/PSSTMNSelectListRecords.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/PSSTMNBatchUpdate.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/psstmncreate.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/psstmninsert.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/psstmnupdate.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/psstmndelete.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/psstmnselectlist.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/psstmnbatch.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/StoredProcedure.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/StoredProcedureIN.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/StoredProcedureOUT.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/StoredProcedureCURSOR.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/spin.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/spout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/spcursor.xml" />
+        <option value="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/TransactionExample.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/TransaqExample.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/transaqexample.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/IntegrationExample.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JSFplusJDBC.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/SpringPlusJDBC.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/spring.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/jsf.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBC.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/FAQ.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/InsertTimestampValueInPreparedStatement.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/InsertDateValueInPreparedStatement.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/insinps.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/insdatainps.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/AboutPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/jsonsimpleexample.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/aboutpage.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       </list>
     </option>
@@ -1941,10 +1961,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2045,28 +2061,58 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codesampler" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="json" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeSampler" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="manifests" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$SDK_HOME$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="device.picker.selection" value="Nexus_5_API_22" />
+    <property name="device.picker.selection" value="1eae16f8" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPropertiesWindowManager-NlEditorPanel.SHOW" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.anton.codesampler" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.anton.codesampler" />
+      <recent name="com.anton.codesampler.JDBC" />
       <recent name="com.anton.codesampler.javaio.file" />
       <recent name="com.anton.codesampler.file" />
     </key>
@@ -2441,360 +2487,81 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/readxmljdom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/modifyexistingxmljdom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaxml/jdom/CreateNewXMLFileJDOM.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStatement/STMNSelectListRecords.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaxml/jdom/ModifyExistingXMLFileJDOM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/createnewxmlfilejdom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/stmnselectlist.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaxml/sax/ReadXMLFileSAX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaxml/jaxb/JAXBExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="49" column="61" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/jaxbhelloexample.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaxml/JavaXML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="76" column="5" selection-start-line="20" selection-start-column="4" selection-end-line="76" selection-end-column="5" />
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaxml/jaxb/JAXB2Example.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaxml/xmlproperties/ConvertPropertiesFileIntoXMLFile.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStatement/STMNBatchUpdate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaxml/xmlproperties/XMLProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/stmnbatchupdate.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/convertproperties.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaxml/xmlproperties/ConvertXMLFileIntoPropertiesFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/convertxml.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/createfile.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaxml/dom/CountXMLElements.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JSON.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/javajson.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JavaCore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="30" column="81" selection-start-line="30" selection-start-column="81" selection-end-line="30" selection-end-column="81" />
+          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chekiffileexist.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/getthetempfile.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/jackson/Jackson.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PreparedStatement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="70" column="79" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/jackson/ObjectAndJSON.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/objandjson.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/jackson/MapAndJSON.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mapandjson.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/jackson/JacksonTreeModelExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/jacksontree.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/jackson/JacksonStreamingExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/jacksonstreaming.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/jackson/PrettyPrintJSONOutputInJackso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/prettyprintjson.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/JavaJSON.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/JavaIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="82" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/gson/GoogleGson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="53" column="69" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="69" />
+        <state relative-caret-position="315">
+          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/gson/ObjAndGson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/objandgson.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/psstmncreate.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/gson/GsonSimpleStreaming.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/gsonsimplestreaming.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/gson/Gsonoutput.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PSSTMNInsertRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
@@ -2804,44 +2571,350 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/gsonoutput.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/psstmninsert.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/TemporaryFiles/DeleteTemporaryFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/jsonsimple/JSONSimple.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PSSTMNUpdateRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="49" column="66" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+        <state relative-caret-position="210">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/TemporaryFiles/TemporaryFile.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/psstmnupdate.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="69" column="5" selection-start-line="18" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
+        <state relative-caret-position="105">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/javaIO/TemporaryFiles/GetTheTemporaryFilePath.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PSSTMNDeleteRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/psstmndelete.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PSSTMNSelectListRecords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/psstmnselectlist.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PSSTMNBatchUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/psstmnbatch.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/QuickStart/OracleDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCPreparedStatment/PSSTMNCreateTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStoredProcedure/StoredProcedure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="54" column="71" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStoredProcedure/StoredProcedureIN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spin.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStoredProcedure/StoredProcedureOUT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spout.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBCStoredProcedure/StoredProcedureCURSOR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="7821" column="0" selection-start-line="7821" selection-start-column="0" selection-end-line="7821" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spcursor.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/TransactionExample/TransactionExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="51" column="63" selection-start-line="51" selection-start-column="63" selection-end-line="51" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/TransactionExample/TransaqExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/transaqexample.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/IntegrationExample/SpringPlusJDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spring.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/IntegrationExample/IntegrationExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="48" column="64" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/IntegrationExample/JSFplusJDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/jsf.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/JDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/QuickStart/PostgreSQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/FAQ/FAQ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="55" column="71" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/FAQ/InsertTimestampValueInPreparedStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/insinps.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JDBC/FAQ/InsertDateValueInPreparedStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/insdatainps.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/jackson/JacksonTreeModelExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="15" selection-end-column="5" />
@@ -2850,20 +2923,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/checkiffileishidden.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="38" selection-start-line="6" selection-start-column="4" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/json/jsonsimple/JSONSimpleExample.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/JavaCore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/AboutPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2871,31 +2952,52 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="172" column="66" selection-start-line="172" selection-start-column="49" selection-end-line="172" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/jsonsimpleexample.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        <state relative-caret-position="247">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/anton/codesampler/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/aboutpage.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding>
+            <element signature="e#262#281#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="5921" column="30" selection-start-line="5921" selection-start-column="30" selection-end-line="5921" selection-end-column="30" />
+        <state relative-caret-position="1404">
+          <caret line="8438" column="0" selection-start-line="8438" selection-start-column="0" selection-end-line="8438" selection-end-column="0" />
           <folding />
         </state>
       </provider>

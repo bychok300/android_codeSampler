@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.1_5f0f402b1ec3b8d9f029805875f064fab572f99e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.1_4d641317216151dc2498c16e3042052aac5360b6/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_1e761d3bb1f4cd17a614b42476ed321d845b59bf.jar" />
     </item>
     <item
         is-multidex="true"
@@ -30,12 +30,120 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="cb2d948319367b100acc76d66f7871eeb44f011f">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_36a8b711a38218c8becc29b825dc93a5606ed688/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.1_fa21c945e311037750990567f7416c08cb6d58b7/classes.dex" />
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.0.1_fa21c945e311037750990567f7416c08cb6d58b7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_3848874e4e6635b066f98e3c64498136f9cac6b4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_29d7ddeffbbf6905740a294ee3e9451b6f4cc5f6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.0.1_7e380ad0fac023f9d9dd6001ccc9c0677beea417.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e9f4262685740bd7946b035a9efbc02ed2ecfe06">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/instant-run_6b3f9a0c5ee045ecbfc3d81bf4b987150e36bff6.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_f9d31c39c13641885b3646ea418b7f86581a17d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.1_51fe089897c903acdabc90bfa3d48fca4d35b670.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.1_32d6e2dd7aad35ed8972695d86b9a2b709a1dd3b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.1_758d8522bf92fe49eb0ae70015b50bce2c10849c/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.0.1_177d803207c4ba4f26a4d640a24b11eff14816ba.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ff075d429d74b0a2c6260e64bea13e2bb9a86bfe">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f5a36d712c7951de8b7097c848f7873afa06ca47/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.1_0f33d797b1d1722c0c36e09c0f01ae989bcbbd75.jar" />
     </item>
     <item
         is-multidex="true"
@@ -45,15 +153,6 @@
         revision="25.0.1"
         sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
         <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.1_7ffe9d2545b59b6ed28ccc005b81446ee0a56d40/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="cb2d948319367b100acc76d66f7871eeb44f011f">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_36a8b711a38218c8becc29b825dc93a5606ed688/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -74,58 +173,49 @@
         <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.1_18e8d443534bfdd6e8cd059d29ffb8abb4d1f64a/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        is-multidex="false"
+        jar="/home/rem0tec0de/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="f4381c25031c20e06767f43d218d26dc4a9f2346">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6b3f9a0c5ee045ecbfc3d81bf4b987150e36bff6/classes.dex" />
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.1_7ffe9d2545b59b6ed28ccc005b81446ee0a56d40.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.1_46925b83a8fb2939eebd6484404d33a1cedc36b7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/libs/internal_impl-25.0.1.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_2ff8b91c04fa95a3ad147bf741aaece04b851fda/classes.dex" />
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_2ff8b91c04fa95a3ad147bf741aaece04b851fda.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.1_46925b83a8fb2939eebd6484404d33a1cedc36b7.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_1bc1d812162d71cbcef3c16388c2c2659b0c985f/classes.dex" />
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_1bc1d812162d71cbcef3c16388c2c2659b0c985f.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_29d7ddeffbbf6905740a294ee3e9451b6f4cc5f6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_3848874e4e6635b066f98e3c64498136f9cac6b4/classes.dex" />
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.1_5f0f402b1ec3b8d9f029805875f064fab572f99e.jar" />
     </item>
     <item
         is-multidex="true"
@@ -138,24 +228,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="bad3f575f99029a1a3dc5547d94383c1bf935c8d">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8fdcd680b121a615111bbf193cdc7ea748de5e7a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.1_51fe089897c903acdabc90bfa3d48fca4d35b670/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -164,40 +236,22 @@
         <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.1_de1d12966b0c1f2c8f62e0a76468b18cb0be6e34/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.1_7e380ad0fac023f9d9dd6001ccc9c0677beea417/classes.dex" />
+        sha1="f11f2c34ac873b524d0cf06b1d28c4a2e4a94c18">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_8fdcd680b121a615111bbf193cdc7ea748de5e7a.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.1_177d803207c4ba4f26a4d640a24b11eff14816ba/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_f9d31c39c13641885b3646ea418b7f86581a17d7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.1_32d6e2dd7aad35ed8972695d86b9a2b709a1dd3b/classes.dex" />
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.1_161f8bf0f81ee3a6f27a17d3587bb8663d824552.jar" />
     </item>
     <item
         is-multidex="true"
@@ -210,33 +264,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.1_0f33d797b1d1722c0c36e09c0f01ae989bcbbd75/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.1_758d8522bf92fe49eb0ae70015b50bce2c10849c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.1_92d1b0128ccf58c3258dc12df3b9ae68889036e2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
         jumboMode="true"
         optimize="true"
@@ -246,21 +273,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="ff075d429d74b0a2c6260e64bea13e2bb9a86bfe">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f5a36d712c7951de8b7097c848f7873afa06ca47/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
         <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.1_7b241e6c0cda88b1012ca9ef4606694b9a17b88b/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.0.1_92d1b0128ccf58c3258dc12df3b9ae68889036e2.jar" />
     </item>
     <item
         is-multidex="true"
@@ -279,24 +306,6 @@
         revision="25.0.1"
         sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
         <dex dex="/home/rem0tec0de/AndroidStudioProjects/android_codeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_de7dffa827dbba59af710b702dd50b05b12a8c7f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.1_161f8bf0f81ee3a6f27a17d3587bb8663d824552/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="f83b00041ecfba705603fec40363416c7de69719">
-        <dex dex="/home/rem0tec0de/AndroidStudioProjects/CodeSampler/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_1e761d3bb1f4cd17a614b42476ed321d845b59bf/classes.dex" />
     </item>
 
 </items>

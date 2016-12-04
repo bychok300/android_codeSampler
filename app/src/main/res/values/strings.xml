@@ -5936,7 +5936,2503 @@ msg 3\n
 	</string>
 
 
+	<string name="MySQL">
 
+		1. Java JDBC connection example\n
+Code snippets to use a JDBC driver to connect a MySQL database.\n
+\n
+Class.forName(\"com.mysql.jdbc.Driver\");\n
+Connection conn = null;\n
+conn = DriverManager.getConnection(\"jdbc:mysql://hostname:port/dbname\",\"username\", \"password\");\n
+conn.close();\n
+See a complete example below :\n
+\n
+JDBCExample.java\n
+package com.mkyong.common;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.SQLException;\n
+\n
+public class JDBCExample {\n
+\n
+  public static void main(String[] argv) {\n
+\n
+	System.out.println(\"-------- MySQL JDBC Connection Testing ------------\");\n
+\n
+	try {\n
+		Class.forName(\"com.mysql.jdbc.Driver\");\n
+	} catch (ClassNotFoundException e) {\n
+		System.out.println(\"Where is your MySQL JDBC Driver?\");\n
+		e.printStackTrace();\n
+		return;\n
+	}\n
+\n
+	System.out.println(\"MySQL JDBC Driver Registered!\");\n
+	Connection connection = null;\n
+\n
+	try {\n
+		connection = DriverManager\n
+		.getConnection(\"jdbc:mysql://localhost:3306/mkyongcom\",\"root\", \"password\");\n
+\n
+	} catch (SQLException e) {\n
+		System.out.println(\"Connection Failed! Check output console\");\n
+		e.printStackTrace();\n
+		return;\n
+	}\n
+\n
+	if (connection != null) {\n
+		System.out.println(\"You made it, take control your database now!\");\n
+	} else {\n
+		System.out.println(\"Failed to make connection!\");\n
+	}\n
+  }\n
+}\n
+
+\n
+2. Run it\n
+Assume JDBCExample.java is store in c:\test folder, along with the MySQL JDBC driver\n
+\n
+C:\test>java -cp c:\test\mysql-connector-java-5.1.8-bin.jar;c:\test JDBCExample\n
+-------- MySQL JDBC Connection Testing ------------\n
+MySQL JDBC Driver Registered!\n
+You made it, take control your database now!\n
+\n
+C:\test>\n
+P.S To run this example, your need mysql-connector-java-{version}-bin.jar in your classpath.\n
+\n
+Done.\n
+
+
+	</string>
+
+	<string name="PostgreSQL">
+
+		1. Download PostgreSQL JDBC Driver\n
+Get a PostgreSQL JDBC driver at this URL : http://jdbc.postgresql.org/download.html\n
+\n\n
+
+
+2. Java JDBC connection example\n
+Code snippets to use JDBC to connect a PostgreSQL database\n
+\n
+Class.forName(\"org.postgresql.Driver\");\n
+Connection connection = null;\n
+connection = DriverManager.getConnection(\n
+   \"jdbc:postgresql://hostname:port/dbname\",\"username\", \"password\");\n
+connection.close();\n
+See a complete example below :\n
+File : JDBCExample.java\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.SQLException;\n
+\n
+public class JDBCExample {\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		System.out.println(\"-------- PostgreSQL \"\n
+				+ \"JDBC Connection Testing ------------\");\n
+\n
+		try {\n
+\n
+			Class.forName(\"org.postgresql.Driver\");\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(\"Where is your PostgreSQL JDBC Driver? \"\n
+					+ \"Include in your library path!\");\n
+			e.printStackTrace();\n
+			return;\n
+\n
+		}\n
+
+		System.out.println(\"PostgreSQL JDBC Driver Registered!\");\n
+\n
+		Connection connection = null;\n
+\n
+		try {\n
+\n
+			connection = DriverManager.getConnection(\n
+					\"jdbc:postgresql://127.0.0.1:5432/testdb\", \"mkyong\",\n
+					\"123456\");\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(\"Connection Failed! Check output console\");\n
+			e.printStackTrace();\n
+			return;\n
+
+		}\n
+
+		if (connection != null) {\n
+			System.out.println(\"You made it, take control your database now!\");\n
+		} else {\n
+			System.out.println(\"Failed to make connection!\");\n
+		}\n
+	}\n
+
+}\n
+\n
+
+3. Run it\n
+Assume JDBCExample is store in c:\test folder, together with PostgreSQL JDBC driver, then run it :\n
+\n
+C:\test>java -cp c:\test\postgresql-8.3-603.jdbc4.jar;c:\test JDBCExample\n
+-------- MySQL JDBC Connection Testing ------------\n
+PostgreSQL JDBC Driver Registered!\n
+You made it, take control your database now!\n
+Done\n
+	</string>
+
+	<string name="OracleDB">
+
+		Java JDBC connection example\n
+Code snippets to use JDBC to connect a Oracle database.\n
+\n
+Class.forName(\"org.postgresql.Driver\");\n
+Connection connection = null;\n
+connection = DriverManager.getConnection(\n
+	\"jdbc:oracle:thin:@localhost:1521:mkyong\",\"username\",\"password\");\n
+connection.close();\n
+See a complete example below :\n
+File : OracleJDBC.java\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.SQLException;\n
+\n
+public class OracleJDBC {\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		System.out.println(\"-------- Oracle JDBC Connection Testing ------\");\n
+\n
+		try {\n
+\n
+			Class.forName(\"oracle.jdbc.driver.OracleDriver\");\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(\"Where is your Oracle JDBC Driver?\");\n
+			e.printStackTrace();\n
+			return;\n
+
+		}\n
+\n
+		System.out.println(\"Oracle JDBC Driver Registered!\");\n
+\n
+		Connection connection = null;\n
+\n
+		try {\n
+\n
+			connection = DriverManager.getConnection(\n
+					\"jdbc:oracle:thin:@localhost:1521:mkyong\", \"username\",\n
+					\"password\");\n
+
+		} catch (SQLException e) {\n
+
+			System.out.println(\"Connection Failed! Check output console\");\n
+			e.printStackTrace();\n
+			return;\n
+\n
+		}\n
+
+		if (connection != null) {\n
+			System.out.println(\"You made it, take control your database now!\");\n
+		} else {\n
+			System.out.println(\"Failed to make connection!\");\n
+		}\n
+	}\n
+
+}\n
+
+
+2. Run it\n
+Assume OracleJDBC.java is store in \“C:\jdbc-test\” folder, together with Oracle JDBC driver (ojdbc6.jar), then run following commands :\n
+\n
+C:\jdbc-test>javac OracleJDBC.java\n
+\n
+C:\jdbc-test>java -cp c:\jdbc-test\ojdbc6.jar;c:\jdbc-test OracleJDBC\n
+-------- Oracle JDBC Connection Testing ------------\n
+Oracle JDBC Driver Registered!\n
+You made it, take control your database now!\n
+\n
+C:\jdbc-test>\n
+	</string>
+
+	<string name="STMNCreateTable">
+
+		Here\’s an example to show you how to create a table in database via JDBC statement. To issue a create statement, calls the Statement.execute() method like this :\n
+\n
+Statement statement = dbConnection.createStatement();\n
+// execute create SQL stetement\n
+statement.execute(createTableSQL);\n
+Full example…\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.SQLException;\n
+import java.sql.Statement;\n
+\n
+public class JDBCStatementCreateExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			createDbUserTable();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+	}\n
+\n
+	private static void createDbUserTable() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		Statement statement = null;\n
+\n
+		String createTableSQL = \"CREATE TABLE DBUSER(\"\n
+				+ \"USER_ID NUMBER(5) NOT NULL, \"\n
+				+ \"USERNAME VARCHAR(20) NOT NULL, \"\n
+				+ \"CREATED_BY VARCHAR(20) NOT NULL, \"\n
+				+ \"CREATED_DATE DATE NOT NULL, " + "PRIMARY KEY (USER_ID) \"\n
+				+ \")\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			statement = dbConnection.createStatement();\n
+\n
+			System.out.println(createTableSQL);\n
+                        // execute the SQL stetement\n
+			statement.execute(createTableSQL);\n
+\n
+			System.out.println(\"Table \\"dbuser\\" is created!\");\n
+\n
+		} catch (SQLException e) {\n
+
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (statement != null) {\n
+				statement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+\n
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+					DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		return dbConnection;\n
+\n
+	}\n
+\n
+}\n
+Result\n
+Here’s the result.\n
+\n
+CREATE TABLE DBUSER(\n
+  USER_ID NUMBER(5) NOT NULL,\n
+  USERNAME VARCHAR(20) NOT NULL,\n
+  CREATED_BY VARCHAR(20) NOT NULL,\n
+  CREATED_DATE DATE NOT NULL,\n
+  PRIMARY KEY (USER_ID)\n
+)\n
+Table \"user\" is created!\n
+	</string>
+
+	<string name="STMNInsertRecord">
+
+		Here\’s an example to show you how to insert a record into table via JDBC statement. To issue a insert statement, calls the Statement.executeUpdate() method like this :\n
+\n
+Statement statement = dbConnection.createStatement();\n
+// execute the insert SQL stetement\n
+statement.executeUpdate(insertTableSQL);\n
+Full example…\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.SQLException;\n
+import java.sql.Statement;\n
+import java.text.DateFormat;\n
+import java.text.SimpleDateFormat;\n
+\n
+public class JDBCStatementInsertExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+	private static final DateFormat dateFormat = new SimpleDateFormat(\n
+			\"yyyy/MM/dd HH:mm:ss\");\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			insertRecordIntoDbUserTable();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+
+	}\n
+
+	private static void insertRecordIntoDbUserTable() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		Statement statement = null;\n
+\n
+		String insertTableSQL = \"INSERT INTO DBUSER\"\n
+				+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) \" + \"VALUES\"\n
+				+ \"(1,\'mkyong\',\'system\', \" + \"to_date(\'\"\n
+				+ getCurrentTimeStamp() + \"\', \'yyyy/mm/dd hh24:mi:ss\'))\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			statement = dbConnection.createStatement();\n
+\n
+			System.out.println(insertTableSQL);\n
+\n
+			// execute insert SQL stetement\n
+			statement.executeUpdate(insertTableSQL);\n
+\n
+			System.out.println(\"Record is inserted into DBUSER table!\");\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (statement != null) {\n
+				statement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+                               DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+
+		return dbConnection;\n
+
+	}\n
+
+	private static String getCurrentTimeStamp() {\n
+\n
+		java.util.Date today = new java.util.Date();\n
+		return dateFormat.format(today.getTime());\n
+\n
+	}\n
+
+}\n
+Result\n\n
+A record is inserted into a table named \“DBUSER\”.\n
+\n
+INSERT INTO DBUSER(USER_ID, USERNAME, CREATED_BY, CREATED_DATE)\n
+VALUES(1,\'mkyong\',\'system\', to_date(\'2011/04/04 13:59:03\', \'yyyy/mm/dd hh24:mi:ss\'))\n
+Record is inserted into DBUSER table!\n
+	</string>
+
+	<string name="STMNUpdateRecord">
+
+		Here\’s an example to show you how to update a record in a table via JDBC statement. To issue a update statement, calls the Statement.executeUpdate() method like this :\n
+\n
+Statement statement = dbConnection.createStatement();\n
+// execute the update SQL stetement\n
+statement.executeUpdate(updateTableSQL);\n
+Full example…\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.SQLException;\n
+import java.sql.Statement;\n
+\n
+public class JDBCStatementUpdateExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			updateRecordIntoDbUserTable();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+
+	}\n
+
+	private static void updateRecordIntoDbUserTable() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		Statement statement = null;\n
+\n
+		String updateTableSQL = \"UPDATE DBUSER\"\n
+				+ \" SET USERNAME = \'mkyong_new\' \"\n
+				+ \" WHERE USER_ID = 1\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			statement = dbConnection.createStatement();\n
+\n
+			System.out.println(updateTableSQL);\n
+\n
+			// execute update SQL stetement\n
+			statement.execute(updateTableSQL);\n
+\n
+			System.out.println(\"Record is updated to DBUSER table!\");\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (statement != null) {\n
+				statement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+                              DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		return dbConnection;\n
+
+	}\n
+
+}\n
+Result\n\n
+The username of \“user_id = 1\” is updated to a new value \‘mkyong_new\’.\n
+\n
+UPDATE DBUSER SET USERNAME = \'mkyong_new\'  WHERE USER_ID = 1\n
+Record is updated into DBUSER table!\n
+	</string>
+
+	<string name="STMNDeleteRecord">
+
+		Here\’s an example to show you how to delete a record from a table via JDBC statement. To issue a delete statement, calls the Statement.executeUpdate() method like this :\n
+\n
+Statement statement = dbConnection.createStatement();\n
+// execute the delete SQL stetement\n
+statement.executeUpdate(deleteTableSQL);\n
+Full example…\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.SQLException;\n
+import java.sql.Statement;\n
+\n
+public class JDBCStatementDeleteExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			deleteRecordFromDbUserTable();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+	}\n
+
+	private static void deleteRecordFromDbUserTable() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		Statement statement = null;\n
+\n
+		String deleteTableSQL = \"DELETE DBUSER WHERE USER_ID = 1\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			statement = dbConnection.createStatement();\n
+\n
+			System.out.println(deleteTableSQL);\n
+\n
+			// execute delete SQL stetement\n
+			statement.execute(deleteTableSQL);\n
+\n
+			System.out.println(\"Record is deleted from DBUSER table!\");\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (statement != null) {\n
+				statement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+\n
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+                             DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		return dbConnection;\n
+
+	}\n
+
+}\n
+Result\n\n
+A record with \“user_id=1\” is deleted from table.\n
+\n
+DELETE DBUSER WHERE USER_ID = 1\n
+Record is deleted from DBUSER table!\n
+	</string>
+	
+	<string name="STMNSelectListRecords">
+		Here\’s an example to show you how to select the entire records from table via JDBC statement, and display all the records via a ResultSet object. To issue a select query, calls the Statement.executeQuery method like this :\n
+\n
+String selectTableSQL = \"SELECT USER_ID, USERNAME from DBUSER\";\n
+Statement statement = dbConnection.createStatement();\n
+ResultSet rs = statement.executeQuery(selectTableSQL);\n
+while (rs.next()) {\n
+	String userid = rs.getString(\"USER_ID\");\n
+	String username = rs.getString(\"USERNAME\");\n
+}\n
+Full example…\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.ResultSet;\n
+import java.sql.SQLException;\n
+import java.sql.Statement;\n
+\n
+public class JDBCStatementSelectExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			selectRecordsFromDbUserTable();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+
+	}\n
+
+	private static void selectRecordsFromDbUserTable() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		Statement statement = null;\n
+\n
+		String selectTableSQL = \"SELECT USER_ID, USERNAME from DBUSER\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			statement = dbConnection.createStatement();\n
+\n
+			System.out.println(selectTableSQL);\n
+\n
+			// execute select SQL stetement\n
+			ResultSet rs = statement.executeQuery(selectTableSQL);\n
+\n
+			while (rs.next()) {\n
+\n
+				String userid = rs.getString(\"USER_ID\");\n
+				String username = rs.getString(\"USERNAME\");\n
+\n
+				System.out.println(\"userid : \" + userid);\n
+				System.out.println(\"username : \" + username);\n
+\n
+			}\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (statement != null) {\n
+				statement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+\n
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(DB_CONNECTION, DB_USER,\n
+					DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		return dbConnection;\n
+\n
+	}\n
+\n
+}\n
+Result\n\n
+A list of the records are retrieved from table \“DBUSER\” and displayed.\n
+	</string>
+
+	<string name="STMNBatchUpdate">
+		Here\’s an example to show you how to insert few records in batch process, via JDBC Statement.\n
+\n
+dbConnection.setAutoCommit(false);\n
+\n
+statement = dbConnection.createStatement();\n
+statement.addBatch(insertTableSQL1);\n
+statement.addBatch(insertTableSQL2);\n
+statement.addBatch(insertTableSQL3);\n
+\n
+statement.executeBatch();\n
+\n
+dbConnection.commit();\n
+Note\n
+Batch Update is not limit to Insert statement, it\’s apply for Update and Delete statement as well.\n
+See full JDBC batch update example …\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.SQLException;\n
+import java.sql.Statement;\n
+import java.text.DateFormat;\n
+import java.text.SimpleDateFormat;\n
+\n
+public class JDBCBatchUpdateExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+	private static final DateFormat dateFormat = new SimpleDateFormat(\n
+			\"yyyy/MM/dd HH:mm:ss\");\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			batchInsertRecordsIntoTable();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+
+	}\n
+
+	private static void batchInsertRecordsIntoTable() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		Statement statement = null;\n
+\n
+		String insertTableSQL1 = \"INSERT INTO DBUSER\"\n
+				+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) \" + \"VALUES\"\n
+				+ \"(101,\'mkyong\',\'system\', \" + \"to_date(\'\"\n
+				+ getCurrentTimeStamp() + \"\', \'yyyy/mm/dd hh24:mi:ss\'))\";\n
+\n
+		String insertTableSQL2 = \"INSERT INTO DBUSER\"\n
+				+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) \" + \"VALUES\"\n
+				+ \"(102,\'mkyong\',\'system\', " + \"to_date(\'\"\n
+				+ getCurrentTimeStamp() + \"\', \'yyyy/mm/dd hh24:mi:ss\'))\";\n
+\n
+		String insertTableSQL3 = \"INSERT INTO DBUSER\"\n
+				+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) \" + \"VALUES\"\n
+				+ \"(103,\'mkyong\',\'system\', \" + \"to_date(\'\"\n
+				+ getCurrentTimeStamp() + \"\', \'yyyy/mm/dd hh24:mi:ss\'))\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			statement = dbConnection.createStatement();\n
+\n
+			dbConnection.setAutoCommit(false);\n
+\n
+			statement.addBatch(insertTableSQL1);\n
+			statement.addBatch(insertTableSQL2);\n
+			statement.addBatch(insertTableSQL3);\n
+\n
+			statement.executeBatch();\n
+\n
+			dbConnection.commit();\n
+\n
+			System.out.println(\"Records are inserted into DBUSER table!\");\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (statement != null) {\n
+				statement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+\n
+		}\n
+\n
+	}\n
+\n
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+				DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		return dbConnection;\n
+\n
+	}\n
+\n
+	private static String getCurrentTimeStamp() {\n
+\n
+		java.util.Date today = new java.util.Date();\n
+		return dateFormat.format(today.getTime());\n
+\n
+	}\n
+
+}\n
+Result\n\n
+3 records are inserted into database via batch update process.\n
+\n
+\n
+
+Why need to use Batch Update?\n
+The above batch update is same with normal executeUpdate() method like this :\n
+\n
+statement.executeUpdate(insertTableSQL1);\n
+statement.executeUpdate(insertTableSQL2);\n
+statement.executeUpdate(insertTableSQL3);\n
+But batch update has performance benefit if you want to insert many records, because executeBatch() reduces the number of JDBC calls to database.\n
+	</string>
+
+	<string name="PSSTMNCreateTable">
+		Here\’s an example to show you how to create a table in database via JDBC PrepareStatement. To issue a create statement, calls the PrepareStatement.executeUpdate() method like this :\n
+\n
+PreparedStatement preparedStatement = dbConnection.prepareStatement(createTableSQL);\n
+// execute create SQL stetement\n
+preparedStatement.executeUpdate();\n
+Full example…\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.PreparedStatement;\n
+import java.sql.SQLException;\n
+\n
+public class JDBCPreparedStatementCreateExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			createTable();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+	}\n
+
+	private static void createTable() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		PreparedStatement preparedStatement = null;\n
+\n
+		String createTableSQL = \"CREATE TABLE DBUSER1(\"\n
+				+ \"USER_ID NUMBER(5) NOT NULL, \"\n
+				+ \"USERNAME VARCHAR(20) NOT NULL, \"\n
+				+ \"CREATED_BY VARCHAR(20) NOT NULL, \"\n
+				+ \"CREATED_DATE DATE NOT NULL, \" + \"PRIMARY KEY (USER_ID) \"\n
+				+ \")\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			preparedStatement = dbConnection.prepareStatement(createTableSQL);\n
+\n
+			System.out.println(createTableSQL);\n
+\n
+			// execute create SQL stetement\n
+			preparedStatement.executeUpdate();\n
+\n
+			System.out.println(\"Table \\"dbuser\\" is created!\");\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (preparedStatement != null) {\n
+				preparedStatement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+                            DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+
+		return dbConnection;\n
+
+	}\n
+
+}\n\n
+Result\n
+A table named \“DBUSER\” is created.\n
+\n
+CREATE TABLE DBUSER(\n
+   USER_ID NUMBER(5) NOT NULL,\n
+   USERNAME VARCHAR(20) NOT NULL,\n
+   CREATED_BY VARCHAR(20) NOT NULL,\n
+   CREATED_DATE DATE NOT NULL,\n
+   PRIMARY KEY (USER_ID)\n
+)\n
+Table \"dbuser\" is created!\n
+	</string>
+
+	<string name="PSSTMNInsertRecord">
+		Here\’s an example to show you how to insert a record into table via JDBC PreparedStatement. To issue an insert statement, calls the PreparedStatement.executeUpdate() method like this :\n
+\n
+String insertTableSQL = \"INSERT INTO DBUSER\"\n
+		+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES\"\n
+		+ \"(?,?,?,?)\";\n
+PreparedStatement preparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
+preparedStatement.setInt(1, 11);\n
+preparedStatement.setString(2, \"mkyong\");\n
+preparedStatement.setString(3, \"system\");\n
+preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
+// execute insert SQL stetement\n
+preparedStatement .executeUpdate();\n
+Full example…\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.PreparedStatement;\n
+import java.sql.SQLException;\n
+import java.text.DateFormat;\n
+import java.text.SimpleDateFormat;\n
+\n
+public class JDBCPreparedStatementInsertExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			insertRecordIntoTable();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+	}\n
+
+	private static void insertRecordIntoTable() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		PreparedStatement preparedStatement = null;\n
+\n
+		String insertTableSQL = \"INSERT INTO DBUSER\"\n
+				+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES\"\n
+				+ \"(?,?,?,?)\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			preparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
+\n
+			preparedStatement.setInt(1, 11);\n
+			preparedStatement.setString(2, \"mkyong\");\n
+			preparedStatement.setString(3, \"system\");\n
+			preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
+\n
+			// execute insert SQL stetement\n
+			preparedStatement.executeUpdate();\n
+\n
+			System.out.println(\"Record is inserted into DBUSER table!\");\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (preparedStatement != null) {\n
+				preparedStatement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+\n
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+                            DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+\n
+		return dbConnection;\n
+\n
+	}\n
+
+	private static java.sql.Timestamp getCurrentTimeStamp() {\n
+\n
+		java.util.Date today = new java.util.Date();\n
+		return new java.sql.Timestamp(today.getTime());\n
+
+	}\n
+
+}\n\n
+Result\n
+A record is inserted into a table named \“DBUSER\”.\n
+
+	</string>
+
+	<string name="PSSTMNUpdateRecord">
+		Here\’s an example to show you how to update a record in table via JDBC PreparedStatement. To issue a update statement, calls the PreparedStatement.executeUpdate() method like this :\n
+\n
+String updateTableSQL = \"UPDATE DBUSER SET USERNAME = ? WHERE USER_ID = ?\";\n
+PreparedStatement preparedStatement = dbConnection.prepareStatement(updateTableSQL);\n
+preparedStatement.setString(1, \"mkyong_new_value\");\n
+preparedStatement.setInt(2, 1001);\n
+// execute insert SQL stetement\n
+preparedStatement .executeUpdate();\n
+Full example…\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.PreparedStatement;\n
+import java.sql.SQLException;\n
+\n
+public class JDBCPreparedStatementUpdateExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			updateRecordToTable();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+
+	}\n
+
+	private static void updateRecordToTable() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		PreparedStatement preparedStatement = null;\n
+\n
+		String updateTableSQL = \"UPDATE DBUSER SET USERNAME = ? \"\n
+				                  + \" WHERE USER_ID = ?\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			preparedStatement = dbConnection.prepareStatement(updateTableSQL);\n
+\n
+			preparedStatement.setString(1, \"mkyong_new_value\");\n
+			preparedStatement.setInt(2, 1001);\n
+\n
+			// execute update SQL stetement\n
+			preparedStatement.executeUpdate();\n
+\n
+			System.out.println(\"Record is updated to DBUSER table!\");\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (preparedStatement != null) {\n
+				preparedStatement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+                            DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+
+		return dbConnection;\n
+
+	}\n
+
+}\n
+Result\n\n
+The username of \“user_id = 1001\” is updated to a new value \‘mkyong_new_value\’.\n
+	</string>
+
+	<string name="PSSTMNDeleteRecord">
+		Here\’s an example to show you how to delete a record from a table via JDBC PreparedStatement. To issue a delete statement, calls the PreparedStatement.executeUpdate() method like this :\n
+\n
+String deleteSQL = \"DELETE DBUSER WHERE USER_ID = ?\";\n
+PreparedStatement preparedStatement = dbConnection.prepareStatement(deleteSQL);\n
+preparedStatement.setInt(1, 1001);\n
+// execute delete SQL stetement\n
+preparedStatement.executeUpdate();\n
+Full example…\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.PreparedStatement;\n
+import java.sql.SQLException;\n
+\n
+public class JDBCPreparedStatementSelectExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			deleteRecordFromTable();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+	}\n
+
+	private static void deleteRecordFromTable() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		PreparedStatement preparedStatement = null;\n
+\n
+		String deleteSQL = \"DELETE DBUSER WHERE USER_ID = ?\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			preparedStatement = dbConnection.prepareStatement(deleteSQL);\n
+			preparedStatement.setInt(1, 1001);\n
+\n
+			// execute delete SQL stetement\n
+			preparedStatement.executeUpdate();\n
+\n
+			System.out.println(\"Record is deleted!\");\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (preparedStatement != null) {\n
+				preparedStatement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+\n
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+                            DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		return dbConnection;\n
+
+	}\n
+
+}\n
+Result\n\n
+A record with \“user_id=1001\″ is deleted from table.\n
+	</string>
+
+	<string name="PSSTMNSelectListRecords">
+		Here\’s an example to show you how to select records from table via JDBC PreparedStatement, and display the records via a ResultSet object. To issue a select query, calls the PreparedStatement.executeQuery() method like this :\n
+\n
+String selectSQL = \"SELECT USER_ID, USERNAME FROM DBUSER WHERE USER_ID = ?\";\n
+PreparedStatement preparedStatement = dbConnection.prepareStatement(selectSQL);\n
+preparedStatement.setInt(1, 1001);\n
+ResultSet rs = preparedStatement.executeQuery(selectSQL );\n
+while (rs.next()) {\n
+	String userid = rs.getString(\"USER_ID\");\n
+	String username = rs.getString(\"USERNAME\");\n
+}\n
+Full example…\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.PreparedStatement;\n
+import java.sql.ResultSet;\n
+import java.sql.SQLException;\n
+\n
+public class JDBCPreparedStatementSelectExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			selectRecordsFromTable();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+	}\n
+\n
+	private static void selectRecordsFromTable() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		PreparedStatement preparedStatement = null;\n
+\n
+		String selectSQL = \"SELECT USER_ID, USERNAME FROM DBUSER WHERE USER_ID = ?\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			preparedStatement = dbConnection.prepareStatement(selectSQL);\n
+			preparedStatement.setInt(1, 1001);\n
+\n
+			// execute select SQL stetement\n
+			ResultSet rs = preparedStatement.executeQuery();\n
+\n
+			while (rs.next()) {\n
+\n
+				String userid = rs.getString(\"USER_ID\");\n
+				String username = rs.getString(\"USERNAME\");\n
+\n
+				System.out.println(\"userid : \" + userid);\n
+				System.out.println(\"username : \" + username);\n
+
+			}\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (preparedStatement != null) {\n
+				preparedStatement.close();\n
+			}\n
+
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+\n
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+                             DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+
+		return dbConnection;\n
+
+	}\n
+
+}\n
+Result\n\n
+List of the records with \“user_id = 1001\” are retrieved from table \“DBUSER\” and displayed.\n
+	</string>
+
+
+	<string name="PSSTMNBatchUpdate">
+		Here\’s an example to show you how to insert few records in batch process, via JDBC PreparedStatement.\n
+\n
+dbConnection.setAutoCommit(false);//commit trasaction manually\n
+\n
+String insertTableSQL = \"INSERT INTO DBUSER\"\n
+			+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES\"\n
+			+ \"(?,?,?,?)\";\n
+PreparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
+\n
+preparedStatement.setInt(1, 101);\n
+preparedStatement.setString(2, \"mkyong101\");\n
+preparedStatement.setString(3, \"system\");\n
+preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
+preparedStatement.addBatch();\n
+\n
+preparedStatement.setInt(1, 102);\n
+preparedStatement.setString(2, \"mkyong102\");\n
+preparedStatement.setString(3, \"system\");\n
+preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
+preparedStatement.addBatch();\n
+preparedStatement.executeBatch();\n
+\n
+dbConnection.commit();\n
+Note\n
+Batch Update is not limit to Insert statement, it\’s apply for Update and Delete statement as well.\n
+See full JDBC batch update example …\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.PreparedStatement;\n
+import java.sql.SQLException;\n
+\n
+public class JDBCBatchUpdateExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			batchInsertRecordsIntoTable();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+	}\n
+
+	private static void batchInsertRecordsIntoTable() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		PreparedStatement preparedStatement = null;\n
+\n
+		String insertTableSQL = \"INSERT INTO DBUSER\"\n
+				+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES\"\n
+				+ \"(?,?,?,?)\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			preparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
+\n
+			dbConnection.setAutoCommit(false);\n
+\n
+			preparedStatement.setInt(1, 101);\n
+			preparedStatement.setString(2, \"mkyong101\");\n
+			preparedStatement.setString(3, \"system\");\n
+			preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
+			preparedStatement.addBatch();\n
+\n
+			preparedStatement.setInt(1, 102);\n
+			preparedStatement.setString(2, \"mkyong102\");\n
+			preparedStatement.setString(3, \"system\");\n
+			preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
+			preparedStatement.addBatch();\n
+\n
+			preparedStatement.setInt(1, 103);\n
+			preparedStatement.setString(2, \"mkyong103\");\n
+			preparedStatement.setString(3, \"system\");\n
+			preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
+			preparedStatement.addBatch();\n
+\n
+			preparedStatement.executeBatch();\n
+\n
+			dbConnection.commit();\n
+\n
+			System.out.println(\"Record is inserted into DBUSER table!\");\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+			dbConnection.rollback();\n
+\n
+		} finally {\n
+\n
+			if (preparedStatement != null) {\n
+				preparedStatement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+                              DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		}\n
+\n
+		return dbConnection;\n
+
+	}\n
+
+	private static java.sql.Timestamp getCurrentTimeStamp() {\n
+\n
+		java.util.Date today = new java.util.Date();\n
+		return new java.sql.Timestamp(today.getTime());\n
+
+	}\n
+
+}\n
+Result\n\n
+3 records are inserted into database via batch update process.\n
+\n
+\n
+
+Why need to use Batch Update?\n
+Alternatively, you can use normal executeUpdate() method like this :\n
+\n
+String insertTableSQL = \"INSERT INTO DBUSER\"\n
+				+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES\"\n
+				+ \"(?,?,?,?)\";\n
+PreparpreparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
+\n
+preparedStatement.setInt(1, 111);\n
+preparedStatement.setString(2, \"mkyong101\");\n
+preparedStatement.setString(3, \"system\");\n
+preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
+preparedStatement.executeUpdate();\n
+\n
+preparedStatement.setInt(1, 112);\n
+preparedStatement.setString(2, \"mkyong102\");\n
+preparedStatement.setString(3, \"system\");\n
+preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
+preparedStatement.executeUpdate();\n
+The above code snippet is works as well, but has performance issue if you are try to insert many records, let say 1000 records, because every executeUpdate() will hits database once. For batch update process, it hits database when executeBatch() is called.\n
+	</string>
+
+	<string name="StoredProcedureIN">
+		Code snippets to show you how to call a Oracle stored procedure via JDBC CallableStatement, and how to pass IN parameters from Java to stored procedure.\n
+\n
+//insertDBUSER is stored procedure\n
+String insertStoreProc = \"{call insertDBUSER(?,?,?,?)}\";\n
+callableStatement = dbConnection.prepareCall(insertStoreProc);\n
+callableStatement.setInt(1, 1000);\n
+callableStatement.setString(2, \"mkyong\");\n
+callableStatement.setString(3, \"system\");\n
+callableStatement.setDate(4, getCurrentDate());\n
+callableStatement.executeUpdate();\n
+JDBC CallableStatement Example\n
+See a full JDBC CallableStatement example.\n
+
+\n
+\n
+1. Stored Procedure\n\n
+A stored procedure in Oracle database. Later, calls it via JDBC.\n
+\n
+CREATE OR REPLACE PROCEDURE insertDBUSER(\n
+	   p_userid IN DBUSER.USER_ID TYPE,\n
+	   p_username IN DBUSER.USERNAME TYPE,\n
+	   p_createdby IN DBUSER.CREATED_BY TYPE,\n
+	   p_date IN DBUSER.CREATED_DATE TYPE)\n
+IS\n
+BEGIN\n
+\n
+  INSERT INTO DBUSER (\"USER_ID\", \"USERNAME\", \"CREATED_BY\", \"CREATED_DATE\")\n
+  VALUES (p_userid, p_username,p_createdby, p_date);\n
+\n
+  COMMIT;\n
+\n
+END;\n
+/\n
+\n
+
+2. Calls Stored Procedure via CallableStatement\n\n
+JDBC example to call stored procedure via CallableStatement.\n
+\n
+File : JDBCCallableStatementINParameterExample.java\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.CallableStatement;\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.SQLException;\n
+\n
+public class JDBCCallableStatementINParameterExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			callOracleStoredProcINParameter();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+	}\n
+
+	private static void callOracleStoredProcINParameter() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		CallableStatement callableStatement = null;\n
+\n
+		String insertStoreProc = \"{call insertDBUSER(?,?,?,?)}\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			callableStatement = dbConnection.prepareCall(insertStoreProc);\n
+\n
+			callableStatement.setInt(1, 1000);\n
+			callableStatement.setString(2, \"mkyong\");\n
+			callableStatement.setString(3, \"system\");\n
+			callableStatement.setDate(4, getCurrentDate());\n
+\n
+			// execute insertDBUSER store procedure\n
+			callableStatement.executeUpdate();\n
+\n
+			System.out.println(\"Record is inserted into DBUSER table!\");\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (callableStatement != null) {\n
+				callableStatement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+				DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+\n
+		return dbConnection;\n
+
+	}\n
+
+	private static java.sql.Date getCurrentDate() {\n
+		java.util.Date today = new java.util.Date();\n
+		return new java.sql.Date(today.getTime());\n
+	}\n
+
+}\n
+Done. When above JDBC example is executed, a new record will be inserted into database via stored procedure \“insertDBUSER\“.\n
+	</string>
+
+	<string name="StoredProcedureOUT">
+		For stored procedure returns OUT parameters, it must be\n
+\n
+Registered via JDBC CallableStatement.registerOutParameter(index,sqlType).\n
+Get it back via CallableStatement.getDataType(index).\n
+See code snippets\n
+\n
+//getDBUSERByUserId is a stored procedure\n
+String getDBUSERByUserIdSql = \"{call getDBUSERByUserId(?,?,?,?)}\";\n
+callableStatement = dbConnection.prepareCall(getDBUSERByUserIdSql);\n
+callableStatement.setInt(1, 10);\n
+callableStatement.registerOutParameter(2, java.sql.Types.VARCHAR);\n
+callableStatement.registerOutParameter(3, java.sql.Types.VARCHAR);\n
+callableStatement.registerOutParameter(4, java.sql.Types.DATE);\n
+\n
+// execute getDBUSERByUserId store procedure\n
+callableStatement.executeUpdate();\n
+\n
+String userName = callableStatement.getString(2);\n
+String createdBy = callableStatement.getString(3);\n
+Date createdDate = callableStatement.getDate(4);\n
+JDBC CallableStatement Example\n
+See a full JDBC CallableStatement example for OUT parameter.\n
+\n
+\n
+
+1. Stored Procedure\n\n
+A stored procedure in Oracle database, with IN and OUT parameters. Later, calls it via JDBC.\n
+\n
+CREATE OR REPLACE PROCEDURE getDBUSERByUserId(\n
+	   p_userid IN DBUSER.USER_ID TYPE,\n
+	   o_username OUT DBUSER.USERNAME TYPE,\n
+	   o_createdby OUT  DBUSER.CREATED_BY TYPE,\n
+	   o_date OUT DBUSER.CREATED_DATE TYPE)\n
+IS\n
+BEGIN\n
+\n
+  SELECT USERNAME , CREATED_BY, CREATED_DATE\n
+  INTO o_username, o_createdby,  o_date\n
+  from  DBUSER WHERE USER_ID = p_userid;\n
+\n
+END;\n
+/\n
+\n
+
+2. Calls Stored Procedure via CallableStatement\n
+JDBC example to call a stored procedure via CallableStatement.\n
+\n
+File : JDBCCallableStatementOUTParameterExample.java\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.CallableStatement;\n
+import java.sql.Date;\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.SQLException;\n
+\n
+public class JDBCCallableStatementOUTParameterExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			callOracleStoredProcOUTParameter();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+	}\n
+
+	private static void callOracleStoredProcOUTParameter() throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		CallableStatement callableStatement = null;\n
+\n
+		String getDBUSERByUserIdSql = \"{call getDBUSERByUserId(?,?,?,?)}\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			callableStatement = dbConnection.prepareCall(getDBUSERByUserIdSql);\n
+\n
+			callableStatement.setInt(1, 10);\n
+			callableStatement.registerOutParameter(2, java.sql.Types.VARCHAR);\n
+			callableStatement.registerOutParameter(3, java.sql.Types.VARCHAR);\n
+			callableStatement.registerOutParameter(4, java.sql.Types.DATE);\n
+\n
+			// execute getDBUSERByUserId store procedure\n
+			callableStatement.executeUpdate();\n
+\n
+			String userName = callableStatement.getString(2);\n
+			String createdBy = callableStatement.getString(3);\n
+			Date createdDate = callableStatement.getDate(4);\n
+\n
+			System.out.println(\"UserName : \" + userName);\n
+			System.out.println(\"CreatedBy : \" + createdBy);\n
+			System.out.println(\"CreatedDate : \" + createdDate);\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+\n
+		} finally {\n
+\n
+			if (callableStatement != null) {\n
+				callableStatement.close();\n
+			}\n
+
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+				DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+\n
+		return dbConnection;\n
+
+	}\n
+
+}\n
+Done.\n
+	</string>
+
+	<string name="StoredProcedureCURSOR">
+		For Oracle stored procedure returns CURSOR parameter, you can\n
+\n
+Registered via JDBC CallableStatement.registerOutParameter(index,OracleTypes.CURSOR).\n
+Get it back via callableStatement.getObject(index).\n
+See code snippets\n
+\n
+//getDBUSERCursor is a stored procedure\n
+String getDBUSERCursorSql = \"{call getDBUSERCursor(?,?)}\";\n
+callableStatement = dbConnection.prepareCall(getDBUSERCursorSql);\n
+callableStatement.setString(1, \"mkyong\");\n
+callableStatement.registerOutParameter(2, OracleTypes.CURSOR);\n
+\n
+// execute getDBUSERCursor store procedure\n
+callableStatement.executeUpdate();\n
+\n
+// get cursor and cast it to ResultSet\n
+rs = (ResultSet) callableStatement.getObject(2);\n
+\n
+// loop it like normal\n
+while (rs.next()) {\n
+	String userid = rs.getString(\"USER_ID\");\n
+	String userName = rs.getString(\"USERNAME\");\n
+}\n
+JDBC CallableStatement CURSOR Example\n
+See a full JDBC CallableStatement example for OUT CURSOR parameter.\n
+\n
+
+\n
+1. Stored Procedure\n
+A Oracle stored procedure, with one IN and one OUT CURSOR parameter. Later, calls it via JDBC.\n
+\n
+CREATE OR REPLACE PROCEDURE getDBUSERCursor(\n
+	   p_username IN DBUSER.USERNAME TYPE,\n
+	   c_dbuser OUT SYS_REFCURSOR)\n
+IS\n
+BEGIN\n
+\n
+  OPEN c_dbuser FOR\n
+  SELECT * FROM DBUSER WHERE USERNAME LIKE p_username || \'percentSimbol\';\n
+\n
+END;\n
+/\n
+
+\n
+2. Calls Stored Procedure via CallableStatement\n
+JDBC example to call above stored procedure, cast the returned CURSOR to ResultSet and loop through the records sequentially.\n
+\n
+File : JDBCCallableStatementCURSORExample.java\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.CallableStatement;\n
+import java.sql.Date;\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.ResultSet;\n
+import java.sql.SQLException;\n
+\n
+import oracle.jdbc.OracleTypes;\n
+\n
+public class JDBCCallableStatementCURSORExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) {\n
+\n
+		try {\n
+\n
+			callOracleStoredProcCURSORParameter();\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+	}\n
+
+	private static void callOracleStoredProcCURSORParameter()\n
+			throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		CallableStatement callableStatement = null;\n
+		ResultSet rs = null;\n
+\n
+		String getDBUSERCursorSql = \"{call getDBUSERCursor(?,?)}\";
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+			callableStatement = dbConnection.prepareCall(getDBUSERCursorSql);\n
+\n
+			callableStatement.setString(1, \"mkyong\");\n
+			callableStatement.registerOutParameter(2, OracleTypes.CURSOR);\n
+\n
+			// execute getDBUSERCursor store procedure\n
+			callableStatement.executeUpdate();\n
+\n
+			// get cursor and cast it to ResultSet\n
+			rs = (ResultSet) callableStatement.getObject(2);\n
+\n
+			while (rs.next()) {\n
+				String userid = rs.getString(\"USER_ID\");\n
+				String userName = rs.getString(\"USERNAME\");\n
+				String createdBy = rs.getString(\"CREATED_BY\");\n
+				String createdDate = rs.getString(\"CREATED_DATE\");\n
+\n
+				System.out.println(\"UserName : \" + userid);\n
+				System.out.println(\"UserName : \" + userName);\n
+				System.out.println(\"CreatedBy : \" + createdBy);\n
+				System.out.println(\"CreatedDate : \" + createdDate);\n
+			}\n
+
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());
+\n
+		} finally {\n
+\n
+			if (rs != null) {\n
+				rs.close();\n
+			}\n
+\n
+			if (callableStatement != null) {\n
+				callableStatement.close();\n
+			}\n
+\n
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+
+	private static Connection getDBConnection() {\n
+\n
+		Connection dbConnection = null;\n
+\n
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+\n
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(\n
+				DB_CONNECTION, DB_USER,DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+		return dbConnection;\n
+
+	}\n
+
+}\n
+Done.\n
+	</string>
+
+	\n<string name="TransaqExample">
+		JDBC Transaction let you control how and when a transaction should commit into database.\n
+\n
+//transaction block start\n
+\n
+//SQL insert statement\n
+//SQL update statement\n
+//SQL delete statement\n
+\n
+//transaction block end\n
+In simple, JDBC transaction make sure SQL statements within a transaction block are all executed successful, if either one of the SQL statement within transaction block is failed, abort and rollback everything within the transaction block.\n
+\n
+See below two examples to understand how JDBC transaction works.\n
+\n
+1. Without JDBC Transaction\n
+By default, data will be committed into database when executeUpdate() is called.
+\n
+String insertTableSQL = \"INSERT INTO DBUSER\"\n
+			+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES\"\n
+			+ \"(?,?,?,?)\";\n
+\n
+String updateTableSQL = \"UPDATE DBUSER SET USERNAME =? \"\n
+			+ \"WHERE USER_ID = ?\";\n
+\n
+preparedStatementInsert = dbConnection.prepareStatement(insertTableSQL);\n
+preparedStatementInsert.setInt(1, 999);\n
+preparedStatementInsert.setString(2, \"mkyong101\");\n
+preparedStatementInsert.setString(3, \"system\");\n
+preparedStatementInsert.setTimestamp(4, getCurrentTimeStamp());\n
+preparedStatementInsert.executeUpdate(); //data COMMITTED into database.\n
+\n
+preparedStatementUpdate = dbConnection.prepareStatement(updateTableSQL);\n
+preparedStatementUpdate.setString(1, \"A very very long string caused DATABASE ERROR\");\n
+preparedStatementUpdate.setInt(2, 999);\n
+\n
+preparedStatementUpdate.executeUpdate(); //Error, value too big,  ignore this update statement,\n
+                                                //but user_id=999 is inserted\n
+When this code is executed, the USER_ID = \‘999\’ is inserted but the username is not update.\n
+\n
+
+ \n
+2. With JDBC Transaction\n
+To put this in a transaction, you can use\n
+\n
+dbConnection.setAutoCommit(false); to start a transaction block.\n
+dbConnection.commit(); to end a transaction block.\n
+See code snippets :\n
+\n
+dbConnection.setAutoCommit(false); //transaction block start\n
+\n
+String insertTableSQL = \"INSERT INTO DBUSER\"\n
+			+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES\"\n
+			+ \"(?,?,?,?)\";\n
+\n
+String updateTableSQL = \"UPDATE DBUSER SET USERNAME =? \"\n
+			+ \"WHERE USER_ID = ?\";\n
+\n
+preparedStatementInsert = dbConnection.prepareStatement(insertTableSQL);\n
+preparedStatementInsert.setInt(1, 999);\n
+preparedStatementInsert.setString(2, \"mkyong101\");\n
+preparedStatementInsert.setString(3, \"system\");\n
+preparedStatementInsert.setTimestamp(4, getCurrentTimeStamp());\n
+preparedStatementInsert.executeUpdate(); //data IS NOT commit yet\n
+\n
+preparedStatementUpdate = dbConnection.prepareStatement(updateTableSQL);\n
+preparedStatementUpdate.setString(1, \"A very very long string caused DATABASE ERROR\");\n
+preparedStatementUpdate.setInt(2, 999);\n
+preparedStatementUpdate.executeUpdate(); //Error, rollback, including the first insert statement.\n
+\n
+dbConnection.commit(); //transaction block end\n
+When this code is executed, update statement is hits error, and make both insert and update statements rollback together.\n
+\n
+\n
+
+Full JDBC Transaction example\n
+See a complete JDBC transaction example.\n
+\n
+package com.mkyong.jdbc;\n
+\n
+import java.sql.DriverManager;\n
+import java.sql.Connection;\n
+import java.sql.PreparedStatement;\n
+import java.sql.SQLException;\n
+\n
+public class JDBCTransactionExample {\n
+\n
+	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_USER = \"user\";\n
+	private static final String DB_PASSWORD = \"password\";\n
+\n
+	public static void main(String[] argv) throws SQLException {\n
+\n
+		Connection dbConnection = null;\n
+		PreparedStatement preparedStatementInsert = null;\n
+		PreparedStatement preparedStatementUpdate = null;\n
+\n
+		String insertTableSQL = \"INSERT INTO DBUSER\"\n
+				+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES\"\n
+				+ \"(?,?,?,?)\";\n
+\n
+		String updateTableSQL = \"UPDATE DBUSER SET USERNAME =? \"\n
+				+ \"WHERE USER_ID = ?\";\n
+\n
+		try {\n
+			dbConnection = getDBConnection();\n
+\n
+			dbConnection.setAutoCommit(false);\n
+\n
+			preparedStatementInsert = dbConnection.prepareStatement(insertTableSQL);\n
+			preparedStatementInsert.setInt(1, 999);\n
+			preparedStatementInsert.setString(2, \"mkyong101\");\n
+			preparedStatementInsert.setString(3, \"system\");\n
+			preparedStatementInsert.setTimestamp(4, getCurrentTimeStamp());\n
+			preparedStatementInsert.executeUpdate();\n
+\n
+			preparedStatementUpdate = dbConnection.prepareStatement(updateTableSQL);\n
+			// preparedStatementUpdate.setString(1,\n
+			// \"A very very long string caused db error\");\n
+			preparedStatementUpdate.setString(1, \"new string\");\n
+			preparedStatementUpdate.setInt(2, 999);\n
+			preparedStatementUpdate.executeUpdate();\n
+\n
+			dbConnection.commit();\n
+\n
+			System.out.println(\"Done!\");\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+			dbConnection.rollback();\n
+\n
+		} finally {\n
+\n
+			if (preparedStatementInsert != null) {\n
+				preparedStatementInsert.close();\n
+			}\n
+\n
+			if (preparedStatementUpdate != null) {\n
+				preparedStatementUpdate.close();\n
+			}\n
+
+			if (dbConnection != null) {\n
+				dbConnection.close();\n
+			}\n
+
+		}\n
+
+	}\n
+
+	private static Connection getDBConnection() {\n
+
+		Connection dbConnection = null;\n
+
+		try {\n
+\n
+			Class.forName(DB_DRIVER);\n
+\n
+		} catch (ClassNotFoundException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+		try {\n
+\n
+			dbConnection = DriverManager.getConnection(DB_CONNECTION, DB_USER,\n
+					DB_PASSWORD);\n
+			return dbConnection;\n
+\n
+		} catch (SQLException e) {\n
+\n
+			System.out.println(e.getMessage());\n
+
+		}\n
+
+		return dbConnection;\n
+
+	}\n
+
+	private static java.sql.Timestamp getCurrentTimeStamp() {\n
+\n
+		java.util.Date today = new java.util.Date();\n
+		return new java.sql.Timestamp(today.getTime());\n
+
+	}\n
+
+}\n
+	</string>
+
+	<string name="InsertTimestampValueInPreparedStatement">
+		Problem\n
+A simple table script in Oracle database.\n
+\n
+CREATE TABLE DBUSER (\n
+  USER_ID       NUMBER (5)    NOT NULL,\n
+  USERNAME      VARCHAR2 (20)  NOT NULL,\n
+  CREATED_BY    VARCHAR2 (20)  NOT NULL,\n
+  CREATED_DATE  DATE          NOT NULL,\n
+  PRIMARY KEY ( USER_ID )\n
+ )\n
+No idea how to insert a timestamp value, e.g. \“04/04/2011 14:45:04\” into \“CREATED_DATE\” field, via JDBC PreparedStatement.\n
+\n
+String insertTableSQL = \"INSERT INTO DBUSER\"\n
+		+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES\"\n
+		+ \"(?,?,?,?)\";\n
+preparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
+preparedStatement.setTimestamp(4,???);\n
+\n
+ \n
+Solution\n
+Create a method to return current timestamp(java.sql.Timestamp) like this :\n
+\n
+private static java.sql.Timestamp getCurrentTimeStamp() {\n
+\n
+	java.util.Date today = new java.util.Date();\n
+	return new java.sql.Timestamp(today.getTime());\n
+
+}\n
+And set the timestamp via preparedStatement.setTimestamp().\n
+\n
+String insertTableSQL = \"INSERT INTO DBUSER\"\n
+	+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES\"\n
+	+ \"(?,?,?,?)\";\n
+preparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
+preparedStatement.setTimestamp(4,getCurrentTimeStamp());\n
+	</string>
+
+	<string name="InsertDateValueInPreparedStatement">
+Problem\n
+A simple table script in Oracle database.\n
+\n
+CREATE TABLE DBUSER (\n
+  USER_ID       NUMBER (5)    NOT NULL,\n
+  USERNAME      VARCHAR2 (20)  NOT NULL,\n
+  CREATED_BY    VARCHAR2 (20)  NOT NULL,\n
+  CREATED_DATE  DATE          NOT NULL,\n
+  PRIMARY KEY ( USER_ID )\n
+ )\n
+No idea how to insert current date value, e.g. \“04/04/2011\” into \“CREATED_DATE\” field, via JDBC PreparedStatement.\n
+\n
+String insertTableSQL = \"INSERT INTO DBUSER\"\n
+		+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES\"\n
+		+ \"(?,?,?,?)\";\n
+preparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
+preparedStatement.setDate(4, ???);\n
+\n
+ \n
+Solution\n
+The \“preparedStatement.setDate()\” method is accept a java.sql.Date parameter, so, you have to convert from java.util.Date to java.sql.Date.\n
+\n
+For example, create a method to return current date, and convert it java.sql.Date :\n
+\n
+private static java.sql.Date getCurrentDate() {\n
+    java.util.Date today = new java.util.Date();\n
+    return new java.sql.Date(today.getTime());\n
+}\n
+And set the returned date via preparedStatement.setDate().\n
+\n
+String insertTableSQL = \"INSERT INTO DBUSER\"\n
+	+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES\"\n
+	+ \"(?,?,?,?)\";\n
+preparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
+preparedStatement.setDate(4, getCurrentDate());\n
+Done.\n
+	</string>
+
+<string name="AboutPage">
+\n
+	It Simple Sampler of Code\n
+	It open source project. You can check it out on: \n
+	<b>\"https://github.com/bychok300/android_codeSampler\"</b>\n
+	\n
+	You may mail me if you found some bugs or have some ideas about project\n
+	\n
+	<b>bychok300@gmail.com</b>
+
+</string>
 
 
 </resources>

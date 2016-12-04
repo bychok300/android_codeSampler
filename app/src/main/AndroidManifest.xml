@@ -17,6 +17,8 @@
         </activity>
         <!---> это кнопка JavaCore которая переводит на список </!-->
         <activity android:name=".JavaCore"></activity>
+        <!---> это кнопка AboutPage которая переводит на страничку о приложении </!-->
+        <activity android:name=".AboutPage"></activity>
 
         <!---> это главные список </!-->
         <!---> это первый элемент списка</!-->
@@ -175,7 +177,62 @@
 
 
 
-        <activity android:name=".JDBC"></activity>
+        <activity android:name=".JDBC.JDBC"></activity>
+        <!---> список JDBC содержит эти подразделы</!-->
+        <activity android:name=".JDBC.QuickStart.QuickStart"></activity>
+        <!---> список QuickStart содержит эти подразделы</!-->
+        <activity android:name=".JDBC.QuickStart.MySQL"></activity>
+        <activity android:name=".JDBC.QuickStart.PostgreSQL"></activity>
+        <activity android:name=".JDBC.QuickStart.OracleDB"></activity>
+
+        <activity android:name=".JDBC.JDBCStatement.Statement"></activity>
+        <!---> список Statement содержит эти подразделы</!-->
+        <activity android:name=".JDBC.JDBCStatement.STMNCreateTable"></activity>
+        <activity android:name=".JDBC.JDBCStatement.STMNInsertRecord"></activity>
+        <activity android:name=".JDBC.JDBCStatement.STMNUpdateRecord"></activity>
+        <activity android:name=".JDBC.JDBCStatement.STMNDeleteRecord"></activity>
+        <activity android:name=".JDBC.JDBCStatement.STMNSelectListRecords"></activity>
+        <activity android:name=".JDBC.JDBCStatement.STMNBatchUpdate"></activity>
+
+        <activity android:name=".JDBC.JDBCPreparedStatment.PreparedStatement"></activity>
+        <!---> список PreparedStatement содержит эти подразделы</!-->
+        <activity android:name=".JDBC.JDBCPreparedStatment.PSSTMNCreateTable"></activity>
+        <activity android:name=".JDBC.JDBCPreparedStatment.PSSTMNInsertRecord"></activity>
+        <activity android:name=".JDBC.JDBCPreparedStatment.PSSTMNUpdateRecord"></activity>
+        <activity android:name=".JDBC.JDBCPreparedStatment.PSSTMNDeleteRecord"></activity>
+        <activity android:name=".JDBC.JDBCPreparedStatment.PSSTMNSelectListRecords"></activity>
+        <activity android:name=".JDBC.JDBCPreparedStatment.PSSTMNBatchUpdate"></activity>
+
+        <activity android:name=".JDBC.JDBCStoredProcedure.StoredProcedure"></activity>
+        <!---> список Stored Procedure содержит эти подразделы</!-->
+        <activity android:name=".JDBC.JDBCStoredProcedure.StoredProcedureIN"></activity>
+        <activity android:name=".JDBC.JDBCStoredProcedure.StoredProcedureOUT"></activity>
+        <activity android:name=".JDBC.JDBCStoredProcedure.StoredProcedureCURSOR"></activity>
+
+        <activity android:name=".JDBC.TransactionExample.TransactionExample"></activity>
+        <!---> список TransactionExample содержит эти подразделы</!-->
+        <activity android:name=".JDBC.TransactionExample.TransaqExample"></activity>
+
+
+        <activity android:name=".JDBC.FAQ.FAQ"></activity>
+        <!---> список TransactionExample содержит эти подразделы</!-->
+        <activity android:name=".JDBC.FAQ.InsertTimestampValueInPreparedStatement"></activity>
+        <activity android:name=".JDBC.FAQ.InsertDateValueInPreparedStatement"></activity>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
