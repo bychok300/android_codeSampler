@@ -36,7 +36,7 @@ Classic Java example to construct a file path, using File.separator or System.ge
 Windows = \\n
 *nix or Mac = /\n
 FilePathExample1.java\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -74,7 +74,7 @@ public class FilePathExample1 {\n
 }\n
 Output\n
 
-Final filepath : /Users/mkyong/Documents/workspace/maven/fileUtils/newFile.txt\n
+Final filepath : /Users/ABychek/Documents/workspace/maven/fileUtils/newFile.txt\n
 File is created!\n
 
 
@@ -82,7 +82,7 @@ File is created!\n
 Some developers are using new File() API to construct the file path.\n
 \n
 FilePathExample2.java\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -114,7 +114,7 @@ public class FilePathExample2 {\n
 }\n
 Output\n
 \n
-Final filepath : /Users/mkyong/Documents/workspace/maven/fileUtils/newFile.txt\n
+Final filepath : /Users/ABychek/Documents/workspace/maven/fileUtils/newFile.txt\n
 File is created!\n
 \n
 \n
@@ -122,7 +122,7 @@ File is created!\n
 Check the system OS and create file path manually, just for fun, not recommend.\n
 \n
 FilePathExample3.java\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -178,7 +178,7 @@ public class FilePathExample3 {\n
 }\n
 Output\n
 \n
-Final filepath : /Users/mkyong/Documents/workspace/maven/fileUtils/newFile.txt\n
+Final filepath : /Users/ABychek/Documents/workspace/maven/fileUtils/newFile.txt\n
 File is created!\n
 \n
     </string>
@@ -200,7 +200,7 @@ In *nix system, you may need to configure more specifies about file permission, 
 \n
 Runtime.getRuntime().exec("chmod 777 file");\n
 File permission example\n\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -211,7 +211,7 @@ public class FilePermissionExample\n
     {\n
     	try {\n
 \n
-	      File file = new File("/mkyong/shellscript.sh");\n
+	      File file = new File("/ABychek/shellscript.sh");\n
 \n
 	      if(file.exists()){\n
 	    	  System.out.println("Is Execute allow : " + file.canExecute());\n
@@ -246,7 +246,7 @@ public class FilePermissionExample\n
 The readLine() from the type DataInputStream is deprecated. Sun officially announced this method can not convert property from bytes to characters. It’s advised to use BufferedReader.\n
 You may interest to read this How to read file from Java – BufferedReader\n
 \n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.BufferedInputStream;\n
 import java.io.DataInputStream;\n
@@ -291,7 +291,7 @@ public class BufferedInputStreamExample {\n
     <string name="ReadFileWithBufferedReader">
         In Java, there are many ways to read a file, here we show you how to use the simplest and most common-used method – BufferedReader.\n
 \n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.BufferedReader;\n
 import java.io.FileReader;\n
@@ -327,7 +327,7 @@ public class BufferedReaderExample {\n
 }\n
 See updated example in JDK 7, which use try-with-resources new feature to close file automatically.\n
 \n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.BufferedReader;\n
 import java.io.FileReader;\n
@@ -359,7 +359,7 @@ public class BufferedReaderExample {\n
     <string name="WriteFileEithFOS">
     In Java, FileOutputStream is a bytes stream class that\’s used to handle raw binary data. To write the data to file, you have to convert the data into bytes and save it to file. See below full example.\n
 \n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.File;\n
 import java.io.FileOutputStream;\n
@@ -406,7 +406,7 @@ public class WriteFileExample {\n
 }\n\n
 An updated JDK7 example, using new “try resource close” method to handle file easily.\n
 \n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.File;\n
 import java.io.FileOutputStream;\n
@@ -445,7 +445,7 @@ public class WriteFileExample {\n
     <string name="WriteFileEithBW">
 In Java, BufferedWriter is a character streams class to handle the character data. Unlike bytes stream (convert data into bytes), you can just write the strings, arrays or characters data directly to file.\n
 \n
-package com.mkyong;\n
+package com.ABychek;\n
 \n
 import java.io.BufferedWriter;\n
 import java.io.File;\n
@@ -458,7 +458,7 @@ public class WriteToFileExample {\n
 \n
 			String content = "This is the content to write into file";\n
 \n
-			File file = new File("/users/mkyong/filename.txt");\n
+			File file = new File("/users/ABychek/filename.txt");\n
 \n
 			// if file doesnt exists, then create it\n
 			if (!file.exists()) {\n
@@ -495,7 +495,7 @@ A text file named “javaio-appendfile.txt” and contains the following content
 ABC Hello\n
 Append new content with new FileWriter(file,true)\n
 \n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.FileWriter;\n
@@ -546,7 +546,7 @@ ABC Hello This content will append to the end of the file\n
 Example\n\n
 In this example, it will delete a log file named “c:\\logfile20100131.log”.\n
 \n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 \n
@@ -579,7 +579,7 @@ public class DeleteFileExample\n
 \n
 In this example, we show you how to use FilenameFilter to list out all files that are end with “.txt” extension in folder “c:\\folder“, and then delete it.\n
 \n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.*;\n
 \n
@@ -635,7 +635,7 @@ public class FileChecker {\n
         <string name="FindFilesWithCertainExtensionOnly">
 A FilenameFilter example, it will only display files that use “.jpg” extension in folder “c:\\folder“.\n
 \n\n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.*;\n
 \n
@@ -695,7 +695,7 @@ public class FindCertainExtension {\n
         Java comes with renameTo() method to rename a file. However , this method is really platform-dependent: you may successfully rename a file in *nix but failed in Windows. So, the return value (true if the file rename successful, false if failed) should always be checked to make sure the file is rename successful.\n
 \n
 File.renameTo() Example\n\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 \n
@@ -725,7 +725,7 @@ The overall processes are quite simple, just do not understand why Java doesn’
 File copy example\n
 Here’s an example to copy a file named “Afile.txt” to another file named “Bfile.txt”. If the “Bfile.txt” is exists, the existing content will be replace, else it will create with the content of the “Afile.txt”.\n
 \n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.FileInputStream;\n
@@ -781,7 +781,7 @@ Copy to new file and delete the original file.\n\n
 In the below two examples, you move a file “C:\\folderA\\Afile.txt” from one directory to another directory with the same file name “C:\\folderB\\Afile.txt“.\n
 \n
 1. File.renameTo()\n\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 \n
@@ -807,7 +807,7 @@ public class MoveFileExample\n
 \n
  \n
 2. Copy and Delete\n\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.FileInputStream;\n
@@ -861,7 +861,7 @@ public class MoveFileExample\n
 A Java program to demonstrate the use of java.io.File setReadOnly() method to make a file read only. Since JDK 1.6, a new setWritable() method is provided to make a file to be writable again.\n
 \n
 Example\n\n
-package com.mkyong;\n
+package com.ABychek;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -922,7 +922,7 @@ The “31/05/2010 08:05” is what you need. The idea is use the Java “Runtime
 Example\n\n
 In this example, it will get the creation date of file (c:\\logfile.log).\n
 \n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.BufferedReader;\n
 import java.io.IOException;\n
@@ -982,7 +982,7 @@ Creation Time  : 08:05\n
 		In Java, you can use the File.lastModified() to get the file’s last modified timestamps. This method will returns the time in milliseconds (long value), you may to format it with SimpleDateFormat to make it a human readable format.\n
 \n
 File Last Modified\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.text.SimpleDateFormat;\n
@@ -1012,7 +1012,7 @@ After Format : 05/31/2010 08:22:29\n
 	<string name="ChangeTheFileLastModifiedDate">
 		Here’s an example to show the use of File.setLastModified() to change the file’s last modified date. This method accept the new modified date in milliseconds (long type), some data type conversion are required.\n
 \n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.text.ParseException;\n
@@ -1064,7 +1064,7 @@ Lastest Last Modified Date : 01/31/1998\n
 Example\n\n
 Get an image file (c:\\java_xml_logo.jpg) 14KB, and display the file size.\n
 \n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 \n
@@ -1134,7 +1134,7 @@ String filePath = absolutePath.\n
 Get file path example\n
 In this example, it create a temporary file, and print out the file path of it.\n
 \n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -1166,8 +1166,8 @@ public class AbsoluteFilePathExample\n
 \n
  \n
 Result\n\n
-File path : C:\Users\mkyong\AppData\Local\Temp\i-am-a-temp-file69424.tmp\n
-File path : C:\Users\mkyong\AppData\Local\Temp\n
+File path : C:\Users\ABychek\AppData\Local\Temp\i-am-a-temp-file69424.tmp\n
+File path : C:\Users\ABychek\AppData\Local\Temp\n
 		</string>
 
 	<!-->________________________________________________________________________________________________________________________________</!-->
@@ -1189,7 +1189,7 @@ Line 9\n
 Line 10\n
 Counts the line\n
 \n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.FileReader;\n
@@ -1240,7 +1240,7 @@ Total number of lines : 10\n
 	<string name="CheckIfFileExists">
 		To determine whether a file is exist in your file system, use the Java IO File.exists().\n
 \n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.*;\n
 \n
@@ -1248,7 +1248,7 @@ public class FileChecker {\n
 \n
   public static void main(String args[]) {\n
 \n
-	  File f = new File("c:\\mkyong.txt");\n
+	  File f = new File("c:\\ABychek.txt");\n
 \n
 	  if(f.exists()){\n
 		  System.out.println("File existed");\n
@@ -1265,7 +1265,7 @@ public class FileChecker {\n
 	<string name="CheckIfFileIsHidden">
 		A Java program to demonstrate the use of java.io.File isHidden() to check if a file is hidden.\n
 \n
-package com.mkyong;\n
+package com.ABychek;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -1292,7 +1292,7 @@ The isHidden() method is system dependent, on UNIX platform, a file is considere
 	<string name="ReadUTF8EncodedDataFromFile">
 		Here’s the example to demonstrate how to read “UTF-8” encoded data from a file in Java\n
 \n
-package com.mkyong;\n
+package com.ABychek;\n
 \n
 import java.io.BufferedReader;\n
 import java.io.File;\n
@@ -1345,7 +1345,7 @@ Do not worry about the symbol “???”, this is because my output console is no
 
 P.S Symbol “??” is some “UTF-8” data in Chinese and Japanese\n
 \n
-package com.mkyong;\n
+package com.ABychek;\n
 \n
 import java.io.BufferedWriter;\n
 import java.io.File;\n
@@ -1395,7 +1395,7 @@ public class test {\n
 Example\n\n
 In this example, you will use DataInputStreamto convert all the content into bytes, and create a String variable with the converted bytes.\n
 \n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.DataInputStream;\n
 import java.io.FileInputStream;\n
@@ -1486,7 +1486,7 @@ MessageDigest md = MessageDigest.getInstance("MD5");\n
 	<string name="ConvertFileIntoAnArrayOfBytes">
 		The Java.io.FileInputStream can used to convert a File object into an array of bytes. In this example, you read a file from “C:\\testing.txt“, convert it into an array of bytes and print out the content.\n
 \n
-package com.mkyong.common;\n
+package com.ABychek.common;\n
 \n
 import java.io.File;\n
 import java.io.FileInputStream;\n
@@ -1523,7 +1523,7 @@ public class FileToArrayOfBytes\n
 	<string name="ConvertArrayOfBytesIntoFile">
 		The Java.io.FileOutputStream can used to convert an array of bytes into a file. In this example, you read a file from “C:\\testing.txt“, and convert it into an array of bytes, and write it into another file “C:\\testing2.txt“.\n
 \n
-package com.mkyong.common;\n
+package com.ABychek.common;\n
 \n
 import java.io.File;\n
 import java.io.FileInputStream;\n
@@ -1563,7 +1563,7 @@ public class ArrayOfBytesToFile\n
 	<string name="ConvertStringToInputStream">
 		A simple Java program to convert a String to InputStream, and use BufferedReader to read and display the converted InputStream.\n
 \n
-package com.mkyong;\n
+package com.ABychek;\n
 \n
 import java.io.BufferedReader;\n
 import java.io.ByteArrayInputStream;\n
@@ -1595,7 +1595,7 @@ public class StringToInputStreamExample {\n
 		In Java, you can use BufferedReader + InputStreamReader to convert InputStream to String.\n
 \n
 InputStreamToStringExample.java\n
-package com.mkyong.core;\n
+package com.ABychek.core;\n
 \n
 import java.io.BufferedReader;\n
 import java.io.ByteArrayInputStream;\n
@@ -1659,7 +1659,7 @@ Done\n
 		A simple Java program to demonstrate the use of String formatter(“%02X “) to convert a File into Hex value. The attached comments should be self-explanatory.
 		\n
 		Example\n
-		package com.mkyong;\n
+		package com.ABychek;\n
 		\n
 		import java.io.File;\n
 		import java.io.FileInputStream;\n
@@ -1731,7 +1731,7 @@ Done\n
 	In Java old days, it lacks of method to determine the free disk space on a partition. But this is changed since JDK 1.6 released, a few new methods – getTotalSpace(), getUsableSpace() and getFreeSpace(), are bundled with java.io.File to retrieve the partition or disk space detail.\n
 \n
 Example\n\n
-package com.mkyong;\n
+package com.ABychek;\n
 \n
 import java.io.File;\n
 \n
@@ -1787,7 +1787,7 @@ oos.writeObject(address);\n\n
 Create an “Address” object and implement the Serializable interface. This object is going to write into a file.\n
 \n
 Address.java\n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.Serializable;\n
 \n
@@ -1828,7 +1828,7 @@ public class Address implements Serializable {\n
 This class will write the \“Address\” object and it’s variable value (\“wall street\”, \“united state\”) into a file named c:\\temp\\address.ser\n
 \n
 WriteObject.java\n\n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.FileOutputStream;\n
 import java.io.IOException;\n
@@ -1918,7 +1918,7 @@ address = (Address) ois.readObject();\n\n
 This class will read a serialized file c:\\temp\\address.ser (created in this example), and convert it back to a \“Address\” object and print out the saved value.\n
 \n
 ReadObject.java\n\n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.FileInputStream;
 import java.io.IOException;\n
@@ -2006,7 +2006,7 @@ Add the file name to \“ZipEntry\” and output it to \“ZipOutputStream\“\n
 1. Simple ZIP example\n
 Read a file \“C:\\\spy.log\” and compress it into a zip file – \“C:\\\MyFile.zip\“.\n
 \n
-package com.mkyong.zip;\n
+package com.ABychek.zip;\n
 \n
 import java.io.FileInputStream;\n
 import java.io.FileOutputStream;\n
@@ -2051,7 +2051,7 @@ public class App\n
 2. Advance ZIP example – Recursively\n\n
 Read all files from folder \“C:\\\testzip\” and compress it into a zip file – \“C:\\\MyFile.zip\“. It will recursively zip a directory as well.\n
 \n
-package com.mkyong.zip;\n
+package com.ABychek.zip;\n
 \n
 import java.io.File;\n
 import java.io.FileInputStream;\n
@@ -2169,7 +2169,7 @@ Get the files to \“ZipEntry” and output it to \“FileOutputStream\“\n
 1. Decompress ZIP file example\n\n
 In this example, it will read a ZIP file from \“C:\\lMyFile.zip\“, and decompress all zipped files to \“C:\\loutputzip\” folder.\n
 \n
-package com.mkyong.zip;\n
+package com.ABychek.zip;\n
 \n
 import java.io.File;\n
 import java.io.FileInputStream;\n
@@ -2259,9 +2259,9 @@ Done\n
 		Gzip is a popular tool to compress a file in *nix system. However, Gzip is not a ZIP tool, it only use to compress a file into a \“.gz\” format, not compress several files into a single archive.\n
 \n
 GZip example\n
-In this example, it will compress a file \“/home/mkyong/file1.txt\” into a gzip file – \“/home/mkyong/file1.gz\“.\n
+In this example, it will compress a file \“/home/ABychek/file1.txt\” into a gzip file – \“/home/ABychek/file1.gz\“.\n
 \n
-package com.mkyong.gzip;\n
+package com.ABychek.gzip;\n
 \n
 import java.io.FileInputStream;\n
 import java.io.FileOutputStream;\n
@@ -2270,8 +2270,8 @@ import java.util.zip.GZIPOutputStream;\n
 \n
 public class GZipFile\n
 {\n
-    private static final String OUTPUT_GZIP_FILE = \"/home/mkyong/file1.gz\";\n
-    private static final String SOURCE_FILE = \"/home/mkyong/file1.txt\";\n
+    private static final String OUTPUT_GZIP_FILE = \"/home/ABychek/file1.gz\";\n
+    private static final String SOURCE_FILE = \"/home/ABychek/file1.txt\";\n
 \n
 \n
     public static void main( String[] args )\n
@@ -2321,9 +2321,9 @@ public class GZipFile\n
 		In previous article, you learn about how to compress a file into a GZip format. In this article, you will learn how to unzip it / decompress the compressed file from a Gzip file.\n
 \n
 Gzip example\n
-In this example, it will decompress the Gzip file \“/home/mkyong/file1.gz\” back to \“/home/mkyong/file1.txt\“.\n
+In this example, it will decompress the Gzip file \“/home/ABychek/file1.gz\” back to \“/home/ABychek/file1.txt\“.\n
 \n
-package com.mkyong.gzip;\n
+package com.ABychek.gzip;\n
 \n
 import java.io.FileInputStream;\n
 import java.io.FileOutputStream;\n
@@ -2332,8 +2332,8 @@ import java.util.zip.GZIPInputStream;\n
 \n
 public class GZipFile\n
 {\n
-    private static final String INPUT_GZIP_FILE = \"/home/mkyong/file1.gz\";\n
-    private static final String OUTPUT_FILE = \"/home/mkyong/file1.txt\";\n
+    private static final String INPUT_GZIP_FILE = \"/home/ABychek/file1.gz\";\n
+    private static final String OUTPUT_FILE = \"/home/ABychek/file1.txt\";\n
 \n
     public static void main( String[] args )\n
     {\n
@@ -2386,7 +2386,7 @@ In this example, you will create an \“Address\” object , compress it and wri
 \n
 P.S Address object can refer to this article.\n
 \n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.FileOutputStream;\n
 import java.io.ObjectOutputStream;\n
@@ -2436,7 +2436,7 @@ address = (Address) ois.readObject();\n
 GZIP example\n
 In this example, you will decompress a compressed file \“address.gz\“, and print it out the value.\n
 \n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.FileInputStream;\n
 import java.io.ObjectInputStream;\n
@@ -2482,7 +2482,7 @@ Street : wall street Country : united state\n
 Here’s an example to create a temporary file in Java.\n
 \n
 Example\n\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -2510,7 +2510,7 @@ public class CreateTempFileExample\n
 \n
  \n
 Result\n\n
-Temp file : C:\Users\mkyong\AppData\Local\Temp\temp-file-name623426.tmp\n
+Temp file : C:\Users\ABychek\AppData\Local\Temp\temp-file-name623426.tmp\n
 	</string>
 
 	<string name="WriteDataToTemporaryFile">
@@ -2519,7 +2519,7 @@ Temp file : C:\Users\mkyong\AppData\Local\Temp\temp-file-name623426.tmp\n
 Example\n\n
 In this example, it will create a temporary file named \“tempfile.tmp\“, and write the text \“This is the temporary file content\” inside.\n
 \n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.BufferedWriter;\n
 import java.io.File;\n
@@ -2565,7 +2565,7 @@ The above example will create a temporary file named \“abc.tmp\” and delete 
 P.S If you want to delete the temporary file manually, you can still use the File.delete().\n
 \n
 Example\n\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -2601,7 +2601,7 @@ public class DeleteTempFileExample\n
 		Here’s an example to get the temporary file path in Java.\n
 \n
 Example\n\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -2636,8 +2636,8 @@ public class GetTempFilePathExample\n
 \n
  \n
 Result\n\n
-Temp file : C:\Users\mkyong\AppData\Local\Temp\temp-file-name79456440.tmp\n
-Temp file path : C:\Users\mkyong\AppData\Local\Temp\n
+Temp file : C:\Users\ABychek\AppData\Local\Temp\temp-file-name79456440.tmp\n
+Temp file path : C:\Users\ABychek\AppData\Local\Temp\n
 	</string>
 
 
@@ -2663,7 +2663,7 @@ Files.createDirectories(path);\n
 A classic Java IO directory example, check if directory exists, if no, then create it.\n
 \n
 CreateDirectoryExample.java\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 \n
@@ -2698,7 +2698,7 @@ public class CreateDirectoryExample {\n
 Java NIO classes are added in JDK 7.\n
 \n
 CreateDirectoryExample.java\n\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.IOException;\n
 import java.nio.file.Files;\n
@@ -2740,16 +2740,16 @@ java.nio.file.AccessDeniedException: /directory-name\n
 Often times, you may require to perform recursive delete in a directory, which means all it’s sub-directories and files should be delete as well, see below example :\n
 \n
 Directory recursive delete example\n
-Delete the directory named \“C:\\mkyong-new\“, and all it’s sub-directories and files as well. The code is self-explanatory and well documented, it should be easy to understand.\n
+Delete the directory named \“C:\\ABychek-new\“, and all it’s sub-directories and files as well. The code is self-explanatory and well documented, it should be easy to understand.\n
 \n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
 \n
 public class DeleteDirectoryExample\n
 {\n
-    private static final String SRC_FOLDER = \"C:\\mkyong-new\";\n
+    private static final String SRC_FOLDER = \"C:\\ABychek-new\";\n
 \n
     public static void main(String[] args)\n
     {\n
@@ -2820,21 +2820,21 @@ public class DeleteDirectoryExample\n
 \n
  \n
 Result\n\n
-File is deleted : C:\mkyong-new\404.php\n
-File is deleted : C:\mkyong-new\archive.php\n
+File is deleted : C:\ABychek-new\404.php\n
+File is deleted : C:\ABychek-new\archive.php\n
 ...\n
-Directory is deleted : C:\mkyong-new\includes\n
-File is deleted : C:\mkyong-new\index.php\n
-File is deleted : C:\mkyong-new\index.php.hacked\n
-File is deleted : C:\mkyong-new\js\hoverIntent.js\n
-File is deleted : C:\mkyong-new\js\jquery-1.4.2.min.js\n
-File is deleted : C:\mkyong-new\js\jquery.bgiframe.min.js\n
-Directory is deleted : C:\mkyong-new\js\superfish-1.4.8\css\n
-Directory is deleted : C:\mkyong-new\js\superfish-1.4.8\images\n
-Directory is deleted : C:\mkyong-new\js\superfish-1.4.8\n
-File is deleted : C:\mkyong-new\js\superfish-navbar.css\n
+Directory is deleted : C:\ABychek-new\includes\n
+File is deleted : C:\ABychek-new\index.php\n
+File is deleted : C:\ABychek-new\index.php.hacked\n
+File is deleted : C:\ABychek-new\js\hoverIntent.js\n
+File is deleted : C:\ABychek-new\js\jquery-1.4.2.min.js\n
+File is deleted : C:\ABychek-new\js\jquery.bgiframe.min.js\n
+Directory is deleted : C:\ABychek-new\js\superfish-1.4.8\css\n
+Directory is deleted : C:\ABychek-new\js\superfish-1.4.8\images\n
+Directory is deleted : C:\ABychek-new\js\superfish-1.4.8\n
+File is deleted : C:\ABychek-new\js\superfish-navbar.css\n
 ...\n
-Directory is deleted : C:\mkyong-new\n
+Directory is deleted : C:\ABychek-new\n
 Done\n
 	</string>
 
@@ -2842,9 +2842,9 @@ Done\n
 		Here’s an example to copy a directory and all its sub-directories and files to a new destination directory. The code is full of comments and self-explanatory, left me comment if you need more explanation.\n
 \n
 Example\n\n
-Copy folder \“c:\\mkyong\” and its sub-directories and files to another new folder \“c:\\mkyong-new\“.\n
+Copy folder \“c:\\ABychek\” and its sub-directories and files to another new folder \“c:\\ABychek-new\“.\n
 \n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 import java.io.FileInputStream;\n
@@ -2857,8 +2857,8 @@ public class CopyDirectoryExample\n
 {\n
     public static void main(String[] args)\n
     {\n
-    	File srcFolder = new File(\"c:\\mkyong\");\n
-    	File destFolder = new File(\"c:\\mkyong-new\");\n
+    	File srcFolder = new File(\"c:\\ABychek\");\n
+    	File destFolder = new File(\"c:\\ABychek-new\");\n
 \n
     	//make sure source exists\n
     	if(!srcFolder.exists()){\n
@@ -2927,15 +2927,15 @@ public class CopyDirectoryExample\n
 \n
  \n
 Result\n\n
-Directory copied from c:\mkyong  to c:\mkyong-new\n
-File copied from c:\mkyong\404.php to c:\mkyong-new\404.php\n
-File copied from c:\mkyong\footer.php to c:\mkyong-new\footer.php\n
-File copied from c:\mkyong\js\superfish.css to c:\mkyong-new\js\superfish.css\n
-File copied from c:\mkyong\js\superfish.js to c:\mkyong-new\js\superfish.js\n
-File copied from c:\mkyong\js\supersubs.js to c:\mkyong-new\js\supersubs.js\n
-Directory copied from c:\mkyong\images  to c:\mkyong-new\images\n
-File copied from c:\mkyong\page.php to c:\mkyong-new\page.php\n
-Directory copied from c:\mkyong\psd  to c:\mkyong-new\psd\n
+Directory copied from c:\ABychek  to c:\ABychek-new\n
+File copied from c:\ABychek\404.php to c:\ABychek-new\404.php\n
+File copied from c:\ABychek\footer.php to c:\ABychek-new\footer.php\n
+File copied from c:\ABychek\js\superfish.css to c:\ABychek-new\js\superfish.css\n
+File copied from c:\ABychek\js\superfish.js to c:\ABychek-new\js\superfish.js\n
+File copied from c:\ABychek\js\supersubs.js to c:\ABychek-new\js\supersubs.js\n
+Directory copied from c:\ABychek\images  to c:\ABychek-new\images\n
+File copied from c:\ABychek\page.php to c:\ABychek-new\page.php\n
+Directory copied from c:\ABychek\psd  to c:\ABychek-new\psd\n
 ...\n
 Done\n
 
@@ -2945,7 +2945,7 @@ Done\n
 		In this example, the program will traverse the given directory and print out all the directories and files absolute path and name one by one.\n
 \n
 Example\n\n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 import java.io.File;\n
 \n
@@ -2979,7 +2979,7 @@ C:\Downloads\2009\n
 C:\Downloads\573440.flv\n
 C:\Downloads\575492.flv\n
 C:\Downloads\avira_antivir_personal_en.exe\n
-C:\Downloads\backup-mkyong.com-12-24-2009.tar.gz\n
+C:\Downloads\backup-ABychek.com-12-24-2009.tar.gz\n
 ......\n
 \n
 	</string>
@@ -2989,7 +2989,7 @@ C:\Downloads\backup-mkyong.com-12-24-2009.tar.gz\n
 		Here’s an example to check if a directory is empty.\n
 \n
 Example\n\n
-package com.mkyong.file;\n
+package com.ABychek.file;\n
 \n
 import java.io.File;\n
 \n
@@ -3027,7 +3027,7 @@ public class CheckEmptyDirectoryExample\n
 \n
 String workingDir = System.getProperty(\"user.dir\");\n
 Example\n\n
-package com.mkyong.io;\n
+package com.ABychek.io;\n
 \n
 public class App{\n
 \n
@@ -3049,7 +3049,7 @@ Current working directory : E:\workspace\HibernateExample\n
 This post is duplicated, please refer to this – 3 ways to read input from console in Java.\n
 A quick example to show you how to read the standard input in Java.\n
 \n
-package com.mkyong.pageview;\n
+package com.ABychek.pageview;\n
 \n
 import java.io.BufferedReader;\n
 import java.io.IOException;\n
@@ -3063,7 +3063,7 @@ public class Test {\n
 \n
         try {\n
 \n
-            // Refer to this http://www.mkyong.com/java/how-to-read-input-from-console-java/\n
+            // Refer to this http://www.ABychek.com/java/how-to-read-input-from-console-java/\n
             // for JDK 1.6, please use java.io.Console class to read system input.\n
             br = new BufferedReader(new InputStreamReader(System.in));\n
 \n
@@ -3111,13 +3111,13 @@ DOM Parser is slow and consumes a lot of memory when it loads an XML document wh
 1. DOM XML Parser Example\n\n
 This example shows you how to get the node by \“name\”, and display the value.\n
 \n
-/Users/mkyong/staff.xml\n
+/Users/ABychek/staff.xml\n
 		&lt;?xml version=\"1.0\"?>\n
 		&lt;company>\n
 	&lt;staff id=\"1001\">\n
-		&lt;firstname>yong&lt;/firstname>\n
-	&lt;lastname>mook kim&lt;/lastname>\n
-	&lt;nickname>mkyong&lt;/nickname>\n
+		&lt;firstname>Bychek&lt;/firstname>\n
+	&lt;lastname>Anton Olegovi&lt;/lastname>\n
+	&lt;nickname>ABychek&lt;/nickname>\n
 	&lt;salary>100000&lt;/salary>\n
 	&lt;/staff>\n
 	&lt;staff id=\"2001\">\n
@@ -3128,7 +3128,7 @@ This example shows you how to get the node by \“name\”, and display the valu
 	&lt;/staff>\n
 	&lt;/company>\n
 ReadXMLFile.java\n\n
-package com.mkyong.seo;\n
+package com.ABychek.seo;\n
 \n
 import javax.xml.parsers.DocumentBuilderFactory;\n
 import javax.xml.parsers.DocumentBuilder;\n
@@ -3144,7 +3144,7 @@ public class ReadXMLFile {\n
 \n
     try {\n
 \n
-	File fXmlFile = new File(\"/Users/mkyong/staff.xml\");\n
+	File fXmlFile = new File(\"/Users/ABychek/staff.xml\");\n
 	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();\n
 	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();\n
 	Document doc = dBuilder.parse(fXmlFile);\n
@@ -3190,9 +3190,9 @@ Root element :company\n
 \n
 Current Element :staff\n
 Staff id : 1001\n
-First Name : yong\n
-Last Name : mook kim\n
-Nick Name : mkyong\n
+First Name : Bychek\n
+Last Name : Anton Olegovich\n
+Nick Name : ABychek\n
 Salary : 100000\n
 \n
 Current Element :staff\n
@@ -3218,9 +3218,9 @@ File : file.xml – Original XML file.\n
 		&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n
 &lt;company>\n
    &lt;staff id=\"1\">\n
-	&lt;irstname>yong&lt;/firstname>\n
-	&lt;lastname>mook kim&lt;/lastname>\n
-	&lt;nickname>mkyong&lt;/nickname>\n
+	&lt;irstname>Bychek&lt;/firstname>\n
+	&lt;lastname>Anton Olegovich&lt;/lastname>\n
+	&lt;nickname>ABychek&lt;/nickname>\n
 	&lt;salary>100000&lt;/salary>\n
    &lt;/staff>\n
 &lt;/company>\n
@@ -3235,8 +3235,8 @@ File : file.xml – Newly modified XML file.\n
 		&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n
 &lt;company>\n
    &lt;staff id=\"2\">\n
-	&lt;lastname>mook kim&lt;/lastname>\n
-	&lt;nickname>mkyong&lt;/nickname>\n
+	&lt;lastname>Anton Olegovich&lt;/lastname>\n
+	&lt;nickname>ABychek&lt;/nickname>\n
 	&lt;salary>2000000&lt;/salary>\n
 	&lt;age>28&lt;/age>\n
 	&lt;/staff>\n
@@ -3349,15 +3349,15 @@ At the end of the example, following XML file named \“file.xml\” will be cre
 		&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n
 &lt;company>\n
 	&lt;staff id=\"1\">\n
-		&lt;firstname>yong&lt;/firstname>\n
-	&lt;lastname>mook kim&lt;/lastname>\n
-	&lt;nickname>mkyong&lt;/nickname>\n
+		&lt;firstname>Bychek&lt;/firstname>\n
+	&lt;lastname>Anton Olegovich&lt;/lastname>\n
+	&lt;nickname>ABychek&lt;/nickname>\n
 	&lt;salary>100000&lt;/salary>\n
 	&lt;/staff>\n
 	&lt;/company>\n
 File : WriteXMLFile.java – Java class to create a XML file.\n
 \n
-package com.mkyong.core;\n
+package com.ABychek.core;\n
 \n
 import java.io.File;\n
 import javax.xml.parsers.DocumentBuilder;\n
@@ -3401,17 +3401,17 @@ public class WriteXMLFile {\n
 \n
 		// firstname elements\n
 		Element firstname = doc.createElement(\"firstname\");\n
-		firstname.appendChild(doc.createTextNode(\"yong\"));\n
+		firstname.appendChild(doc.createTextNode(\"Bychek\"));\n
 		staff.appendChild(firstname);\n
 \n
 		// lastname elements\n
 		Element lastname = doc.createElement(\"lastname\");\n
-		lastname.appendChild(doc.createTextNode(\"mook kim\"));\n
+		lastname.appendChild(doc.createTextNode(\"Anton Olegovich\"));\n
 		staff.appendChild(lastname);\n
 \n
 		// nickname elements\n
 		Element nickname = doc.createElement(\"nickname\");\n
-		nickname.appendChild(doc.createTextNode(\"mkyong\"));\n
+		nickname.appendChild(doc.createTextNode(\"ABychek\"));\n
 		staff.appendChild(nickname);\n
 \n
 		// salary elements\n
@@ -3459,9 +3459,9 @@ File : file.xml\n
 		&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n
 &lt;company>\n
 	&lt;staff id=\"1\">\n
-		&lt;firstname>yong&lt;/firstname>\n
-		&lt;lastname>mook kim&lt;/lastname>\n
-		&lt;nickname>mkyong&lt;/nickname>\n
+		&lt;firstname>Bychek&lt;/firstname>\n
+		&lt;lastname>Anton Olegovich&lt;/lastname>\n
+		&lt;nickname>ABychek&lt;/nickname>\n
 		&lt;alary>2000000&lt;/salary>\n
 		&lt;age>29/age>\n
 	&lt;/staff>\n
@@ -3533,9 +3533,9 @@ Create a simple XML file.\n
 		&lt;?xml version=\"1.0\"?>\n
 &lt;company>\n
 	&lt;staff>\n
-		&lt;firstname>yong&lt;/firstname>\n
-	&lt;lastname>mook kim&lt;/lastname>\n
-	&lt;nickname>mkyong&lt;/nickname>\n
+		&lt;firstname>Bychek&lt;/firstname>\n
+	&lt;lastname>Anton Olegovich&lt;/lastname>\n
+	&lt;nickname>ABychek&lt;/nickname>\n
 	&lt;salary>100000&lt;/salary>\n
 	&lt;/staff>\n
 	&lt;staff>\n
@@ -3642,13 +3642,13 @@ Result\n
 Start Element :company\n
 Start Element :staff\n
 Start Element :firstname\n
-First Name : yong\n
+First Name : Bychek\n
 End Element :firstname\n
 Start Element :lastname\n
-Last Name : mook kim\n
+Last Name : Anton Olegovich\n
 End Element :lastname\n
 Start Element :nickname\n
-Nick Name : mkyong\n
+Nick Name : ABychek\n
 End Element :nickname\n
 Start Element :salary\n
 Salary : 100000\n
@@ -3677,7 +3677,7 @@ You may interest to read this How to read XML file in Java – (DOM Parser)\n
 
 	<string name="ReadUTF8XMLFile">
 
-		By mkyong | December 17, 2009 | Updated : August 4, 2011 | Viewed : 156,285 times +429 pv/w
+		By ABychek | December 17, 2009 | Updated : August 4, 2011 | Viewed : 156,285 times +429 pv/w
 
 In previous Java SAX XML example, there is no problem if you use SAX to parse a plain text (ANSI) XML file, however, if you parse a XML file which contains some special UTF-8 characters, it will prompts \“Invalid byte 1 of 1-byte UTF-8 sequence\” exception.\n
 \n
@@ -3688,8 +3688,8 @@ See following xml file which contain a special UTF-8 characters \“§\” (pres
 		&lt;?xml version=\"1.0\"?>\n
 &lt;company>\n
 	&lt;staff>\n
-		&lt;firstname>yong&lt;/firstname>\n
-	&lt;lastname>mook kim&lt;/lastname>\n
+		&lt;firstname>Bychek&lt;/firstname>\n
+	&lt;lastname>Anton Olegovich&lt;/lastname>\n
 	&lt;nickname>§&lt;/nickname>\n
 	&lt;salary>100000&lt;/salary>\n
 	&lt;/staff>\n
@@ -3706,7 +3706,7 @@ is.setEncoding(\"UTF-8\");\n
 saxParser.parse(is, handler);\n
 See a full example of using SAX parser to parse a Unicode XML file.\n
 \n
-package com.mkyong.test;\n
+package com.ABychek.test;\n
 \n
 import java.io.File;\n
 import java.io.FileInputStream;\n
@@ -3866,9 +3866,9 @@ A small dot \“.\” before the \“&lt;?xml….\n
 .&lt;?xml version="1.0"?>\n
 &lt;company>\n
 	&lt;staff>\n
-		&lt;firstname>yong&lt;/firstname>\n
-	&lt;lastname>mook kim&lt;/lastname>\n
-	&lt;nickname>mkyong&lt;/nickname>\n
+		&lt;firstname>Bychek&lt;/firstname>\n
+	&lt;lastname>Anton Olegovich&lt;/lastname>\n
+	&lt;nickname>ABychek&lt;/nickname>\n
 	&lt;salary>100000&lt;/salary>\n
 	&lt;/staff>\n
 	&lt;staff>\n
@@ -3908,9 +3908,9 @@ XML file as following\n
 		&lt;?xml version=\"1.0\"?>\n
 &lt;company>\n
 	&lt;staff>\n
-		&lt;firstname>yong&lt;/firstname>\n
-	&lt;lastname>mook kim&lt;/lastname>\n
-	&lt;nickname>mkyong&lt;/nickname>\n
+		&lt;firstname>Bychek&lt;/firstname>\n
+	&lt;lastname>Anton Olegovich&lt;/lastname>\n
+	&lt;nickname>ABychek&lt;/nickname>\n
 	&lt;salary>100000&lt;/salary>\n
 	&lt;/staff>\n
 	&lt;staff>\n
@@ -3965,9 +3965,9 @@ public class ReadXMLFile {\n
 }\n\n
 Output\n
 \n
-First Name : yong\n
-Last Name : mook kim\n
-Nick Name : mkyong\n
+First Name : Bychek\n
+Last Name : Anton Olegovich\n
+Nick Name : ABychek\n
 Salary : 100000\n
 First Name : low\n
 Last Name : yin fong\n
@@ -3995,9 +3995,9 @@ File : file.xml – Original XML file.\n
 		&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?>\n
 		&lt;company>\n
   &lt;staff id=\"1\">\n
-    &lt;firstname>yong&lt;/firstname>\n
-	&lt;lastname>mook kim&lt;/lastname>\n
-	&lt;nickname>mkyong&lt;/nickname>\n
+    &lt;firstname>Bychek&lt;/firstname>\n
+	&lt;lastname>Anton Olegovich&lt;/lastname>\n
+	&lt;nickname>ABychek&lt;/nickname>\n
 	&lt;salary>5000&lt;/salary>\n
 	&lt;/staff>\n
 	&lt;/company>\n
@@ -4012,8 +4012,8 @@ File : file.xml – Newly modified XML file.\n
 		&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?>\n
 		&lt;company>\n
   &lt;staff id=\"2\">\n
-    &lt;lastname>mook kim&lt;/lastname>\n
-    &lt;nickname>mkyong&lt;/nickname>\n
+    &lt;lastname>Anton Olegovich&lt;/lastname>\n
+    &lt;nickname>ABychek&lt;/nickname>\n
     &lt;salary>7000&lt;&lt;/salary>\n
     &lt;age>28&lt;/age>\n
   &lt;/staff>\n
@@ -4088,9 +4088,9 @@ File : file.xml\n
 		&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?>\n
 &lt;company>\n
   &lt;staff id=\"1\">\n
-    &lt;firstname>yong&lt;/firstname>\n
-	&lt;lastname>mook kim&lt;/lastname>\n
-	&lt;nickname>mkyong&lt;/nickname>\n
+    &lt;firstname>Bychek&lt;/firstname>\n
+	&lt;lastname>Anton Olegovich&lt;/lastname>\n
+	&lt;nickname>ABychek&lt;/nickname>\n
 	&lt;salary>199999&lt;/salary>\n
 	&lt;/staff>\n
 	&lt;staff id=\"2\">\n
@@ -4124,9 +4124,9 @@ public class WriteXMLFile {\n
 \n
 		Element staff = new Element(\"staff\");\n
 		staff.setAttribute(new Attribute(\"id\", \"1\"));\n
-		staff.addContent(new Element(\"firstname\").setText(\"yong\"));\n
-		staff.addContent(new Element(\"lastname\").setText(\"mook kim\"));\n
-		staff.addContent(new Element(\"nickname\").setText(\"mkyong\"));\n
+		staff.addContent(new Element(\"firstname\").setText(\"Bychek\"));\n
+		staff.addContent(new Element(\"lastname\").setText(\"Anton Olegovich\"));\n
+		staff.addContent(new Element(\"nickname\").setText(\"ABychek\"));\n
 		staff.addContent(new Element(\"salary\").setText(\"199999\"));\n
 \n
 		doc.getRootElement().addContent(staff);\n
@@ -4176,7 +4176,7 @@ For JDK &lt; 1.6, download JAXB from here, and puts \“jaxb-api.jar\” and \�
 2. JAXB Annotation\n\n
 For object that need to convert to / from XML file, it have to annotate with JAXB annotation. The annotation are pretty self-explanatory, you can refer to this JAXB guide for detail explanation.\n
 \n
-package com.mkyong.core;\n
+package com.ABychek.core;\n
 \n
 import javax.xml.bind.annotation.XmlAttribute;\n
 import javax.xml.bind.annotation.XmlElement;\n
@@ -4222,7 +4222,7 @@ public class Customer {\n
 3. Convert Object to XML\n
 JAXB marshalling example, convert customer object into a XML file. The jaxbMarshaller.marshal() contains a lot of overloaded methods, find one that suit your output.\n
 \n
-package com.mkyong.core;\n
+package com.ABychek.core;\n
 \n
 import java.io.File;\n
 import javax.xml.bind.JAXBContext;\n
@@ -4234,7 +4234,7 @@ public class JAXBExample {\n
 \n
 	  Customer customer = new Customer();\n
 	  customer.setId(100);\n
-	  customer.setName(\"mkyong\");\n
+	  customer.setName(\"ABychek\");\n
 	  customer.setAge(29);\n
 \n
 	  try {\n
@@ -4260,12 +4260,12 @@ Output\n\n
 		&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n
 &lt;customer id=\"100\">\n
     &lt;age>29&lt;/age>\n
-    &lt;name>mkyong&lt;/name>\n
+    &lt;name>ABychek&lt;/name>\n
 &lt;/customer>\n\n
 4. Convert XML to Object\n
 JAXB unmarshalling example, convert a XML file content into a customer object. The jaxbMarshaller.unmarshal() contains a lot of overloaded methods, find one that suit yours.\n
 \n
-package com.mkyong.core;\n
+package com.ABychek.core;\n
 \n
 import java.io.File;
 import javax.xml.bind.JAXBContext;\n
@@ -4292,7 +4292,7 @@ public class JAXBExample {\n
 }\n
 Output\n
 \n
-Customer [name=mkyong, age=29, id=100]\n
+Customer [name=ABychek, age=29, id=100]\n
 	</string>
 
 	<string name="ConvertPropertiesFileIntoXMLFile">
@@ -4348,7 +4348,7 @@ The above example will write the properties detail into a XML file \“c:/email-
    &lt;/properties>\n
 In this example, we show you how to use loadFromXML() method to load above XML file into a properties object, and get the key \“email.support\” value via getProperty() method.\n
 \n
-package com.mkyong;\n
+package com.ABychek;\n
 \n
 import java.io.FileInputStream;\n
 import java.io.IOException;\n
@@ -4394,7 +4394,7 @@ String jsonInString = mapper.writeValueAsString(user);\n
 1.2 Convert JSON to Java object, readValue(...)\n
 \n
 ObjectMapper mapper = new ObjectMapper();\n
-String jsonInString = \"{\'name\' : \'mkyong\'}\";\n
+String jsonInString = \"{\'name\' : \'ABychek\'}\";\n
 
 //JSON from file to Object
 User user = mapper.readValue(new File(\"c:\\user.json\"), User.class);
@@ -4420,7 +4420,7 @@ pom.xml\n
 An User object for testing.\n
 \n
 User.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import java.util.List;\n
 \n
@@ -4436,7 +4436,7 @@ public class User {\n
 Convert an user object into a JSON formatted string.\n
 \n
 JacksonExample.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -4482,7 +4482,7 @@ public class JacksonExample {\n
 \n
 		User user = new User();\n
 \n
-		user.setName(\"mkyong\");\n
+		user.setName(\"ABychek\");\n
 		user.setAge(33);\n
 \n
 		List&lt;String> msg = new ArrayList&lt;>();\n
@@ -4500,10 +4500,10 @@ Output\n
 \n
 //new json file is created in D:\\user.json\"\n
 \n
-{\"name\":\"mkyong\",\"age\":33,\"messages\":[\"hello jackson 1\",\"hello jackson 2\",\"hello jackson 3\"]}\n
+{\"name\":\"ABychek\",\"age\":33,\"messages\":[\"hello jackson 1\",\"hello jackson 2\",\"hello jackson 3\"]}\n
 \n
 {\n
-  \"name\" : \"mkyong\",\n
+  \"name\" : \"ABychek\",\n
   \"age\" : 33,\n
   \"messages\" : [ \"hello jackson 1\", \"hello jackson 2\", \"hello jackson 3\" ]\n
 }\n
@@ -4511,7 +4511,7 @@ Output\n
 Read JSON string and convert it back to a Java object.\n
 \n
 JacksonExample.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -4534,7 +4534,7 @@ public class JacksonExample {\n
 			System.out.println(user);\n
 \n
 			// Convert JSON string to Object\n
-			String jsonInString = \"{\"age\":33,\"messages\":[\"msg 1\",\"msg 2\"],\"name\":\"mkyong\"}";\n
+			String jsonInString = \"{\"age\":33,\"messages\":[\"msg 1\",\"msg 2\"],\"name\":\"ABychek\"}";\n
 			User user1 = mapper.readValue(jsonInString, User.class);\n
 			System.out.println(user1);\n
 \n
@@ -4551,16 +4551,16 @@ public class JacksonExample {\n
 }\n
 Output\n
 \n
-User [name=mkyong, age=33, messages=[hello jackson 1, hello jackson 2, hello jackson 3]]\n
+User [name=ABychek, age=33, messages=[hello jackson 1, hello jackson 2, hello jackson 3]]\n
 \n
-User [name=mkyong, age=33, messages=[msg 1, msg 2]]\n
+User [name=ABychek, age=33, messages=[msg 1, msg 2]]\n
 6. @JsonView\n
 @JsonView has been supported in Jackson since version 1.4, it lets you control what fields to display.\n
 \n
 6.1 A simple class.\n
 \n
 Views.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 public class Views {\n
 \n
@@ -4571,7 +4571,7 @@ public class Views {\n
 6.2 Annotate on the fields you want to display.\n
 \n
 User.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import java.util.List;\n
 import org.codehaus.jackson.map.annotate.JsonView;\n
@@ -4591,7 +4591,7 @@ public class User {\n
 6.3 Enable the @JsonView via writerWithView().\n
 \n
 JacksonExample.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import java.io.IOException;\n
 import java.util.ArrayList;\n
@@ -4636,7 +4636,7 @@ public class JacksonExample {\n
 \n
 		User user = new User();\n
 \n
-		user.setName(\"mkyong\");\n
+		user.setName(\"ABychek\");\n
 		user.setAge(33);\n
 
 		List&lt;String> msg = new ArrayList&lt;>();\n\n
@@ -4652,8 +4652,8 @@ public class JacksonExample {\n
 }\n
 Output\n
 \n
-{\"name\":\"mkyong\"}\n
-{\"name\":\"mkyong\",\"age\":33}\n
+{\"name\":\"ABychek\"}\n
+{\"name\":\"ABychek\",\"age\":33}\n
 
 
 	</string>
@@ -4665,7 +4665,7 @@ P.S All examples are tested with Jackson 2.6.3\n
 \n
 1. JSON string to Map\n
 JsonMapExample.java\n\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import java.io.IOException;\n
 import java.util.HashMap;\n
@@ -4683,7 +4683,7 @@ public class JsonMapExample {\n
 		try {\n
 \n
 			ObjectMapper mapper = new ObjectMapper();\n
-			String json = \"{\\"name\\":\\"mkyong\\", \\"age\\":29}\";\n
+			String json = \"{\\"name\\":\\"ABychek\\", \\"age\\":29}\";\n
 \n
 			Map&lt;String, Object> map = new HashMap&lt;String, Object>();\n
 \n
@@ -4704,14 +4704,14 @@ public class JsonMapExample {\n
 }\n
 Output\n
 \n
-{name=mkyong, age=29}\n
+{name=ABychek, age=29}\n
 \n
  \n
 2. Map to JSON string\n
 Example to convert the Map to JSON string.\n
 \n
 MapJsonExample.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import java.io.IOException;\n
 import java.util.HashMap;\n
@@ -4731,7 +4731,7 @@ public class MapJsonExample{\n
 			String json = \"\";\n
 \n
 			Map&lt;String, Object> map = new HashMap&lt;String, Object>();\n
-			map.put(\"name\", \"mkyong\");\n
+			map.put(\"name\", \"ABychek\");\n
 			map.put(\"age\", 29);\n
 \n
 			// convert map to JSON string\n
@@ -4756,16 +4756,16 @@ public class MapJsonExample{\n
 }\n
 Output\n
 \n
-{\"name\":\"mkyong\",\"age\":29}\n
+{\"name\":\"ABychek\",\"age\":29}\n
 {\n
-  \"name\" : \"mkyong\",\n
+  \"name\" : \"ABychek\",\n
   \"age\" : 29\n
 }\n
 \n
  \n
 3. Map to JSON File\n\n
 JsonMapFileExample.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -4787,7 +4787,7 @@ public class JsonMapFileExample {\n
 			ObjectMapper mapper = new ObjectMapper();\n
 \n
 			Map&lt;String, Object> map = new HashMap&lt;String, Object>();\n
-			map.put(\"name\", \"mkyong\");\n
+			map.put(\"name\", \"ABychek\");\n
 			map.put(\"age\", 29);\n
 \n
 			List&lt;Object> list = new ArrayList&lt;>();\n
@@ -4811,10 +4811,10 @@ public class JsonMapFileExample {\n
 
 }\n
 c:\\user.json\n\n
-{\"name\":\"mkyong\",\"messages\":[\"msg 1\",\"msg 2\",\"msg 3\"],\"age\":29}\n
+{\"name\":\"ABychek\",\"messages\":[\"msg 1\",\"msg 2\",\"msg 3\"],\"age\":29}\n
 4. JSON file to Map\n
 JsonFileMapExample.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -4862,7 +4862,7 @@ public class Jackson2Example {\n
 }\n
 Output\n
 \n
-mkyong\n
+ABychek\n
 29\n
 msg 1\n
 msg 2\n
@@ -4883,8 +4883,8 @@ c:\\user.json\n
 {\n
   \"id\"   : 1,\n
   \"name\" : {\n
-    \"first\" : \"Yong\",\n
-    \"last\" : \"Mook Kim\"\n
+    \"first\" : \"Bychek\",\n
+    \"last\" : \"Anton Olegovich\"\n
   },\n
   \"contact\" : [\n
     { \"typ\e" : \"phone/home\", \"ref\" : \"111-111-1234\"},\n
@@ -4894,7 +4894,7 @@ c:\\user.json\n
 1.2 Using Jackson TreeModel (JsonNode) to parse and traversal above JSON file. Read comments for self-explanatory.\n
 \n
 JacksonTreeModel.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -4967,9 +4967,9 @@ public class JacksonTreeModel {\n
 Output\n
 \n
 id : 1\n
-firstName : Yong\n
+firstName : Bychek\n
 middleName :\n
-lastName : Mook Kim\n
+lastName : Anton Olegovich\n
 type : phone/home\n
 ref : 111-111-1234\n
 type : phone/work\n
@@ -4984,8 +4984,8 @@ c:\\user2.json\n
  {\n
   \"id\"   : 1,\n
   \"name\" : {\n
-    \"first\" : \"Yong\",\n
-    \"last\" : \"Mook Kim\"\n
+    \"first\" : \"Bychek\",\n
+    \"last\" : \"Anton Olegovich\"\n
   },\n
   \"contact\" : [\n
     { \"type\" : \"phone/home\", \"ref\" : \"111-111-1234\"},\n
@@ -4995,7 +4995,7 @@ c:\\user2.json\n
 {\n
   \"id\"   : 2,\n
   \"name\" : {\n
-    \"first\" : \"Yong\",\n
+    \"first\" : \"Bychek\",\n
     \"last\" : \"Zi Lap\"\n
   },\n
   \"contact\" : [\n
@@ -5020,7 +5020,7 @@ for(JsonNode root : rootArray){\n
 3.1 This example, show you how to create, update and remove nodes (ObjectNode and ArrayNode). Read the comments for self-explanatory.\n
 \n
 JacksonTreeModel.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import java.io.File;\n
 import java.io.IOException;\n
@@ -5055,7 +5055,7 @@ public class JacksonTreeModel {\n
 			}\n
 \n
 			// 3. Create a new field in nameNode\n
-			((ObjectNode) nameNode).put(\"nickname\", \"mkyong\");\n
+			((ObjectNode) nameNode).put(\"nickname\", \"ABychek\");\n
 \n
 			// 4. Remove last field in nameNode\n
 			((ObjectNode) nameNode).remove(\"last\");\n
@@ -5084,7 +5084,7 @@ public class JacksonTreeModel {\n
 			// 7. Append a new Node to ArrayNode\n
 			ObjectNode email = mapper.createObjectNode();\n
 			email.put(\"type\", \"email\");\n
-			email.put(\"ref\", \"abc@mkyong.com\");\n
+			email.put(\"ref\", \"abc@ABychek.com\");\n
 \n
 			JsonNode contactNode = root.path(\"contact\");\n
 			((ArrayNode) contactNode).add(email);\n
@@ -5107,8 +5107,8 @@ Output\n
 Before Update {\n
   \"id\" : 1,\n
   \"name\" : {\n
-    \"first\" : \"Yong\",\n
-    \"last\" : \"Mook Kim\"\n
+    \"first\" : \"Bychek\",\n
+    \"last\" : \"Anton Olegovich\"\n
   },\n
   \"contact\" : [ {\n
     \"type\" : \"phone/home\",\n
@@ -5122,9 +5122,9 @@ Before Update {\n
 After Update {\n
   \"id\" : 1000,\n
   \"name\" : {\n
-    \"first\" : \"Yong\",\n
+    \"first\" : \"Bychek\",\n
     \"middle\" : \"M\",\n
-    \"nickname\" : \"mkyong"\\n
+    \"nickname\" : \"ABychek"\\n
   },\n
   \"contact\" : [ {\n
     \"type\" : \"phone/home\",\n
@@ -5134,7 +5134,7 @@ After Update {\n
     \"ref\" : \"222-222-2222\"\n
   }, {\n
     \"type\" : \"email\",\n
-    \"ref\" : \"abc@mkyong.com\"\n
+    \"ref\" : \"abc@ABychek.com\"\n
   } ],\n
   \"position\" : {\n
     \"name\" : \"Developer\",\n
@@ -5184,7 +5184,7 @@ public class JacksonStreamExample {\n
 			\"c:\\user.json\"), JsonEncoding.UTF8);\n
 	jGenerator.writeStartObject(); // {\n
 \n
-	jGenerator.writeStringField(\"name\", \"mkyong\"); // \"name\" : \"mkyong\"\n
+	jGenerator.writeStringField(\"name\", \"ABychek\"); // \"name\" : \"ABychek\"\n
 	jGenerator.writeNumberField(\"age\", 29); // \"age\" : 29\n
 \n
 	jGenerator.writeFieldName(\"messages\"); // \"messages\" :\n
@@ -5220,7 +5220,7 @@ public class JacksonStreamExample {\n
 As result, following new file named \“file.json\” is created :\n
 \n
 {\n
-	\"name\":\"mkyong\",\n
+	\"name\":\"ABychek\",\n
 	\"age\":29,\n
 	\"messages\":[\"msg 1\",\"msg 2\",\"msg 3\"]\n
 }\n
@@ -5232,11 +5232,11 @@ On the other hand, use JsonParser to parse or read above file \“file.json\“,
 Token concept\n
 In streaming mode, every JSON \“string\” is consider as a single token, and each tokens will be processed incremental, that why we call it \“incremental mode\”. For example,\n
 {\n
-   \"name\":\"mkyong\"\n
+   \"name\":\"ABychek\"\n
 }\n
 Token 1 = \“{\“\n
 Token 2 = \“name\”\n
-Token 3 = \“mkyong\”\n
+Token 3 = \“ABychek\”\n
 Token 4 = \“}\”\n
 See full example.\n
 \n
@@ -5267,7 +5267,7 @@ public class JacksonStreamExample {\n
 		  // current token is \"name\",\n
                   // move to next, which is \"name\"\'s value\n
 		  jParser.nextToken();\n
-		  System.out.println(jParser.getText()); // display mkyong\n
+		  System.out.println(jParser.getText()); // display ABychek\n
 \n
 		}\n
 
@@ -5318,7 +5318,7 @@ Warning\n
 The array parsing is a bit tricky, read code comments for explanation.\n\n
 Output\n
 \n
-mkyong\n
+ABychek\n
 29\n
 msg 1\n
 msg 2\n
@@ -5339,7 +5339,7 @@ ObjectMapper mapper = new ObjectMapper();\n
 System.out.println(mapper.writeValueAsString(user));\n
 But the json output is in compact mode.\n
 \n
-{\"age\":29,\"messages\":[\"msg 1\",\"msg 2\",\"msg 3\"],\"name\":\"mkyong\"}\n
+{\"age\":29,\"messages\":[\"msg 1\",\"msg 2\",\"msg 3\"],\"name\":\"ABychek\"}\n
 To enable pretty print, use writerWithDefaultPrettyPrinter.\n
 \n
 ObjectMapper mapper = new ObjectMapper();\n
@@ -5349,21 +5349,21 @@ Output\n
 {\n
   \"age\" : 29,\n
   \"messages\" : [ \"msg 1\", \"msg 2\", \"msg 3\" ],\n
-  \"name\" : \"mkyong\"\n
+  \"name\" : \"ABychek\"\n
 }\n
 \n
  \n
 2. Pretty Print JSON String\n
 This is a bit tricky, try to use writerWithDefaultPrettyPrinter again.\n
 \n
-String test = \"{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"mkyong\\"}";\n
+String test = \"{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"ABychek\\"}";\n
 System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(test));\n
 Output, not what we want, json is still in compact mode.\n
 \n
-\"{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"mkyong\\"}"\n
+\"{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"ABychek\\"}"\n
 To solve it, bind the JSON string to Object before pretty print it.\n
 \n
-String test = "{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"mkyong\\"}";\n
+String test = "{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"ABychek\\"}";\n
 Object json = mapper.readValue(test, Object.class);\n
 System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json));\n\n
 Output\n
@@ -5371,7 +5371,7 @@ Output\n
 {\n
   \"age\" : 29,\n
   \"messages\" : [ \"msg 1\", \"msg 2\", \"msg 3\" ],\n
-  \"name\" : \"mkyong\"\n
+  \"name\" : \"ABychek\"\n
 }\n
 \n
  \n
@@ -5386,7 +5386,7 @@ public class AdminController {\n
   @RequestMapping(method = RequestMethod.GET)\n
   public ModelAndView index() {\n
 
-	String test = \"{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"mkyong\\"}";\n
+	String test = \"{\\"age\\":29,\\"messages\\":[\\"msg 1\\",\\"msg 2\\",\\"msg 3\\"],\\"name\\":\\"ABychek\\"}";\n
 	Object json = mapper.readValue(test, Object.class);\n
 
 	ModelAndView modelandView = new ModelAndView(\"viewname\");\n
@@ -5433,7 +5433,7 @@ Gson gson = new Gson();\n
 Staff staff = gson.fromJson(new FileReader(\"D:\\file.json\"), Staff.class);\n
 \n
 // 2. JSON to Java object, read it from a Json String.\n
-String jsonInString = \"{\'name\' : \'mkyong\'}\";\n
+String jsonInString = \"{\'name\' : \'ABychek\'}\";\n
 Staff staff = gson.fromJson(jsonInString, Staff.class);\n
 \n
 // JSON to JsonElement, convert to String later.\n
@@ -5456,7 +5456,7 @@ pom.xml\n
 A simple POJO, for testing later.\n
 \n
 staff.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import java.math.BigDecimal;\n
 import java.util.List;\n
@@ -5474,7 +5474,7 @@ public class Staff {\n
 Gson example to convert a Staff object into a JSON formatted string.\n
 \n
 GsonExample.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import com.google.gson.Gson;\n
 \n
@@ -5510,7 +5510,7 @@ public class GsonExample {\n
 \n
         Staff staff = new Staff();\n
 \n
-        staff.setName(\"mkyong\");\n
+        staff.setName(\"ABychek\");\n
         staff.setAge(35);\n
         staff.setPosition(\"Founder\");\n
         staff.setSalary(new BigDecimal(\"10000\"));\n
@@ -5529,14 +5529,14 @@ public class GsonExample {\n
 }\n
 Output\n
 
-{\"name\":\"mkyong\",\"age\":35,\"position\":\"Founder\",\"salary\":10000,\"skills\":[\"java\",\"python\",\"shell\"]}\n
+{\"name\":\"ABychek\",\"age\":35,\"position\":\"Founder\",\"salary\":10000,\"skills\":[\"java\",\"python\",\"shell\"]}\n
 \n
 //new file is created in \"D:\\staff.json\"\n
 5. JSON to Java Object\n
 Gson example to read a JSON from a file and convert it back to a Java object.\n
 \n
 Gson2Example.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import com.google.gson.Gson;\n
 import java.io.FileReader;\n
@@ -5569,18 +5569,18 @@ public class Gson2Example {\n
 }\n
 Output\n
 \n
-Staff{name=\'mkyong\', age=35, position=\'Founder\', salary=10000, skills=[java, python, shell]}\n\n
+Staff{name=\'ABychek\', age=35, position=\'Founder\', salary=10000, skills=[java, python, shell]}\n\n
 6. FAQs\n
 Some commonly ask questions.\n
 \n
 6.1 Convert a JSON Array to a List, using TypeToken\n
 \n
-String json = \"[{\\"name\\":\\"mkyong\\"}, {\\"name\\":\\"laplap\\"}]\";\n
+String json = \"[{\\"name\\":\\"ABychek\\"}, {\\"name\\":\\"laplap\\"}]\";\n
 List&lt;Staff> list = gson.fromJson(json, new TypeToken&lt;List&lt;Staff>>(){}.getType());\n
 list.forEach(x -> System.out.println(x));\n
 6.2 Convert a JSON to a Map\n
 
-String json = \"{\\"name\\":\\"mkyong\\", \\"age\\":33}\";\n
+String json = \"{\\"name\\":\\"ABychek\\", \\"age\\":33}\";\n
 Map&lt;String, Object> map = gson.fromJson(json, new TypeToken&lt;Map&lt;String, Object>>(){}.getType());\n
 map.forEach((x,y)-> System.out.println(\"key : \" + x + \" , value : \" + y));\n
 		</string>
@@ -5610,7 +5610,7 @@ public class GsonStreamExample {\n
 	writer = new JsonWriter(new FileWriter(\"c:\\user.json\"));\n
 \n
 	writer.beginObject(); // {\n
-	writer.name(\"name\").value(\"mkyong\"); // \"name\" : \"mkyong\"\n
+	writer.name(\"name\").value(\"ABychek\"); // \"name\" : \"ABychek\"\n
 	writer.name(\"age\").value(29); // \"age\" : 29\n
 \n
 	writer.name(\"messages\"); // \"messages\" :\n
@@ -5635,7 +5635,7 @@ public class GsonStreamExample {\n
 As result, following new file named \“file.json\” is created :\n
 \n
 {\n
-	\"name\":\"mkyong\",\n
+	\"name\":\"ABychek\",\n
 	\"age\":29,\n
 	\"messages\":[\"msg 1\",\"msg 2\",\"msg 3\"]\n
 }\n
@@ -5649,18 +5649,18 @@ In streaming mode, every JSON \“data\” is consider as an individual token. W
 For example,\n
 \n
 {\n
-	\"url\":\"www.mkyong.com\"\n
+	\"url\":\"www.ABychek.com\"\n
 }\n
 Token 1 = \“{\”\n
 Token 2 = \“url\”\n
-Token 3 = \“www.mkyong.com\”\n
+Token 3 = \“www.ABychek.com\”\n
 Token 4 = \“}”\n
 \n
 As result, you need to keep calling \“next****\” method to move to next token manually.\n
 \n
 See full example.\n
 \n
-package com.mkyong.core;\n
+package com.ABychek.core;\n
 \n
 import java.io.FileNotFoundException;\n
 import java.io.FileReader;\n
@@ -5717,7 +5717,7 @@ public class GsonStreamExample {\n
 }\n
 Output\n
 \n
-mkyong\n
+ABychek\n
 29\n
 msg 1\n
 msg 2\n
@@ -5735,7 +5735,7 @@ String json = gson.toJson(someObj);\n
 System.out.println(json);\n
 Output\n
 \n
-{\"name\":\"mkyong",\"age\":35,\"position\":\"Founder\",\"salary\":10000,\"skills\":[\"java\",\"python\",\"shell\"]}\n
+{\"name\":\"ABychek",\"age\":35,\"position\":\"Founder\",\"salary\":10000,\"skills\":[\"java\",\"python\",\"shell\"]}\n
 2. To enable the pretty-print, create the Gson object with GsonBuilder\n
 \n
 Gson gson = new GsonBuilder().setPrettyPrinting().create();\n
@@ -5744,7 +5744,7 @@ System.out.println(json);\n
 Output\n
 \n
 {\n
-  \"name\": \"mkyong\",\n
+  \"name\": \"ABychek\",\n
   \"age\": 35,\n
   \"position\": \"Founder\",\n
   \"salary\": 10000,\n
@@ -5757,7 +5757,7 @@ Output\n
 3. Full example.\n
 \n
 GsonExample.java\n
-package com.mkyong.json;\n
+package com.ABychek.json;\n
 \n
 import com.google.gson.Gson;\n
 import com.google.gson.GsonBuilder;\n
@@ -5784,7 +5784,7 @@ public class GsonExample {\n
 \n
         Staff staff = new Staff();\n
 
-        staff.setName(\"mkyong\");\n
+        staff.setName(\"ABychek\");\n
         staff.setAge(35);\n
         staff.setPosition(\"Founder\");\n
         staff.setSalary(new BigDecimal(\"10000\"));\n
@@ -5804,7 +5804,7 @@ public class GsonExample {\n
 Output\n\n
 
 {\n
-  \"name\": \"mkyong\",\n
+  \"name\": \"ABychek\",\n
   \"age\": 35,\n
   \"position\": \"Founder\",\n
   \"salary\": 10000,\n
@@ -5843,7 +5843,7 @@ public class JsonSimpleExample {\n
      public static void main(String[] args) {\n
 \n
 	JSONObject obj = new JSONObject();\n
-	obj.put(\"name\", \"mkyong.com\");\n
+	obj.put(\"name\", \"ABychek.com\");\n
 	obj.put(\"age\", new Integer(100));\n
 \n
 	JSONArray list = new JSONArray();\n
@@ -5873,7 +5873,7 @@ Output – See content of file named \“test.json\“.\n
 \n
 {\n
 	\"age\":100,\n
-	\"name\":"mkyong.com",\n
+	\"name\":"ABychek.com",\n
 	\"messages\":[\"msg 1\",\"msg 2\",\"msg 3\"]\n
 }\n
 
@@ -5927,7 +5927,7 @@ public class JsonSimpleExample {\n
 }\n
 Output\n
 \n
-mkyong.com\n
+ABychek.com\n
 100\n
 msg 1\n
 msg 2\n
@@ -5948,7 +5948,7 @@ conn.close();\n
 See a complete example below :\n
 \n
 JDBCExample.java\n
-package com.mkyong.common;\n
+package com.ABychek.common;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -5973,7 +5973,7 @@ public class JDBCExample {\n
 \n
 	try {\n
 		connection = DriverManager\n
-		.getConnection(\"jdbc:mysql://localhost:3306/mkyongcom\",\"root\", \"password\");\n
+		.getConnection(\"jdbc:mysql://localhost:3306/ABychekcom\",\"root\", \"password\");\n
 \n
 	} catch (SQLException e) {\n
 		System.out.println(\"Connection Failed! Check output console\");\n
@@ -6055,7 +6055,7 @@ public class JDBCExample {\n
 		try {\n
 \n
 			connection = DriverManager.getConnection(\n
-					\"jdbc:postgresql://127.0.0.1:5432/testdb\", \"mkyong\",\n
+					\"jdbc:postgresql://127.0.0.1:5432/testdb\", \"ABychek\",\n
 					\"123456\");\n
 \n
 		} catch (SQLException e) {\n
@@ -6094,7 +6094,7 @@ Code snippets to use JDBC to connect a Oracle database.\n
 Class.forName(\"org.postgresql.Driver\");\n
 Connection connection = null;\n
 connection = DriverManager.getConnection(\n
-	\"jdbc:oracle:thin:@localhost:1521:mkyong\",\"username\",\"password\");\n
+	\"jdbc:oracle:thin:@localhost:1521:ABychek\",\"username\",\"password\");\n
 connection.close();\n
 See a complete example below :\n
 File : OracleJDBC.java\n
@@ -6128,7 +6128,7 @@ public class OracleJDBC {\n
 		try {\n
 \n
 			connection = DriverManager.getConnection(\n
-					\"jdbc:oracle:thin:@localhost:1521:mkyong\", \"username\",\n
+					\"jdbc:oracle:thin:@localhost:1521:ABychek\", \"username\",\n
 					\"password\");\n
 
 		} catch (SQLException e) {\n
@@ -6171,7 +6171,7 @@ Statement statement = dbConnection.createStatement();\n
 statement.execute(createTableSQL);\n
 Full example…\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -6181,7 +6181,7 @@ import java.sql.Statement;\n
 public class JDBCStatementCreateExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -6292,7 +6292,7 @@ Statement statement = dbConnection.createStatement();\n
 statement.executeUpdate(insertTableSQL);\n
 Full example…\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -6304,7 +6304,7 @@ import java.text.SimpleDateFormat;\n
 public class JDBCStatementInsertExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 	private static final DateFormat dateFormat = new SimpleDateFormat(\n
@@ -6331,7 +6331,7 @@ public class JDBCStatementInsertExample {\n
 \n
 		String insertTableSQL = \"INSERT INTO DBUSER\"\n
 				+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) \" + \"VALUES\"\n
-				+ \"(1,\'mkyong\',\'system\', \" + \"to_date(\'\"\n
+				+ \"(1,\'ABychek\',\'system\', \" + \"to_date(\'\"\n
 				+ getCurrentTimeStamp() + \"\', \'yyyy/mm/dd hh24:mi:ss\'))\";\n
 \n
 		try {\n
@@ -6405,7 +6405,7 @@ Result\n\n
 A record is inserted into a table named \“DBUSER\”.\n
 \n
 INSERT INTO DBUSER(USER_ID, USERNAME, CREATED_BY, CREATED_DATE)\n
-VALUES(1,\'mkyong\',\'system\', to_date(\'2011/04/04 13:59:03\', \'yyyy/mm/dd hh24:mi:ss\'))\n
+VALUES(1,\'ABychek\',\'system\', to_date(\'2011/04/04 13:59:03\', \'yyyy/mm/dd hh24:mi:ss\'))\n
 Record is inserted into DBUSER table!\n
 	</string>
 
@@ -6418,7 +6418,7 @@ Statement statement = dbConnection.createStatement();\n
 statement.executeUpdate(updateTableSQL);\n
 Full example…\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -6428,7 +6428,7 @@ import java.sql.Statement;\n
 public class JDBCStatementUpdateExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -6452,7 +6452,7 @@ public class JDBCStatementUpdateExample {\n
 		Statement statement = null;\n
 \n
 		String updateTableSQL = \"UPDATE DBUSER\"\n
-				+ \" SET USERNAME = \'mkyong_new\' \"\n
+				+ \" SET USERNAME = \'ABychek_new\' \"\n
 				+ \" WHERE USER_ID = 1\";\n
 \n
 		try {\n
@@ -6516,9 +6516,9 @@ public class JDBCStatementUpdateExample {\n
 
 }\n
 Result\n\n
-The username of \“user_id = 1\” is updated to a new value \‘mkyong_new\’.\n
+The username of \“user_id = 1\” is updated to a new value \‘ABychek_new\’.\n
 \n
-UPDATE DBUSER SET USERNAME = \'mkyong_new\'  WHERE USER_ID = 1\n
+UPDATE DBUSER SET USERNAME = \'ABychek_new\'  WHERE USER_ID = 1\n
 Record is updated into DBUSER table!\n
 	</string>
 
@@ -6531,7 +6531,7 @@ Statement statement = dbConnection.createStatement();\n
 statement.executeUpdate(deleteTableSQL);\n
 Full example…\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -6541,7 +6541,7 @@ import java.sql.Statement;\n
 public class JDBCStatementDeleteExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -6645,7 +6645,7 @@ while (rs.next()) {\n
 }\n
 Full example…\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -6656,7 +6656,7 @@ import java.sql.Statement;\n
 public class JDBCStatementSelectExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -6770,7 +6770,7 @@ Note\n
 Batch Update is not limit to Insert statement, it\’s apply for Update and Delete statement as well.\n
 See full JDBC batch update example …\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -6782,7 +6782,7 @@ import java.text.SimpleDateFormat;\n
 public class JDBCBatchUpdateExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 	private static final DateFormat dateFormat = new SimpleDateFormat(\n
@@ -6809,17 +6809,17 @@ public class JDBCBatchUpdateExample {\n
 \n
 		String insertTableSQL1 = \"INSERT INTO DBUSER\"\n
 				+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) \" + \"VALUES\"\n
-				+ \"(101,\'mkyong\',\'system\', \" + \"to_date(\'\"\n
+				+ \"(101,\'ABychek\',\'system\', \" + \"to_date(\'\"\n
 				+ getCurrentTimeStamp() + \"\', \'yyyy/mm/dd hh24:mi:ss\'))\";\n
 \n
 		String insertTableSQL2 = \"INSERT INTO DBUSER\"\n
 				+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) \" + \"VALUES\"\n
-				+ \"(102,\'mkyong\',\'system\', " + \"to_date(\'\"\n
+				+ \"(102,\'ABychek\',\'system\', " + \"to_date(\'\"\n
 				+ getCurrentTimeStamp() + \"\', \'yyyy/mm/dd hh24:mi:ss\'))\";\n
 \n
 		String insertTableSQL3 = \"INSERT INTO DBUSER\"\n
 				+ \"(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) \" + \"VALUES\"\n
-				+ \"(103,\'mkyong\',\'system\', \" + \"to_date(\'\"\n
+				+ \"(103,\'ABychek\',\'system\', \" + \"to_date(\'\"\n
 				+ getCurrentTimeStamp() + \"\', \'yyyy/mm/dd hh24:mi:ss\'))\";\n
 \n
 		try {\n
@@ -6916,7 +6916,7 @@ PreparedStatement preparedStatement = dbConnection.prepareStatement(createTableS
 preparedStatement.executeUpdate();\n
 Full example…\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -6926,7 +6926,7 @@ import java.sql.SQLException;\n
 public class JDBCPreparedStatementCreateExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -7037,14 +7037,14 @@ String insertTableSQL = \"INSERT INTO DBUSER\"\n
 		+ \"(?,?,?,?)\";\n
 PreparedStatement preparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
 preparedStatement.setInt(1, 11);\n
-preparedStatement.setString(2, \"mkyong\");\n
+preparedStatement.setString(2, \"ABychek\");\n
 preparedStatement.setString(3, \"system\");\n
 preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
 // execute insert SQL stetement\n
 preparedStatement .executeUpdate();\n
 Full example…\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -7056,7 +7056,7 @@ import java.text.SimpleDateFormat;\n
 public class JDBCPreparedStatementInsertExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -7088,7 +7088,7 @@ public class JDBCPreparedStatementInsertExample {\n
 			preparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
 \n
 			preparedStatement.setInt(1, 11);\n
-			preparedStatement.setString(2, \"mkyong\");\n
+			preparedStatement.setString(2, \"ABychek\");\n
 			preparedStatement.setString(3, \"system\");\n
 			preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
 \n
@@ -7163,13 +7163,13 @@ A record is inserted into a table named \“DBUSER\”.\n
 \n
 String updateTableSQL = \"UPDATE DBUSER SET USERNAME = ? WHERE USER_ID = ?\";\n
 PreparedStatement preparedStatement = dbConnection.prepareStatement(updateTableSQL);\n
-preparedStatement.setString(1, \"mkyong_new_value\");\n
+preparedStatement.setString(1, \"ABychek_new_value\");\n
 preparedStatement.setInt(2, 1001);\n
 // execute insert SQL stetement\n
 preparedStatement .executeUpdate();\n
 Full example…\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -7179,7 +7179,7 @@ import java.sql.SQLException;\n
 public class JDBCPreparedStatementUpdateExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -7209,7 +7209,7 @@ public class JDBCPreparedStatementUpdateExample {\n
 			dbConnection = getDBConnection();\n
 			preparedStatement = dbConnection.prepareStatement(updateTableSQL);\n
 \n
-			preparedStatement.setString(1, \"mkyong_new_value\");\n
+			preparedStatement.setString(1, \"ABychek_new_value\");\n
 			preparedStatement.setInt(2, 1001);\n
 \n
 			// execute update SQL stetement\n
@@ -7267,7 +7267,7 @@ public class JDBCPreparedStatementUpdateExample {\n
 
 }\n
 Result\n\n
-The username of \“user_id = 1001\” is updated to a new value \‘mkyong_new_value\’.\n
+The username of \“user_id = 1001\” is updated to a new value \‘ABychek_new_value\’.\n
 	</string>
 
 	<string name="PSSTMNDeleteRecord">
@@ -7280,7 +7280,7 @@ preparedStatement.setInt(1, 1001);\n
 preparedStatement.executeUpdate();\n
 Full example…\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -7290,7 +7290,7 @@ import java.sql.SQLException;\n
 public class JDBCPreparedStatementSelectExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -7391,7 +7391,7 @@ while (rs.next()) {\n
 }\n
 Full example…\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -7402,7 +7402,7 @@ import java.sql.SQLException;\n
 public class JDBCPreparedStatementSelectExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -7510,13 +7510,13 @@ String insertTableSQL = \"INSERT INTO DBUSER\"\n
 PreparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
 \n
 preparedStatement.setInt(1, 101);\n
-preparedStatement.setString(2, \"mkyong101\");\n
+preparedStatement.setString(2, \"ABychek101\");\n
 preparedStatement.setString(3, \"system\");\n
 preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
 preparedStatement.addBatch();\n
 \n
 preparedStatement.setInt(1, 102);\n
-preparedStatement.setString(2, \"mkyong102\");\n
+preparedStatement.setString(2, \"ABychek102\");\n
 preparedStatement.setString(3, \"system\");\n
 preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
 preparedStatement.addBatch();\n
@@ -7527,7 +7527,7 @@ Note\n
 Batch Update is not limit to Insert statement, it\’s apply for Update and Delete statement as well.\n
 See full JDBC batch update example …\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -7537,7 +7537,7 @@ import java.sql.SQLException;\n
 public class JDBCBatchUpdateExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -7571,19 +7571,19 @@ public class JDBCBatchUpdateExample {\n
 			dbConnection.setAutoCommit(false);\n
 \n
 			preparedStatement.setInt(1, 101);\n
-			preparedStatement.setString(2, \"mkyong101\");\n
+			preparedStatement.setString(2, \"ABychek101\");\n
 			preparedStatement.setString(3, \"system\");\n
 			preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
 			preparedStatement.addBatch();\n
 \n
 			preparedStatement.setInt(1, 102);\n
-			preparedStatement.setString(2, \"mkyong102\");\n
+			preparedStatement.setString(2, \"ABychek102\");\n
 			preparedStatement.setString(3, \"system\");\n
 			preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
 			preparedStatement.addBatch();\n
 \n
 			preparedStatement.setInt(1, 103);\n
-			preparedStatement.setString(2, \"mkyong103\");\n
+			preparedStatement.setString(2, \"ABychek103\");\n
 			preparedStatement.setString(3, \"system\");\n
 			preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
 			preparedStatement.addBatch();\n
@@ -7665,13 +7665,13 @@ String insertTableSQL = \"INSERT INTO DBUSER\"\n
 PreparpreparedStatement = dbConnection.prepareStatement(insertTableSQL);\n
 \n
 preparedStatement.setInt(1, 111);\n
-preparedStatement.setString(2, \"mkyong101\");\n
+preparedStatement.setString(2, \"ABychek101\");\n
 preparedStatement.setString(3, \"system\");\n
 preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
 preparedStatement.executeUpdate();\n
 \n
 preparedStatement.setInt(1, 112);\n
-preparedStatement.setString(2, \"mkyong102\");\n
+preparedStatement.setString(2, \"ABychek102\");\n
 preparedStatement.setString(3, \"system\");\n
 preparedStatement.setTimestamp(4, getCurrentTimeStamp());\n
 preparedStatement.executeUpdate();\n
@@ -7685,7 +7685,7 @@ The above code snippet is works as well, but has performance issue if you are tr
 String insertStoreProc = \"{call insertDBUSER(?,?,?,?)}\";\n
 callableStatement = dbConnection.prepareCall(insertStoreProc);\n
 callableStatement.setInt(1, 1000);\n
-callableStatement.setString(2, \"mkyong\");\n
+callableStatement.setString(2, \"ABychek\");\n
 callableStatement.setString(3, \"system\");\n
 callableStatement.setDate(4, getCurrentDate());\n
 callableStatement.executeUpdate();\n
@@ -7719,7 +7719,7 @@ JDBC example to call stored procedure via CallableStatement.\n
 \n
 File : JDBCCallableStatementINParameterExample.java\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.CallableStatement;\n
 import java.sql.DriverManager;\n
@@ -7729,7 +7729,7 @@ import java.sql.SQLException;\n
 public class JDBCCallableStatementINParameterExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -7759,7 +7759,7 @@ public class JDBCCallableStatementINParameterExample {\n
 			callableStatement = dbConnection.prepareCall(insertStoreProc);\n
 \n
 			callableStatement.setInt(1, 1000);\n
-			callableStatement.setString(2, \"mkyong\");\n
+			callableStatement.setString(2, \"ABychek\");\n
 			callableStatement.setString(3, \"system\");\n
 			callableStatement.setDate(4, getCurrentDate());\n
 \n
@@ -7875,7 +7875,7 @@ JDBC example to call a stored procedure via CallableStatement.\n
 \n
 File : JDBCCallableStatementOUTParameterExample.java\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.CallableStatement;\n
 import java.sql.Date;\n
@@ -7886,7 +7886,7 @@ import java.sql.SQLException;\n
 public class JDBCCallableStatementOUTParameterExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -7993,7 +7993,7 @@ See code snippets\n
 //getDBUSERCursor is a stored procedure\n
 String getDBUSERCursorSql = \"{call getDBUSERCursor(?,?)}\";\n
 callableStatement = dbConnection.prepareCall(getDBUSERCursorSql);\n
-callableStatement.setString(1, \"mkyong\");\n
+callableStatement.setString(1, \"ABychek\");\n
 callableStatement.registerOutParameter(2, OracleTypes.CURSOR);\n
 \n
 // execute getDBUSERCursor store procedure\n
@@ -8033,7 +8033,7 @@ JDBC example to call above stored procedure, cast the returned CURSOR to ResultS
 \n
 File : JDBCCallableStatementCURSORExample.java\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.CallableStatement;\n
 import java.sql.Date;\n
@@ -8047,7 +8047,7 @@ import oracle.jdbc.OracleTypes;\n
 public class JDBCCallableStatementCURSORExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -8078,7 +8078,7 @@ public class JDBCCallableStatementCURSORExample {\n
 			dbConnection = getDBConnection();\n
 			callableStatement = dbConnection.prepareCall(getDBUSERCursorSql);\n
 \n
-			callableStatement.setString(1, \"mkyong\");\n
+			callableStatement.setString(1, \"ABychek\");\n
 			callableStatement.registerOutParameter(2, OracleTypes.CURSOR);\n
 \n
 			// execute getDBUSERCursor store procedure\n
@@ -8181,7 +8181,7 @@ String updateTableSQL = \"UPDATE DBUSER SET USERNAME =? \"\n
 \n
 preparedStatementInsert = dbConnection.prepareStatement(insertTableSQL);\n
 preparedStatementInsert.setInt(1, 999);\n
-preparedStatementInsert.setString(2, \"mkyong101\");\n
+preparedStatementInsert.setString(2, \"ABychek101\");\n
 preparedStatementInsert.setString(3, \"system\");\n
 preparedStatementInsert.setTimestamp(4, getCurrentTimeStamp());\n
 preparedStatementInsert.executeUpdate(); //data COMMITTED into database.\n
@@ -8214,7 +8214,7 @@ String updateTableSQL = \"UPDATE DBUSER SET USERNAME =? \"\n
 \n
 preparedStatementInsert = dbConnection.prepareStatement(insertTableSQL);\n
 preparedStatementInsert.setInt(1, 999);\n
-preparedStatementInsert.setString(2, \"mkyong101\");\n
+preparedStatementInsert.setString(2, \"ABychek101\");\n
 preparedStatementInsert.setString(3, \"system\");\n
 preparedStatementInsert.setTimestamp(4, getCurrentTimeStamp());\n
 preparedStatementInsert.executeUpdate(); //data IS NOT commit yet\n
@@ -8232,7 +8232,7 @@ When this code is executed, update statement is hits error, and make both insert
 Full JDBC Transaction example\n
 See a complete JDBC transaction example.\n
 \n
-package com.mkyong.jdbc;\n
+package com.ABychek.jdbc;\n
 \n
 import java.sql.DriverManager;\n
 import java.sql.Connection;\n
@@ -8242,7 +8242,7 @@ import java.sql.SQLException;\n
 public class JDBCTransactionExample {\n
 \n
 	private static final String DB_DRIVER = \"oracle.jdbc.driver.OracleDriver\";\n
-	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:MKYONG\";\n
+	private static final String DB_CONNECTION = \"jdbc:oracle:thin:@localhost:1521:ABychek\";\n
 	private static final String DB_USER = \"user\";\n
 	private static final String DB_PASSWORD = \"password\";\n
 \n
@@ -8266,7 +8266,7 @@ public class JDBCTransactionExample {\n
 \n
 			preparedStatementInsert = dbConnection.prepareStatement(insertTableSQL);\n
 			preparedStatementInsert.setInt(1, 999);\n
-			preparedStatementInsert.setString(2, \"mkyong101\");\n
+			preparedStatementInsert.setString(2, \"ABychekABychek101\");\n
 			preparedStatementInsert.setString(3, \"system\");\n
 			preparedStatementInsert.setTimestamp(4, getCurrentTimeStamp());\n
 			preparedStatementInsert.executeUpdate();\n
